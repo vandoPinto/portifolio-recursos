@@ -1,0 +1,65 @@
+<div style="width: 1008px;height: 60px;display: flex;background-color: #0D536A;">
+    <p style="position: absolute;color: white;margin-left: 42px;margin-top: 26px;font-size: 12px;">Botao Janela</p>
+</div>
+<div style="margin-top: 39px;margin-left: 41px;width: 785px;">
+    <p>Clique nos quadros e conheça algumas listas de ações que podem ser feitas nas boas práticas.</p>
+    <div>
+        <img src="recursos/imgs/img-slide-12.svg" style="width: 808px;margin-top: 35px;margin-left: -9px;">
+    </div>
+    <div style="display: flex;justify-content: space-between;">
+        <div id="botao_1" style="width: 250px; height: 190px; margin-top: -240px; cursor: pointer;">
+        </div>
+        <div id="botao_2" style="width: 250px; height: 190px; margin-top: -240px; cursor: pointer;">
+        </div>
+        <div id="botao_3" style="width: 250px; height: 190px; margin-top: -240px; cursor: pointer;">
+        </div>
+    </div>
+    <div>
+        <div class="jan" id="janela_1" style="justify-content: center; align-items: center; display: flex;">
+            <img src="recursos/imgs/interacao.1-slide-12.svg" style="width: 601px;">
+            <p
+                style="font: normal normal normal 14px/18px Poppins;color: white;position: absolute;top: -9px;left: 870px;">
+                x</p>
+        </div>
+        <div class="jan" id="janela_2" style="justify-content: center; align-items: center; display: flex;">
+            <img src="recursos/imgs/interacao.2-slide-12.svg" style="width: 801px;">
+            <p
+                style="font: normal normal normal 14px/18px Poppins;color: white;position: absolute;top: -9px;left: 870px;">
+                x</p>
+        </div>
+        <div class="jan" id="janela_3" style="justify-content: center; align-items: center; display: flex;">
+            <img src="recursos/imgs/interacao.3-slide-12.svg" style="width: 801px;">
+            <p
+                style="font: normal normal normal 14px/18px Poppins;color: white;position: absolute;top: -9px;left: 870px;">
+                x</p>
+        </div>
+    </div>
+</div>
+<footer style="width: 1008px;height: 19px;display: flex;background-color: #0D536A;"></footer>
+<button onclick="copiarCodigo();" style="width: 140px;height: 30px;position: absolute;right: 20px;top: 13px;">Copiar
+    código</button>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
+        apagarJanelas();
+        $(document).find('[id^=btn]').hide();
+        let botoes = $(document).find('[id^=botao]').map((index, botao) => {
+            $(botao).css('cursor', 'pointer');
+            $(botao).hover(() => {
+                $(document).find(`[id=btn_${index + 1}_2]`).show();
+            });
+            $(botao).mouseleave(() => {
+                $(document).find('[id^=btn]').hide();
+            });
+            $(botao).click(() => {
+                apagarJanelas();
+                $(janelas[index]).fadeIn();
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>

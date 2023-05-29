@@ -1,0 +1,262 @@
+<style>
+    p {
+        font-size: 11px;
+    }
+</style>
+<div style="width: 1008px;height: 60px;display: flex;background-color: #0D536A;">
+    <p style="position: absolute;color: white;margin-left: 42px;margin-top: 26px;font-size: 12px;">Jogo Opções</p>
+</div>
+<div class="coluna-esquerda largura-1_1" style="width: 100%;">
+    <div id="janela_0">
+        <div
+            style="display: flex;margin-top: 40px;margin-left: 50px;width: 785px;height: 280px;background-color: #004c72;">
+            <img src="recursos/imgs/SI_31.png" style="margin-left: 40px;width: 300px;">
+            <div
+                style="margin-top: 96px;margin-left: 40px;width: 330px;height: 75px;color: white;font-weight: bold;border: 1px solid #fac900;border-radius: 10px;padding: 20px;">
+                <p style="text-align: center;">
+                    Vamos testar se você se recorda dos tipos de diagnóstico
+                    apresentados? Responda às afirmações selecionando a
+                    alternativa correta para o personagem chegar à unidade de saúde. Não se esqueça de clicar em
+                    começar.
+                </p>
+            </div>
+        </div>
+        <img id="comecar" src="recursos/imgs/SI_31a.png"
+            style="position: absolute;left: 635px;top: 310px;width: 130px;">
+    </div>
+    <div>
+        <img id="personagem" src="recursos/imgs/personagem.png"
+            style="position: absolute; left: 54px; top: 330px; width: 60px;">
+        <img id="fundo" src="recursos/imgs/SI_32.png" style="position: absolute; margin-left: 120px; width: 261px;">
+        <img id="sub" src="recursos/imgs/submeter.png"
+            style="position: absolute; left: 605px; top: 338px; width: 130px; cursor: pointer;">
+        <div id="janela_1"
+            style="display: flex;margin-top: 40px;margin-left: 50px;width: 785px;height: 280px;background-color: #004c72;">
+            <div
+                style="margin-top: 96px; margin-left: 400px; width: 330px; height: 125px; color: white; border: 1px solid #fac900; border-radius: 10px; padding: 10px;">
+                <p>
+                    Tosse persistente seca ou produtiva, febre vespertina, sudorese noturna e emagrecimento são sintomas
+                    clássicos
+                    observados por esse diagnóstico.
+                </p>
+                <div style="display: flex; flex-direction: column;">
+                    <div id="opcao_1_e" style="display: inline-flex; cursor: pointer;">
+                        <p>( </p>
+                        <p id="marcado_1">X</p>
+                        <p>) </p>
+                        <p style="padding-left: 3px;"> Diagnóstico clínico</p>
+                    </div>
+                    <div id="opcao_1_c" style="display: inline-flex; margin-top: -12px; cursor: pointer;">
+                        <p>(</p>
+                        <p id="marcado_2">X</p>
+                        <p>)</p>
+                        <p style="padding-left: 3px;"> Diagnóstico por imagem</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="janela_2"
+            style="display: flex;margin-top: 40px;margin-left: 50px;width: 785px;height: 280px;background-color: #004c72;">
+            <div
+                style="margin-top: 96px; margin-left: 400px; width: 330px; height: 125px; color: white; border: 1px solid #fac900; border-radius: 10px; padding: 10px;">
+                <p>
+                    Conhecimento clínico + métodos usados no diagnóstico de outras doenças (câncer, por exemplo) é
+                    estratégia desse tipo de
+                    diagnóstico.
+                </p>
+                <div style="display: flex; flex-direction: column;">
+                    <div id="opcao_2_e" style="display: inline-flex; cursor: pointer;">
+                        <p>( </p>
+                        <p id="marcado_3">X</p>
+                        <p>) </p>
+                        <p style="padding-left: 3px;">Diagnóstico bacteriológico</p>
+                    </div>
+                    <div id="opcao_2_c" style="display: inline-flex; margin-top: -12px; cursor: pointer;">
+                        <p>(</p>
+                        <p id="marcado_4">X</p>
+                        <p>)</p>
+                        <p style="padding-left: 3px;">Diagnóstico diferencial</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="janela_3"
+            style="display: flex;margin-top: 40px;margin-left: 50px;width: 785px;height: 280px;background-color: #004c72;">
+            <div
+                style="margin-top: 96px; margin-left: 400px; width: 330px; height: 125px; color: white; border: 1px solid #fac900; border-radius: 10px; padding: 10px;">
+                <p>
+                    Baciloscopia direta, TRM-TB e cultura de escarro são técnicas desse diagnóstico.
+                </p>
+                <div style="display: flex; flex-direction: column;">
+                    <div id="opcao_3_c" style="display: inline-flex; cursor: pointer;">
+                        <p>( </p>
+                        <p id="marcado_5">X</p>
+                        <p>) </p>
+                        <p style="padding-left: 3px;">Diagnóstico bacteriológico</p>
+                    </div>
+                    <div id="opcao_3_e" style="display: inline-flex; margin-top: -12px; cursor: pointer;">
+                        <p>(</p>
+                        <p id="marcado_6">X</p>
+                        <p>)</p>
+                        <p style="padding-left: 3px;">Diagnóstico diferencial</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="janela_4"
+            style="display: flex;margin-top: 40px;margin-left: 50px;width: 785px;height: 280px;background-color: #004c72;">
+            <div
+                style="margin-top: 96px; margin-left: 400px; width: 330px; height: 125px; color: white; border: 1px solid #fac900; border-radius: 10px; padding: 10px;">
+                <p id="parabens" style="margin-top: 62px; margin-left: 45px; width: 260px; display: none;">
+                    <strong>Parabéns!</strong> Você acertou as três situações.
+                </p>
+                <div id="tenteNovamente">
+                    <p style="margin-top: 49px;margin-left: 45px;margin-bottom: 27px;width: 260px;">
+                        Tente novamente e acerte as três alternativas para o personagem chegar à unidade de saúde!
+                    </p>
+                    <div id="btnTenteNovamente"
+                        style="background-color:#fac900;width: 112px;height: 30px;border-radius: 5px;display: flex;justify-content: center;align-items: center;margin:auto;">
+                        <p style="color: white;font-weight: bolder;">Tente novamente!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="termometro_1">
+            <img src="recursos/imgs/termometro1.png"
+                style="position: absolute;left: 616px;top: 190px;width: 130px;cursor: pointer;">
+        </div>
+        <div id="termometro_2">
+            <img src="recursos/imgs/termometro2.png"
+                style="position: absolute;left: 616px;top: 190px;width: 130px;cursor: pointer;">
+        </div>
+        <div id="termometro_3">
+            <img src="recursos/imgs/termometro3.png"
+                style="position: absolute;left: 616px;top: 190px;width: 130px;cursor: pointer;">
+        </div>
+        <div id="termometro_4">
+            <img src="recursos/imgs/termometro4.png"
+                style="position: absolute;left: 616px;top: 190px;width: 130px;cursor: pointer;">
+        </div>
+    </div>
+</div>
+<footer style="width: 1008px;height: 19px;display: flex;background-color: #0D536A;"></footer>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer')//.on("click", apagarJanelas);
+        $(document).find('[id^=comecar]').css('cursor', 'pointer').on("click", comecar);
+        let termometro = $(document).find('[id^=termometro]').hide();
+
+        var submeter = $('#sub').hide();
+        var fundo = $('#fundo').hide();
+        var personagem = $('#personagem').hide();
+        let contador = 0;
+        let certo = 0;
+        let errado = 0;
+        let selecionado;
+        let contadorCerto = 0;
+        apagarJanelas();
+        $(janelas[0]).show();
+
+
+        $(document).find('[id^=btnTenteNovamente]').css('cursor', 'pointer').on("click", reiniciar);
+
+        function reiniciar() {
+            $('#sub').hide();
+            $('#fundo').hide();
+            $('#personagem').hide();
+            contador = 0;
+            certo = 0;
+            errado = 0;
+            selecionado;
+            contadorCerto = 0;
+            apagarJanelas();
+            $(janelas[0]).show();
+            $("#personagem").animate({ top: 330, left: 54 }, 1000);
+            $(document).find('[id^=termometro]').hide();
+        }
+
+        function comecar() {
+            desmarcarOpcoes();
+            $(janelas[0]).hide();
+            $(fundo).show();
+            $(personagem).show();
+            $(janelas[1]).show();
+            $(termometro[0]).show();
+            validacao();
+        }
+
+        function validacao() {
+            $(document).find('[id^=opcao]').map((index, opcao) => {
+                $(opcao).click(() => {
+                    desmarcarOpcoes();
+                    $(`#marcado_${(index + 1)}`).show();
+                    selecionado = opcao;
+                    $(submeter).fadeIn();
+                })
+            })
+        }
+
+        $(submeter).on("click", () => {
+            console.log(selecionado.id);
+            if (selecionado.id.split('_')[2] == 'c') {
+                animar(certo);
+                certo++;
+            } else {
+                errado++;
+                $(termometro).hide();
+                $(termometro[errado]).show();
+                //$(termometro[errado]).addClass("animate__animated animate__tada");
+            }
+            proximaAtividade();
+        })
+
+        function proximaAtividade() {
+            $(submeter).hide();
+            $(janelas[contador + 1]).hide();
+            $(janelas[contador + 2]).show();
+            contador++;
+            if (janelas.length - 2 < contador) {
+                validacao(contador + 3)
+            }
+        }
+
+        function animar(index) {
+            let coordenadas = [
+                { top: 290, left: 109 },
+                { top: 255, left: 177 },
+                { top: 185, left: 244 },
+            ]
+            $(document).ready(function () {
+                contadorCerto++;
+                $("#personagem").animate(coordenadas[index], 1000, () => {
+                    console.log('finalizou');
+                });
+                console.log(contadorCerto);
+                if (contadorCerto == 3) {
+                    console.log('mostrar o feed certo');
+                    $('#parabens').show();
+                    $('#tenteNovamente').hide();
+                }
+            });
+        }
+
+        let botoes = $(document).find('[id^=botao]').map((index, botao) => {
+            $(botao).css('cursor', 'pointer')
+            $(botao).click((e) => {
+                apagarJanelas();
+                $('#' + e.currentTarget.id).css('background-color', '#fac900');
+                $(janelas[index]).fadeIn();
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+        function desmarcarOpcoes() {
+            $(document).find('[id^=marcado]').hide();
+        }
+    })
+</script>
+<button onclick="copiarCodigo();" style="width: 140px;height: 30px;position: absolute;right: 20px;top: 13px;">Copiar
+    código</button>

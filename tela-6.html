@@ -1,0 +1,132 @@
+<style>
+    .flip-box {
+        background-color: transparent;
+        width: 145px;
+        height: 275px;
+        border: 1px solid #f1f1f1;
+        perspective: 1000px;
+    }
+
+    .flip-box-inner {
+        position: relative;
+        width: 145px;
+        height: 275px;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+    }
+
+    .flip-box-inner:hover {
+        transform: rotateY(180deg);
+    }
+
+    .flip-box-front,
+    .flip-box-back {
+        position: absolute;
+        width: 145px;
+        height: 275px;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+    .flip-box-front {
+        background-color: #bbb;
+        color: black;
+    }
+
+    .flip-box-back {
+        background-color: #004c72;
+        color: white;
+        transform: rotateY(180deg);
+    }
+</style>
+<div style="width: 1008px;height: 60px;display: flex;background-color: #0D536A;">
+    <p style="position: absolute;color: white;margin-left: 42px;margin-top: 26px;font-size: 12px;">Botao Janela</p>
+</div>
+<div class="coluna-esquerda largura-1_1">
+    <div style="margin-top: 25px; margin-left: 160px; width: 650px;">
+        <p>Vejamos alguns exemplos para que você possa compreender melhor os conceitos de<strong>
+                doença</strong> e
+            de<strong> agravo.</strong></p>
+        <p><strong style="color: #004c72;">Passe o mouse</strong> sobre as imagens para entender mais a respeito
+            das situações ilustradas.</p>
+        <div style="margin-top: 7px; margin-left: -83px; display: flex;">
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img style=" width: 145px;" src="recursos/imgs/SI_13a.png">
+                    </div>
+                    <div class="flip-box-back">
+                        <p style=" margin: auto; margin-top: 80px; padding: 10px; text-align: center; color: white;">
+                            Uma
+                            idosa de 63 anos, diabética, que perde a visão em decorrência das complicações da
+                            doença mal
+                            controlada.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img style=" width: 145px;" src="recursos/imgs/SI_13b.png">
+                    </div>
+                    <div class="flip-box-back">
+                        <p style=" margin: auto; margin-top: 60px; padding: 10px; text-align: center; color: white;">
+                            Uma
+                            criança que sofre um atropelamento quando estava a andar de bicicleta e que, por
+                            consequência, sofre uma lesão na
+                            coluna, perdendo a movimentação das pernas.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img style=" width: 145px;" src="recursos/imgs/SI_13c.png">
+                    </div>
+                    <div class="flip-box-back">
+                        <p style=" margin: auto; margin-top: 60px; padding: 10px; text-align: center; color: white;">
+                            Um
+                            adolescente que tem dificuldades de conviver em sociedade devido à depressão e que,
+                            em razão
+                            disso, tenta
+                            autoagressão e acaba provocando grandes cortes no braço.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img style=" width: 145px;" src="recursos/imgs/SI_13d.png">
+                    </div>
+                    <div class="flip-box-back">
+                        <p style=" margin: auto; margin-top: 80px; padding: 10px; text-align: center; color: white;">
+                            Uma
+                            gestante que adquire catapora ao entrar em contato com uma criança da vizinhança que
+                            está
+                            com a doença.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img style=" width: 145px;" src="recursos/imgs/SI_13e.png">
+                    </div>
+                    <div class="flip-box-back">
+                        <p style=" margin: auto; margin-top: 50px; padding: 10px; text-align: center; color: white;">
+                            Um
+                            trabalhador urbano que recolhe lixo e é exposto a lixo hospitalar radioativo,
+                            descartado
+                            indevidamente, e que
+                            desenvolve queimaduras ou algum tipo de câncer.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer style="width: 1008px;height: 19px;display: flex;background-color: #0D536A;"></footer><button
+    onclick="copiarCodigo();" style="width: 140px;height: 30px;position: absolute;right: 20px;top: 13px;">Copiar
+    código</button>

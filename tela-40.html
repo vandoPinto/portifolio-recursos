@@ -1,0 +1,79 @@
+<div style="width: 1008px;height: 60px;display: flex;background-color: #0D536A;">
+    <p style="position: absolute;color: white;margin-left: 42px;margin-top: 26px;font-size: 12px;">Atividades</p>
+</div>
+<div>
+    <div style="margin-left: 116px;margin-top: 46px;width: 658px;">
+        <p>O complexo regulador é composto por uma ou mais centrais de regulação, que compreendem toda a ação-meio
+            do
+            processo
+            regulatório. Recebem as solicitações e fazem o processamento e o agendamento delas (MENDES, 2011).</p>
+        <p>Clique sobre as
+            centrais de regulação para conhecer a área de atuação de cada uma.</p>
+        <div
+            style="margin-top: -19px;display: flex;flex-direction: column;justify-content: space-between;height: 240px;">
+            <div id="botao_1"
+                style="display: flex; width: 1020px; align-items: center; justify-content: space-between; cursor: pointer;">
+                <p
+                    style="width: 250px;text-align: center;font: normal normal bold 18px/18px Poppins;letter-spacing: 0px;color: #376551;margin-left: 207px;margin-top: 30px;">
+                    CENTRAL DE REGULAÇÃO DE URGÊNCIA</p>
+                <p id="janela_1"
+                    style="width: 530px; text-align: left; font: 18px / 18px Poppins; color: rgb(255, 136, 0); cursor: pointer; display: none;">
+                    Regula a atenção de urgência e que é realizada pelo Samu.</p>
+            </div>
+            <div id="botao_2"
+                style="display: flex; width: 1020px; align-items: center; justify-content: space-between; cursor: pointer;">
+                <p
+                    style="width: 250px;text-align: center;font: normal normal bold 18px/18px Poppins;letter-spacing: 0px;color: #376551;margin-left: 207px;margin-top: 30px;">
+                    CENTRAL DE
+                    REGULAÇÃO DE INTERNAÇÕES ELETIVAS</p>
+                <p id="janela_2"
+                    style="width: 530px; text-align: left; font: 18px / 18px Poppins; color: rgb(255, 136, 0); cursor: pointer; display: none;">
+                    Regula leitos hospitalares dos estabelecimentos de saúde vinculados ao SUS, próprios,
+                    contratados ou
+                    conveniados.</p>
+            </div>
+            <div id="botao_3"
+                style="display: flex; width: 1020px; align-items: center; justify-content: space-between; cursor: pointer;">
+                <p
+                    style="width: 250px;text-align: center;font: normal normal bold 18px/18px Poppins;letter-spacing: 0px;color: #376551;margin-left: 207px;margin-top: 40px;">
+                    CENTRAL DE
+                    REGULAÇÃO DE CONSULTAS E EXAMES</p>
+                <p id="janela_3"
+                    style="width: 530px; text-align: left; font: 18px / 18px Poppins; color: rgb(255, 136, 0); cursor: pointer; display: none;">
+                    Regula o acesso das pessoas às consultas especializadas, aos serviços de apoio de diagnóstico e
+                    terapêutico, bem como
+                    aos demais procedimentos ambulatoriais especializados ou não.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<footer style="width: 1008px;height: 19px;display: flex;background-color: #0D536A;"></footer>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
+        apagarJanelas();
+        $(document).find('[id^=btn]').hide();
+        let botoes = $(document).find('[id^=botao]').map((index, botao) => {
+            $(botao).css('cursor', 'pointer');
+            $(botao).hover(() => {
+                //$(document).find(`[id=botao_${index + 1}]`).css('background-color', '#FFA800');
+            });
+            $(botao).mouseleave(() => {
+                //$(document).find(`[id=botao_${index + 1}]`).css('background-color', '#649781');
+            });
+            $(botao).click(() => {
+                //apagarJanelas();
+                $(janelas[index]).fadeIn();
+                $(document).find(`[id=botao_${index + 1}]`).css('margin-left', '-260px');
+
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>
+<button onclick="copiarCodigo();" style="width: 140px;height: 30px;position: absolute;right: 20px;top: 13px;">Copiar
+    código</button>

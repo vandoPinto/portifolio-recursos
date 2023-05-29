@@ -1,0 +1,160 @@
+<style>
+    img {
+        margin: 5px;
+    }
+
+    p {
+        font-size: 11px;
+    }
+</style>
+<div style="width: 1008px;height: 60px;display: flex;background-color: #0D536A;">
+    <p style="position: absolute;color: white;margin-left: 42px;margin-top: 26px;font-size: 12px;">Jogo da memória</p>
+</div>
+<div style="max-width: 888px; font-size: 10px; text-align: center; width: 100%; margin-top: 15px; margin-left: 170px;">
+    <p>Vamos exemplificar resgatando algumas das doenças e agravos transmissíveis já mencionados nesta aula.</p>
+    <p style="color: #004D73; margin-left: -148px; width: 100%; text-align: center;">Encontre
+        os pares corretos para relembrar cada caso.</p>
+
+    <div style="width: 400px; margin-left: 80px;">
+        <img src="recursos/imgs/SI_32_1.png" style="width: 110px;">
+        <img src="recursos/imgs/SI_32_2.png" style="width: 110px;">
+        <img src="recursos/imgs/SI_32_3.png" style="width: 110px;">
+
+        <img src="recursos/imgs/SI_32_2.png" style="width: 110px;">
+        <img src="recursos/imgs/SI_32_3.png" style="width: 110px;">
+        <img src="recursos/imgs/SI_32_1.png" style="width: 110px;">
+    </div>
+
+    <div style="width: 400px;margin-left: 250px;margin-top: -304px;">
+        <img id="click01_click06" src="recursos/imgs/SI_32_0.png"
+            style="width: 110px;position: fixed;top: 124px;left: 268px;">
+        <img id="click02_click04" src="recursos/imgs/SI_32_0.png"
+            style="width: 110px;position: fixed;top: 123px;left: 390px;">
+        <img id="click03_click05" src="recursos/imgs/SI_32_0.png"
+            style="width: 110px;position: fixed;top: 124px;left: 512px;">
+
+        <img id="click04_click02" src="recursos/imgs/SI_32_0.png"
+            style="width: 110px;position: fixed;top: 275px;left: 268px;">
+        <img id="click05_click03" src="recursos/imgs/SI_32_0.png"
+            style="width: 110px;position: fixed;top: 275px;left: 390px;">
+        <img id="click06_click01" src="recursos/imgs/SI_32_0.png"
+            style="width: 110px;position: fixed;top: 275px;left: 512px;">
+    </div>
+
+    <div style="position: absolute;">
+
+
+        <div id="janela_01"
+            style="margin-left: -55px; margin-top: -50px; cursor: pointer; width: 295px; height: 180px; background-color: rgba(0, 77, 115, 0.9); border-radius: 10px; display: none;">
+
+            <h1 style="color: #fac900; padding-top: 10px;">Sarna (escabiose)</h1>
+
+            <p style="color: white; width: 274px; margin: 15px;">No caso da sarna (escabiose), a prevenção
+                consiste,
+                basicamente, em evitar contato
+                com pessoas e roupas
+                contaminadas.
+                Veja que, no âmbito da saúde prisional, é fundamental que, uma vez que se detecte um
+                paciente com
+                escabiose, todos que
+                com ele tenham contato direto sejam examinados e tratados. Dessa forma, interrompe-se a
+                cadeia de
+                transmissão da
+                parasitose.</p>
+        </div>
+
+        <div id="janela_02"
+            style="margin-left: 125px; margin-top: 100px; cursor: pointer; width: 310px; height: 190px; background-color: rgba(0, 77, 115, 0.9); border-radius: 10px; display: none;">
+            <h1 style="color: #fac900;padding-top: 10px;">Tuberculose / Covid-19</h1>
+            <p style="color: white; width: 282px; margin: 15px;">
+                Você se lembra de que a tuberculose e a covid-19 são doenças transmitidas por gotículas
+                contendo o
+                agente transmissor
+                (bactéria e vírus) que são expelidas no ar por indivíduos doentes? Uma das formas de
+                preveni-las
+                consiste no isolamento
+                de casos suspeitos e de indivíduos doentes até que eles não transmitam mais a doença. Por
+                isso, é
+                extremamente
+                importante identificar numa comunidade todos os casos suspeitos no mesmo período x fator.
+            </p>
+        </div>
+
+        <div id="janela_03"
+            style="margin-left: 410px; margin-top: -50px; cursor: pointer; width: 298px; height: 170px; background-color: rgba(0, 77, 115, 0.9); border-radius: 10px; display: none;">
+            <h1 style="color: #fac900;padding-top: 10px;">Hepatite B / HIV</h1>
+            <p style="color: white; width: 270px; margin: 15px;">
+                Por serem doenças de transmissão parenteral, o uso de preservativo em todas as relações
+                sexuais, o não
+                compartilhamento
+                de seringas e agulhas, o uso de luvas para manipular feridas e líquidos corporais são
+                medidas
+                estabelecidas para a sua
+                prevenção. Lembre-se de que, no caso da hepatite B, a vacina é considerada a melhor forma de
+                prevenção.
+            </p>
+        </div>
+    </div>
+</div>
+<footer style="width: 1008px;height: 19px;display: flex;background-color: #0D536A;"></footer>
+
+<script>
+    $(() => {
+        let primeira = false;
+        let segunda = false;
+        let arrDeRespostas = [];
+        let janelas = $(document).find('[id^=janela]').hide();
+        $(document).find('[id^=click]').on('click', escolherCarta);
+        $(document).find('[id^=feedFinal]').hide();
+
+        janelas.map((i, e) => {
+            arrDeRespostas[i] = false;
+        })
+
+        function escolherCarta(me) {
+            fecharTodasAsJanelas();
+            if (!primeira || !segunda) {
+                $('#' + me.currentTarget.id).hide();
+            }
+
+            if (!primeira) {
+                primeira = me.currentTarget.id;
+            } else if (primeira && !segunda) {
+                segunda = me.currentTarget.id;
+            }
+
+            if (primeira && segunda) {
+                if (primeira.split('_')[0] == segunda.split('_')[1]) {
+                    let numero1 = (primeira.split('_')[0]).split('click')[1];
+                    let numero2 = (segunda.split('_')[0]).split('click')[1];
+                    let menor;
+                    if (numero1 > numero2) {
+                        menor = numero2;
+                    } else {
+                        menor = numero1
+                    }
+                    $(document).find(`[id^=janela_${menor}]`).fadeIn().on('click', fecharTodasAsJanelas);
+                    primeira = false;
+                    segunda = false;
+                    arrDeRespostas[Number(menor) - 1] = true;
+                } else {
+                    setTimeout(() => {
+                        $('#' + primeira).show();
+                        $('#' + segunda).show();
+                        primeira = false;
+                        segunda = false;
+                    }, 900);
+                }
+            }
+        }
+
+        function fecharTodasAsJanelas() {
+            $(document).find('[id^=janela]').fadeOut();
+            if (arrDeRespostas.every(elem => elem == true)) {
+                $(document).find('[id^=feedFinal]').fadeIn();
+            }
+        }
+    })
+</script>
+<button onclick="copiarCodigo();" style="width: 140px;height: 30px;position: absolute;right: 20px;top: 13px;">Copiar
+    código</button>

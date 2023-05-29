@@ -1,0 +1,48 @@
+<div style="width: 1008px;height: 60px;display: flex;background-color: #0D536A;">
+    <p style="position: absolute;color: white;margin-left: 42px;margin-top: 26px;font-size: 12px;">Áudios</p>
+</div>
+<div class="coluna-esquerda largura-1_1"
+    style="max-width: 888px; font-size: 10px; text-align: center; width: 100%; margin-top: 60px;">
+    <h1>O que são doenças e agravos transmissíveis e não transmissíveis?</h1>
+    <p style=" margin-left: 5px; margin-bottom: 30px; width: 100%; text-align: center;"><strong
+            style="color: #004D73;">Clique</strong>
+        nos ícones de áudio para escutar a respeito do que são doenças e agravos transmissíveis e não
+        transmissíveis.</p>
+    <div
+        style="text-align: center; display: inline-flex; width: 370px; flex-direction: row; flex-wrap: wrap; justify-content: space-between; margin-top: 30px;">
+        <div style="margin-top: 5px; cursor: pointer;" class="btn animate__animated animate__tada" data-toggle="modal"
+            data-target="#modalCentro1">
+            <img src="recursos/imgs/SI_audio1.png" style="width: 158px;">
+        </div>
+        <div style="margin-top: 5px; cursor: pointer;" class="btn animate__animated animate__tada" data-toggle="modal"
+            data-target="#modalCentro2">
+            <img src="recursos/imgs/SI_audio2.png" style="width: 158px;">
+        </div>
+    </div>
+</div>
+<footer style="width: 1008px;height: 19px;display: flex;background-color: #0D536A;"></footer>
+<!-- Modal -->
+<div class="modal fade saiba-mais" id="modalCentro1" tabindex="-1" role="dialog"
+    aria-labelledby="TituloModalCentralizado" aria-hidden="true" style="overflow-y:hidden;">
+    <div class="modal-dialog modal-dialog-centered " role="document">
+        <div class="modal-content saiba-mais-modal" style="margin-top: 95px; width: 300px; height: 150px;">
+            <div data-dismiss="modal" class="close" aria-hidden="true">×</div>
+            <audio style="width: 87%; margin-top: 50px;" controls="controls">
+                <source src="recursos/audio/NA_DEPEN_M3A1_Tela_16_20_01_2022_transmissiveis.mp3" type="audio/mp3">
+            </audio>
+        </div>
+    </div>
+</div>
+<div class="modal fade saiba-mais" id="modalCentro2" tabindex="-1" role="dialog"
+    aria-labelledby="TituloModalCentralizado" aria-hidden="true" style="overflow-y:hidden;">
+    <div class="modal-dialog modal-dialog-centered " role="document">
+        <div class="modal-content saiba-mais-modal" style="margin-top: 95px; width: 300px; height: 150px;">
+            <div data-dismiss="modal" class="close" aria-hidden="true">×</div>
+            <audio style="width: 87%; margin-top: 50px;" controls="controls">
+                <source src="recursos/audio/NA_DEPEN_M3A1_Tela_16_20_01_2022_nao_transmissiveis.mp3" type="audio/mp3">
+            </audio>
+        </div>
+    </div>
+</div>
+<button onclick="copiarCodigo();" style="width: 140px;height: 30px;position: absolute;right: 20px;top: 13px;">Copiar
+    código</button>

@@ -1,0 +1,99 @@
+<style>
+    p {
+        font-size: 11px;
+    }
+</style>
+<div style="width: 1008px;height: 60px;display: flex;background-color: #0D536A;">
+    <p style="position: absolute;color: white;margin-left: 42px;margin-top: 26px;font-size: 12px;">Atividades Clique</p>
+</div>
+<div class="coluna-esquerda largura-1_1">
+    <div style="margin-top: 20px;margin-left: 130px;width: 660px;">
+        <p>A seguir, vejamos alguns testes diagnósticos disponíveis, sem nos atermos a detalhes técnicos e
+            metodológicos.</p>
+        <p><b style="color: #004c72;">Clique</b> no símbolo de ++ para ampliar a explicação sobre o teste.</p>
+        <img style="width: 17px;position: absolute;top: 114px;left: 249px;cursor: pointer;"
+            src="recursos/imgs/plusFundo.png">
+        <img src="recursos/imgs/SI_24.png" style="width: 770px;margin-left: -73px;">
+    </div>
+    <div>
+        <div id="botao_1">
+            <img style="width: 17px;position: absolute;top: 280px;left: 114px;cursor: pointer;"
+                src="recursos/imgs/plusFundo.png">
+        </div>
+        <div id="botao_2">
+            <img style="width: 17px;position: absolute;top: 270px;left: 404px;cursor: pointer;"
+                src="recursos/imgs/plusFundo.png">
+        </div>
+        <div id="botao_3">
+            <img style="width: 17px;position: absolute;top: 200px;left: 754px;cursor: pointer;"
+                src="recursos/imgs/plusFundo.png">
+        </div>
+
+    </div>
+    <div>
+        <div id="janela_1"
+            style="position: relative; width: 673px; height: 160px; background-color: rgb(0, 77, 115); border-radius: 10px; flex-wrap: nowrap; margin-left: 115px; margin-top: -274px; cursor: pointer; display: flex;">
+            <img style="margin-top: 21px;margin-left: 18px;height: 113px;" src="recursos/imgs/SI_24janela1.png">
+            <div style="margin-left: 30px; margin-top: 31px;">
+                <p style="color: white;"><strong>Testes Moleculares de Amplificação de Ácidos Nucleicos
+                        (TAAN/RT-PCR)</strong>: confirmam a presença de material genético do vírus
+                    SARS-CoV-2 em amostras coletadas na região do nariz e/ou da garganta utilizando um<i> swab</i>
+                    nasal
+                    (cotonete longo).
+                    Considerado o método de referência (padrão-ouro) para o diagnóstico e rastreio da covid-19. O
+                    resultado sai em 24h. É
+                    realizado em pacientes sintomáticos e assintomáticos. Em pacientes infectados e sintomáticos, a
+                    amostra deve ser
+                    coletada até o 8º dia de início dos sintomas, preferencialmente entre o 3º e o 7º dia.</p>
+            </div>
+        </div>
+        <div id="janela_2"
+            style="position: relative; width: 665px; height: 159px; background-color: rgb(0, 77, 115); border-radius: 10px; flex-wrap: nowrap; margin-left: 115px; margin-top: -274px; cursor: pointer; display: flex;">
+            <img style="margin-top: 21px;margin-left: 18px;height: 113px;" src="recursos/imgs/SI_24janela2.png">
+            <div style="margin-left: 30px; margin-top: 31px;">
+                <p style="color: white;"><strong>Teste Rápido de Antígenos (Ag-RDT)</strong>: detectam partículas do
+                    vírus presentes em amostras coletadas do nariz e da garganta.
+                    Indicado para pessoas que apresentam os sintomas da doença e utilizado quando os testes de
+                    TAAN/RT-PCR não estão
+                    disponíveis. Resultado dentro de 15 a 30 minutos da realização. Não recomendado para pacientes
+                    assintomáticos. A amostra
+                    deve ser coletada, preferencialmente, entre o 2º e o 7º dia de início dos sintomas.</p>
+            </div>
+        </div>
+        <div id="janela_3"
+            style="position: relative; width: 673px; height: 160px; background-color: rgb(0, 77, 115); border-radius: 10px; flex-wrap: nowrap; margin-left: 115px; margin-top: -274px; cursor: pointer; display: flex;">
+            <img style="margin-top: 21px;margin-left: 18px;height: 113px;" src="recursos/imgs/SI_24janela3.png">
+            <div style="margin-left: 30px; margin-top: 31px;">
+                <p style="color: white;"><strong>Testes sorológicos (detecção de IgG e IgM)</strong>: os métodos
+                    sorológicos são desenvolvidos para detecção de anticorpos IgG e
+                    IgM. O IgM é uma partícula grande, formada mais rapidamente e, quando detectável, indica que o
+                    corpo
+                    está formando
+                    imunidade contra uma infecção recente. Enquanto o IgG consiste em partículas pequenas que
+                    indicam
+                    uma imunidade
+                    decorrente de uma exposição prévia à doença (no caso a covid-19).</p>
+            </div>
+        </div>
+    </div>
+</div>
+<footer style="width: 1008px;height: 19px;display: flex;background-color: #0D536A;"></footer>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
+        apagarJanelas();
+        let botoes = $(document).find('[id^=botao]').map((index, botao) => {
+            $(botao).click(() => {
+                apagarJanelas();
+                $(janelas[index]).fadeIn();
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>
+<button onclick="copiarCodigo();" style="width: 140px;height: 30px;position: absolute;right: 20px;top: 13px;">Copiar
+    código</button>

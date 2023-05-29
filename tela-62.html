@@ -1,0 +1,71 @@
+<style>
+    .parent {
+        width: 898px;
+        overflow-x: hidden;
+        float: left;
+        margin-left: -14px;
+    }
+
+    .child {
+        width: 1000px;
+        height: 492px;
+        float: left;
+        cursor: pointer;
+    }
+</style>
+<div style="display: flex;">
+    <div style="width: 622px;height: 490px;right: 1px;background-color: #0D536A;padding-left: 40px;padding-top: 10px;">
+        <div>
+            <p style="position: absolute;color: white;margin-top: 26px;font-size: 12px;">
+                TÓPICO<strong>
+                    1</strong></p>
+            <p style="position: absolute;color: white;margin-left: 80px;margin-top: 20px;font-size: 11px;width: 230px;">
+                PLANEJAMENTO E PROGRAMAÇÃO EM SAÚDE NO SISTEMA ÚNICO DE SAÚDE (SUS)</p>
+        </div>
+        <div
+            style=" width:100px; height: 6px;position: absolute;top: 60px;border-bottom: 1px solid white;width: 319px;">
+        </div>
+        <p style="color: white;margin-top: 160px;width: 240px;margin-left: 20px;">Que tal conhecermos as normas que
+            direcionam o processo de planejamento no SUS por meio de uma linha do tempo? </p>
+        <p style="color: white;width: 240px;margin-left: 20px;">Arraste
+            para o lado para interagir com a imagem.
+        </p>
+        <div style="position: absolute;height: 300px;width: 3px;background-color: #324963;top: 98px;left: 377px;">
+        </div>
+    </div>
+    <div class="parent">
+        <div class="child">
+            <img src="recursos/imgs/img-slide-35.svg" style="margin-left: 1px;height: 500px;">
+        </div>
+    </div>
+</div>
+<script>
+    $(() => {
+        const slider = document.querySelector('.parent');
+        let mouseDown = false;
+        let startX, scrollLeft;
+
+        let startDragging = function (e) {
+            mouseDown = true;
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        };
+        let stopDragging = function (event) {
+            mouseDown = false;
+        };
+
+        slider.addEventListener('mousemove', (e) => {
+            e.preventDefault();
+            if (!mouseDown) { return; }
+            const x = e.pageX - slider.offsetLeft;
+            const scroll = x - startX;
+            slider.scrollLeft = scrollLeft - scroll;
+        });
+
+        slider.addEventListener('mousedown', startDragging, false);
+        slider.addEventListener('mouseup', stopDragging, false);
+        slider.addEventListener('mouseleave', stopDragging, false);
+    })
+</script>
+<button onclick="copiarCodigo();" style="width: 140px;height: 30px;position: absolute;right: 20px;top: 13px;">Copiar
+    código</button>

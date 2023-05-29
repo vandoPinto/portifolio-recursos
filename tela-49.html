@@ -1,0 +1,159 @@
+<style>
+    p {
+        font-size: 11px;
+    }
+</style>
+<div style="width: 1008px;height: 60px;display: flex;background-color: #0D536A;">
+    <p style="position: absolute;color: white;margin-left: 42px;margin-top: 26px;font-size: 12px;">Mini navegação</p>
+</div>
+<div>
+    <h1 style="margin-top: 30px;margin-left: 90px;">O que caracteriza a depressão?</h1>
+    <p style="margin-left: 90px; width: 750px;">A depressão é uma doença complexa que afeta, predominantemente, o
+        humor. Acomete a pessoa em sua totalidade,
+        provocando
+        grande sensação de desconforto e sofrimento. As pessoas com depressão não conseguem desfrutar dos prazeres
+        normais da
+        vida por experimentarem sentimentos persistentes de inadequação, tristeza profunda ou irritação, desamparo e
+        pessimismo
+        exagerado.</p>
+    <p style="text-align: center;margin-left: 90px;"><b style="color: #836bff;">Navegue</b> pelo carrossel para
+        visualizar outras características.</p>
+    <div
+        style="margin-top: 0px;margin-left: 100px;background-color: #836bff;width: 730px;height: 212px;border-radius: 10px;position: absolute;">
+    </div>
+    <div
+        style="display: inline-flex;margin-top: 60px;margin-left: 62px;position: absolute;width: 805px;justify-content: space-between;position: absolute;">
+        <img id="volta" src="recursos/imgs/SI_20_volta.png" style="width: 50px; cursor: pointer; opacity: 0.6;">
+        <img id="avanca" src="recursos/imgs/SI_20_avanca.png" style="width: 50px; cursor: pointer;">
+    </div>
+    <div id="janela_1">
+        <img src="recursos/imgs/SI_15_janela1.png" style="width: 195px;position: absolute;left: 170px;top: 205px;">
+        <div>
+            <p
+                style="position: absolute;margin-left: 410px;margin-right: auto;color: white;width: 310px;height: 230px;top: 150px;display: flex;align-items: center;">
+                Dificuldade na fluidez e organização das ideias, que se reflete no baixo desempenho cognitivo de
+                memória, concentração e
+                raciocínio. A pessoa não consegue, por exemplo, realizar contas.</p>
+            <p
+                style="position: absolute;left: 410px;margin-right: auto;color: white;width: 340px;height: 230px;top: 230px;display: flex;align-items: center;">
+                A doença distorce negativamente a maneira habitual como a pessoa interpreta os acontecimentos
+                passados,
+                presentes e
+                futuros. Esse julgamento enviesado da realidade produz pensamento de culpa, pessimismo,
+                autoacusação,
+                morte,
+                incurabilidade, entre outros, que geralmente são conteúdos muito dolorosos.</p>
+        </div>
+    </div>
+    <div id="janela_2"
+        style="position: absolute; margin-left: 155px; margin-right: auto; color: white; height: 240px; margin-top: -10px; align-items: center; display: flex;">
+        <div style="display: flex;margin-left: 45px;">
+            <p style="width: 160px; margin-top: 79px;">
+                Cansaço, fadiga, agitação ou lentificação geral, insônia ou sono excessivo, perda ou ganho de peso e
+                diminuição dos
+                interesses.</p>
+            <img src="recursos/imgs/SI_15_janela2.png" style="width: 242px;margin-left: 120px;">
+        </div>
+    </div>
+    <div id="janela_3"
+        style="position: absolute; margin-left: 155px; margin-right: auto; color: white; height: 240px; margin-top: -10px; align-items: center; display: flex;">
+        <div style="display: flex;margin-left: 30px;">
+            <img src="recursos/imgs/SI_15_janela3.png" style="width: 242px;cursor: pointer;">
+            <p style="width: 170px; margin-top: 80px; margin-left: 120px;">
+                Os estímulos são percebidos com menos intensidade, o colorido se perde, a comida parece não ter
+                gosto,
+                os cheiros são
+                pouco percebidos.</p>
+        </div>
+    </div>
+    <div id="janela_4"
+        style="position: absolute; margin-left: 155px; margin-right: auto; color: white; height: 240px; margin-top: -7px; align-items: center; display: flex;">
+        <div style="display: flex;margin-right: 25px;">
+            <p style="width: 220px; margin-top: 68px;">
+                Dificuldade de modificar o estado de tristeza, independentemente de fatores externos, mesmo os
+                positivos. Desleixo e
+                descuido com a aparência e os cuidados pessoais, além de deixar de cuidar da organização da casa ou
+                do
+                local onde
+                trabalha.
+            </p>
+            <img src="recursos/imgs/SI_15_janela4.png" style="width: 345px;margin-left: 60px;">
+        </div>
+    </div>
+</div>
+<footer style="width: 1008px;height: 19px;display: flex;background-color: #0D536A;"></footer>
+<div id="conteudo"
+    style="position: absolute; background-color: rgb(250, 201, 1); top: 220px; right: 290px; width: 357px; border-radius: 10px; display: flex;">
+    <p style="text-align: center;">Multiplicação anormal de células de um tecido que pode ocasionar
+        consequências graves
+        ao corpo; tumor, câncer.</p>
+</div>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]');
+        let avanca = $(document).find('[id^=avanca]').on('click', avancar);
+        let volta = $(document).find('[id^=volta]').on('click', voltar);
+        let contador = 1;
+        $(volta).css('opacity', '0.6');
+
+        apagarJanelas();
+        $(document).find('[id^=janela_1]').show();
+
+        function avancar() {
+            if (contador < janelas.length) {
+                apagarJanelas();
+                contador++;
+                $(document).find(`[id^=janela_${contador}]`).show();
+            }
+            mudarBotoes();
+        }
+
+        function voltar() {
+            if (contador > 1) {
+                apagarJanelas();
+                contador--;
+                $(document).find(`[id^=janela_${contador}]`).show();
+            }
+            mudarBotoes();
+        }
+
+        function mudarBotoes() {
+            if (contador == 1) {
+                $(volta).css('opacity', '0.6');
+                $(avanca).css('opacity', '1');
+            }
+            if (contador == janelas.length) {
+                $(volta).css('opacity', '1');
+                $(avanca).css('opacity', '0.6');
+            }
+            if (contador > 1 && contador < janelas.length) {
+                $(volta).css('opacity', '1');
+                $(avanca).css('opacity', '1');
+            }
+        }
+
+        let botoes = $(document).find('[id^=botao]').map((index, botao) => {
+            $(botao).click(() => {
+                apagarJanelas();
+                mudarBotao(index + 1)
+                $(janelas[index + 1]).show();
+            })
+        })
+
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+
+        let conteudo = $('#conteudo').hide();
+        $('#hotWord-bt').hover(() => {
+            conteudo.fadeIn()
+        })
+        $('#hotWord-bt').mouseout(() => {
+            conteudo.fadeOut()
+        })
+    })
+</script>
+<button onclick="copiarCodigo();" style="width: 140px;height: 30px;position: absolute;right: 20px;top: 13px;">Copiar
+    código</button>

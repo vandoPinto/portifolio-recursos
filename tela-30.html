@@ -1,0 +1,76 @@
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 400px;
+        height: 200px;
+        font-size: 10px;
+        background-color: #FFFFFF
+    }
+
+    td,
+    th {
+        border: 1px solid #FFC900;
+        text-align: left;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .titulo {
+        background-color: #004C72;
+        color: white;
+    }
+
+    .left {
+        text-align: left;
+    }
+
+    .centro {
+        text-align: center;
+        vertical-align: middle;
+    }
+</style>
+<div style="width: 1008px;height: 60px;display: flex;background-color: #0D536A;">
+    <p style="position: absolute;color: white;margin-left: 42px;margin-top: 26px;font-size: 12px;">Áudios</p>
+</div>
+<div class=" coluna-esquerda largura-1_3">
+    <div style="margin: 125px 37px; width: 250px;">
+        <h1>Ações de saúde desenvolvidas no sistema prisional</h1>
+        <p>Veremos agora alguns aspectos da legislação que garante à pessoa privada de liberdade o direito à
+            saúde e, também, algumas ações e projetos desenvolvidos no sistema prisional com base nessa
+            fundamentação jurídica.</p>
+    </div>
+</div>
+<div class="coluna-esquerda largura-1_2 ">
+    <img src="recursos/imgs/SG_37.gif" style="height: 282px; width: 275.35px; margin-top: 40px; margin-left: 10px;">
+</div>
+<div class="coluna-direita largura-1_3">
+    <div style="margin-top: 150px; margin-right: 37px; width: 256px;">
+        <h1 style="font-size: 10px;">Clique no ícone do áudio para saber aspectos do direito à saúde da pessoa
+            privada de liberdade.
+        </h1>
+        <!-- Botao modal -->
+        <div style="text-align: center; padding-right: 60px; cursor: pointer;"
+            class="btn animate__animated animate__tada" data-toggle="modal" data-target="#modalCentro">
+            <img style="height: 65px; width: 182px; margin-left: 46px; margin-top: 16px;" src="recursos/imgs/audio.png">
+        </div>
+        <!-- Fim botao Modal -->
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade saiba-mais" id="modalCentro" tabindex="-1" role="dialog"
+    aria-labelledby="TituloModalCentralizado" aria-hidden="true" style="overflow-y:hidden;">
+    <div class="modal-dialog modal-dialog-centered " role="document">
+        <div class="modal-content saiba-mais-modal" style="margin-top: 95px; width: 300px; height: 150px;">
+            <div data-dismiss="modal" class="close" aria-hidden="true">×</div>
+
+            <audio style="width: 87%; margin-top: 50px;" controls="controls">
+                <source src="recursos/audio/RC_02.mp3" type="audio/mp3">
+            </audio>
+
+        </div>
+    </div>
+</div>
+<footer style="width: 1008px;height: 19px;display: flex;background-color: #0D536A;"></footer>
+<button onclick="copiarCodigo();" style="width: 140px;height: 30px;position: absolute;right: 20px;top: 13px;">Copiar
+    código</button>

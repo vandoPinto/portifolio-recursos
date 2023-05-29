@@ -1,0 +1,116 @@
+<div style="width: 1008px;height: 60px;display: flex;background-color: #0D536A;">
+    <p style="position: absolute;color: white;margin-left: 42px;margin-top: 26px;font-size: 12px;">Abas</p>
+</div>
+<div>
+    <div style="margin-left: 63px;margin-top: 16px;width: 785px;">
+        <p>O emprego de tais práticas traz consigo a proposta de contribuir para o aumento na resolutividade dos
+            serviços de saúde
+            por atuarem de modo diferente e potencialmente sinérgico com os medicamentos convencionais ou como
+            alternativa eficaz e
+            mais segura, quando bem selecionadas. </p>
+        <p>Nesse sentido, é importante diferenciar o uso de prática integrativa em
+            substituição ou como complemento ao tratamento convencional. </p>
+        <p>Clique nos nomes e veja como se dá esse uso.</p>
+        <div style="margin-top: 9px;">
+            <div style="display: flex;">
+                <div id="botao_1"
+                    style="width: 258px; height: 36px; background: 0% 0% no-repeat padding-box padding-box rgb(27, 137, 146); border-radius: 5px 5px 0px 0px; cursor: pointer;">
+                    <p style="font: normal normal bold 12px/14px Poppins;color: #FFFFFF;text-align: center;">USO
+                        COMO
+                        PRIMEIRA OPÇÃO</p>
+                </div>
+                <div id="botao_2"
+                    style="width: 258px; height: 30px; background: 0% 0% no-repeat padding-box padding-box rgb(126, 101, 145); border-radius: 5px 5px 0px 0px; cursor: pointer;">
+                    <p style="font: normal normal bold 12px/14px Poppins;color: #FFFFFF; text-align: center;">USO
+                        COMPLEMENTAR</p>
+                </div>
+            </div>
+            <div id="janela_1"
+                style="margin-top: -9px; width: 743px; height: 162px; background: 0% 0% no-repeat padding-box padding-box rgb(27, 137, 146); border-radius: 12px; justify-content: space-around; align-items: center; display: flex; cursor: pointer;">
+                <div style="color: #FFFFFF;width: 689px;">
+                    <div>
+                        <p style="font: normal normal normal 12px/15px Poppins;color: #FFFFFF;">Acupuntura em casos
+                            de
+                            dor
+                            lombar crônica (URITS <i>et al.</i>, 2021), melhorando a dor e a
+                            funcionalidade física imediatamente
+                            após a sessão, assim como a qualidade de vida física (MU <i>et al.</i>, 2020); prevenção
+                            de
+                            enxaqueca,
+                            sendo pouco mais eficaz
+                            que medicamentos e muito mais segura (GIOVANARDI <i>et al.</i>, 2020); redução de dor em
+                            pacientes
+                            com
+                            câncer em tratamento
+                            paliativo (YANG <i>et al.</i>, 2021). </p>
+                        <p style="font: normal normal normal 12px/15px Poppins;color: #FFFFFF;">Fitoterápicos podem
+                            substituir tratamentos convencionais, como em estados leves de
+                            ansiedade e depressão, dispepsia não ulcerosa neoplásica, infecções urinárias
+                            inespecíficas
+                            (BRASIL, 2012).</p>
+                    </div>
+                </div>
+            </div>
+            <div id="janela_2"
+                style="margin-top: -9px; width: 743px; height: 202px; background: 0% 0% no-repeat padding-box padding-box rgb(126, 101, 145); border-radius: 12px; display: flex; justify-content: space-around; align-items: center; cursor: pointer;">
+                <div style="color: #FFFFFF;width: 689px;">
+                    <div>
+                        <p style="font: normal normal normal 12px/15px Poppins;color: #FFFFFF;">Meditação e
+                            <i>yoga</i>
+                            em
+                            casos de transtornos mentais, em associação com medicamentos e
+                            psicoterapia
+                            (VANCAMPFORT <i>et al.</i>,
+                            2021).
+                        </p>
+                        <p style="font: normal normal normal 12px/15px Poppins;color: #FFFFFF;">Meditação como modo
+                            de
+                            se atingir bem-estar psicológico, assim como melhorar a imunidade e
+                            saúde
+                            cardiovascular
+                            em adultos e diminuir abstenção escolar e infrações, ideação suicida e melhorar
+                            bem-estar e
+                            saúde cardiovascular em
+                            crianças e adolescentes (WILSON; KENNY; PEÑA, 2021).</p>
+                        <p style="font: normal normal normal 12px/15px Poppins;color: #FFFFFF;">Meditação durante a
+                            gravidez para reduzir ansiedade, depressão e
+                            estresse (BABBAR; OYARZABAL; OYARZABAL, 2021).</p>
+                        <p style="font: normal normal normal 12px/15px Poppins;color: #FFFFFF;">Plantas medicinais
+                            como
+                            primeira escolha, por exemplo hepatites tóxicas e
+                            hiperplasia prostática benigna (BRASIL, 2012).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer style="width: 1008px;height: 19px;display: flex;background-color: #0D536A;"></footer>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
+        apagarJanelas();
+        $(document).find('[id=janela_1]').show();
+        $(document).find('[id^=btn]').hide();
+        let botoes = $(document).find('[id^=botao]').map((index, botao) => {
+            $(botao).css('cursor', 'pointer');
+            $(botao).hover(() => {
+                $(document).find(`[id=btn_${index + 1}_2]`).show();
+            });
+            $(botao).mouseleave(() => {
+                $(document).find('[id^=btn]').hide();
+            });
+            $(botao).click(() => {
+                apagarJanelas();
+                $(janelas[index]).fadeIn();
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>
+<button onclick="copiarCodigo();" style="width: 140px;height: 30px;position: absolute;right: 20px;top: 13px;">Copiar
+    código</button>

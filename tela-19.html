@@ -1,0 +1,89 @@
+<style>
+    .botao:hover {
+        width: 60px;
+    }
+</style>
+<div style="width: 1008px;height: 60px;display: flex;background-color: #0D536A;">
+    <p style="position: absolute;color: white;margin-left: 42px;margin-top: 26px;font-size: 12px;">Botao Janela</p>
+</div>
+<div class="coluna-esquerda">
+    <div class="animate__animated animate__backInRight"
+        style="width: 359px;height: 71px;background-color: #fff2d9;border-radius: 10px;margin-top: 9px;">
+        <p style="width: 295px;margin-left: 50px;padding-top: 15px;">É importante destacar que não são consideradas
+            doenças do trabalho:</p>
+    </div>
+    <div>
+        <img class="animate__animated animate__backInRight" src="recursos/imgs/Tela55.jpg"
+            style="width: 600px;height: 400px;position: relative;top: -85px;margin-left: 290px;z-index: -1;">
+    </div>
+</div>
+<div
+    style="position: absolute;display: flex;flex-direction: column;justify-content: space-between;height: 282px;top: 158px;left: 108px;">
+    <div id="botao_1" class="botao" style="cursor: pointer;">
+        <img src="recursos/imgs/ativo-1.svg" style="width: 54px;cursor: pointer;">
+    </div>
+    <div id="botao_2" style="cursor: pointer;">
+        <img src="recursos/imgs/ativo-2.svg" style="width: 54px;cursor: pointer;">
+    </div>
+    <div id="botao_3" style="cursor: pointer;">
+        <img src="recursos/imgs/ativo-3.svg" style="width: 54px;cursor: pointer;">
+    </div>
+    <div id="botao_4" style="cursor: pointer;">
+        <img src="recursos/imgs/ativo-4.svg" style="width: 54px;cursor: pointer;">
+    </div>
+</div>
+<footer style="width: 1008px;height: 19px;display: flex;background-color: #0D536A;"></footer>
+<div id="janela_1"
+    style="position: absolute; width: 631px; height: 61px; top: 153px; left: 160px; background: 0% 0% no-repeat padding-box padding-box rgb(40, 70, 102); opacity: 0.91; cursor: pointer; display: none;">
+    <div style="margin-left: 36px;width: 308px;margin-top: 39px;">
+        <p style="font-size: 16px;color: white;margin-top: -17px;">Doença degenerativa.</p>
+    </div>
+</div>
+<div id="janela_2"
+    style="position: absolute; width: 631px; height: 61px; top: 230px; left: 160px; background: 0% 0% no-repeat padding-box padding-box rgb(139, 30, 177); opacity: 0.9; cursor: pointer; display: none;">
+    <div style="margin-left: 36px;width: 308px;margin-top: 39px;">
+        <p style="font-size: 16px;color: white;margin-top: -17px;">Doença inerente a grupo etário.</p>
+    </div>
+</div>
+<div id="janela_3"
+    style="position: absolute; width: 631px; height: 61px; top: 305px; left: 160px; background: 0% 0% no-repeat padding-box padding-box rgb(49, 141, 109); opacity: 0.9; cursor: pointer; display: none;">
+    <div style="margin-left: 36px;width: 418px;margin-top: 39px;">
+        <p style="font-size: 16px;color: white;margin-top: -17px;">Doença que não produz incapacidade laborativa.
+        </p>
+    </div>
+</div>
+<div id="janela_4"
+    style="position: absolute; width: 631px; height: 79px; top: 373px; left: 160px; background: 0% 0% no-repeat padding-box padding-box rgb(180, 132, 0); opacity: 0.9; cursor: pointer; display: none;">
+    <div style="margin-left: 36px;width: 568px;margin-top: 19px;">
+        <p style="font-size: 16px;color: white;margin-top: -8px;">Doença endêmica adquirida por habitar na região em
+            que ela se desenvolve, salvo comprovação de que é resultante de
+            exposição ou contato direto determinado pela natureza do trabalho.</p>
+    </div>
+</div>
+<button onclick="copiarCodigo();" style="width: 140px;height: 30px;position: absolute;right: 20px;top: 13px;">Copiar
+    código</button>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
+        apagarJanelas();
+        $(document).find('[id^=btn]').hide();
+        let botoes = $(document).find('[id^=botao]').map((index, botao) => {
+            $(botao).css('cursor', 'pointer');
+            $(botao).hover(() => {
+                $(document).find(`[id=btn_${index + 1}_2]`).show();
+            });
+            $(botao).mouseleave(() => {
+                $(document).find('[id^=btn]').hide();
+            });
+            $(botao).click(() => {
+                apagarJanelas();
+                $(janelas[index]).fadeIn();
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>

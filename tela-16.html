@@ -1,0 +1,77 @@
+<div style="width: 1008px;height: 60px;display: flex;background-color: #0D536A;">
+    <p style="position: absolute;color: white;margin-left: 42px;margin-top: 26px;font-size: 12px;">Botao Janela</p>
+</div>
+<div style="margin-top: 35px;margin-left: 34px;width: 823px;">
+    <p>Então, Testa (1989) elaborou uma classificação dos tipos de poder dos atores sociais
+        que atuam nesse setor,
+        distinguindo-os como poder político, poder técnico e poder administrativo. </p>
+    <p>Clique em cada poder para conhecer suas
+        características.</p>
+    <p style="color: #FFA800;font-size: 20px;font-weight: bolder;text-align: center;">TIPOS DE PODER</p>
+    <div style="display: flex;width: 510px;justify-content: space-around;margin-left: 130px;margin-top: 20px;">
+        <div id="botao_1"
+            style="width: 162px; height: 51px; background: 0% 0% no-repeat padding-box padding-box rgb(63, 107, 113); border-radius: 12px; display: flex; justify-content: space-around; align-items: center; cursor: pointer;">
+            <p style="color: white;">TÉCNICO</p>
+        </div>
+        <div id="botao_2"
+            style="width: 162px; height: 51px; background: 0% 0% no-repeat padding-box padding-box rgb(134, 159, 178); border-radius: 12px; display: flex; justify-content: space-around; align-items: center; cursor: pointer;">
+            <p style="color: white;">POLÍTICO</p>
+        </div>
+        <div id="botao_3"
+            style="width: 162px; height: 51px; background: 0% 0% no-repeat padding-box padding-box rgb(80, 109, 143); border-radius: 12px; display: flex; justify-content: space-around; align-items: center; cursor: pointer;">
+            <p style="color: white;">ADMINISTRATIVO</p>
+        </div>
+    </div>
+    <div>
+        <div id="janela_1"
+            style="display: flex;margin-left: 40px; margin-top: 40px; width: 398px; height: 96px; background: 0% 0% no-repeat padding-box padding-box rgb(63, 107, 113); justify-content: space-around; align-items: center; ">
+            <p style="width: 315px;text-align: left;font: normal normal normal 12px/14px Poppins;color: #FFFFFF;">
+                Expresso pelo uso de conhecimentos e tecnologias em qualquer dos níveis de funcionamento no setor de
+                saúde.</p>
+            <p style="font-size: 13px;color: white;position: absolute;top: 310px;left: 460px;">x</p>
+            <img src="recursos/imgs/ceta1.svg" style="position: absolute;top: 287px;left: 240px;">
+        </div>
+        <div id="janela_2"
+            style="display: flex;margin-left: 200px; margin-top: 40px; width: 398px; height: 96px; background: 0% 0% no-repeat padding-box padding-box rgb(134, 159, 178); justify-content: space-around; align-items: center; ">
+            <p style="width: 315px;text-align: left;font: normal normal normal 12px/14px Poppins;color: #FFFFFF;">
+                Expresso por meio da defesa dos interesses políticos dos diversos grupos envolvidos no setor.</p>
+            <p style="font-size: 13px;color: white;position: absolute;top: 310px;left: 614px;">x</p>
+            <img src="recursos/imgs/ceta2.svg" style="position: absolute;top: 287px;left: 410px;">
+        </div>
+        <div id="janela_3"
+            style="display: flex;margin-left: 350px; margin-top: 40px; width: 398px; height: 96px; background: 0% 0% no-repeat padding-box padding-box rgb(80, 109, 143); justify-content: space-around; align-items: center; ">
+            <p style="width: 315px;text-align: left;font: normal normal normal 12px/14px Poppins;color: #FFFFFF;">
+                Expresso por meio das atividades e dos processos no manejo de recursos.</p>
+            <p style="font-size: 13px;color: white;position: absolute;top: 310px;left: 770px;">x</p>
+            <img src="recursos/imgs/ceta3.svg" style="position: absolute;top: 287px;left: 578px;">
+        </div>
+    </div>
+</div>
+<footer style="width: 1008px;height: 19px;display: flex;background-color: #0D536A;"></footer>
+<button onclick="copiarCodigo();" style="width: 140px;height: 30px;position: absolute;right: 20px;top: 13px;">Copiar
+    código</button>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
+        apagarJanelas();
+        $(document).find('[id^=btn]').hide();
+        let botoes = $(document).find('[id^=botao]').map((index, botao) => {
+            $(botao).css('cursor', 'pointer');
+            $(botao).hover(() => {
+                $(document).find(`[id=btn_${index + 1}_2]`).show();
+            });
+            $(botao).mouseleave(() => {
+                $(document).find('[id^=btn]').hide();
+            });
+            $(botao).click(() => {
+                apagarJanelas();
+                $(janelas[index]).fadeIn();
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>

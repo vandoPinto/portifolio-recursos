@@ -1,0 +1,46 @@
+<div style="width: 1008px;height: 60px;display: flex;background-color: #0D536A;">
+    <p style="position: absolute;color: white;margin-left: 42px;margin-top: 26px;font-size: 12px;">Videos</p>
+</div>
+<div class="coluna-esquerda largura-1_1" style="max-width: 888px;">
+    <p style=" margin-top: 46px; width: 100%; text-align: center;">Você conhece o Depen? Já ouviu falar sobre
+        ele? Sabe quais são suas responsabilidades, atribuições e incumbências?</p>
+    <div style="text-align: center; margin-top: 40px; cursor: pointer;" class="btn animate__animated animate__tada"
+        data-toggle="modal" data-target="#modalCentro">
+        <img src="recursos/imgs/SI_10.png" style="width: 233px; height: 180px;">
+    </div>
+    <p style="color: #004D73; font-size: 10px; text-align: center; width: 100%; margin-top: 50px;">
+        <strong>Clique no ícone do vídeo para
+            saber algumas respostas sobre o Depen.</strong>
+    </p>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="modalCentro" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+    aria-hidden="true" style="overflow-y:hidden;">
+    <div class="modal-dialog modal-dialog-centered " role="document">
+        <div class="modal-content" style="position: fixed; top: 72px; left: 0; width: 100%; height: 370px;">
+            <div data-dismiss="modal" class="close" aria-hidden="true" style="margin-left: auto; padding-right: 10px;">×
+            </div>
+            <video id="full-video" width="100%" height="345px" controls="">
+                <source src="recursos/video/SV_01.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+</div>
+<!-- Fim modal -->
+<footer style="width: 1008px;height: 19px;display: flex;background-color: #0D536A;"></footer>
+<button onclick="copiarCodigo();" style="width: 140px;height: 30px;position: absolute;right: 20px;top: 13px;">Copiar
+    código</button>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.close').click(function (event) {
+            $("#full-video").get(0).pause();
+            $("#full-video").get(0).currentTime = 0;
+            event.preventDefault();
+        });
+        $('.btn').click(function (event) {
+            $("#full-video").get(0).currentTime = 0;
+            $("#full-video").get(0).play();
+        });
+    });
+</script>

@@ -1,0 +1,68 @@
+<div style="width: 1008px;height: 60px;display: flex;background-color: #0D536A;">
+    <p style="position: absolute;color: white;margin-left: 42px;margin-top: 26px;font-size: 12px;">Botao Janela</p>
+</div>
+<div class="coluna-esquerda largura-1_2 ">
+    <div style="margin-top: 150px;margin-left: 50px;width: 365px;">
+        <p>Considerando as informações da tabela anterior, você saberia responder em quantas vezes aumenta o risco
+            de
+            adoecimento por TB entre pessoas privadas de liberdade se comparado com a população geral?</p>
+        <p><strong style="color:  #004c72;">Clique</strong> na resposta correspondente.</p>
+    </div>
+</div>
+<div class="coluna-direita largura-1_2 animate__animated animate__backInRight"
+    style="margin-top: 75px; display: grid; margin-right: 100px; height: 230px;">
+    <div id="botao_1"
+        style="width: 250px;height: 96px;background-color: rgb(129, 97, 255);cursor: pointer;border-radius: 10px;">
+        <p style=" color: white; font-size: 35px; font-weight: bold; text-align: center;">35 vezes</p>
+    </div>
+    <div id="botao_2"
+        style="width: 250px;height: 96px;background-color: rgb(129, 97, 255);cursor: pointer;border-radius: 10px;">
+        <p style=" color: white; font-size: 35px; font-weight: bold; text-align: center;">28 vezes</p>
+    </div>
+</div>
+<div style="position: absolute; margin-top: 110px; margin-left: 120px; width: 610px; height: 160px; background-color: rgb(0, 76, 114); border-radius: 10px; cursor: pointer; display: none;"
+    id="janela_1">
+    <img style="height: 70px; margin-top: -48px; margin-left: 30px;margin-bottom: 15px;" src="recursos/imgs/SI_CE.png">
+    <h2 style="margin-left: 30px; color: #fac900;">Resposta correta</h2>
+    <p style="margin-left: 30px;width: 560px;color: white;">Isso mesmo! A chance de adoecer por TB entre as
+        pessoas
+        privadas de liberdade é 35 vezes maior do que na população
+        geral. Além disso, você percebeu que mais de onze porcento de todos os novos casos de TB registrados em
+        2019, no
+        Brasil,
+        foram diagnosticados nas unidades prisionais?</p>
+</div>
+<div style="position: absolute; margin-top: 110px; margin-left: 120px; width: 610px; height: 160px; background-color: rgb(0, 76, 114); border-radius: 10px; cursor: pointer; display: none;"
+    id="janela_2">
+    <img style="height: 70px; margin-top: -48px; margin-left: 30px;margin-bottom: 15px;" src="recursos/imgs/SI_CE.png">
+    <h2 style="margin-left: 30px; color: #fac900;">Resposta incorreta</h2>
+    <p style="margin-left: 30px; width: 550px; color: white;">Na verdade, a chance de adoecer por TB entre as
+        pessoas
+        privadas de liberdade é 35 vezes maior do que na população
+        geral. Além disso, você percebeu que mais de onze porcento de todos os novos casos de TB registrados em
+        2019, no
+        Brasil,
+        foram diagnosticados nas unidades prisionais?</p>
+</div>
+<footer style="width: 1008px;height: 19px;display: flex;background-color: #0D536A;"></footer>
+<button onclick="copiarCodigo();" style="width: 140px;height: 30px;position: absolute;right: 20px;top: 13px;">Copiar
+    código</button>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
+        apagarJanelas();
+        let botoes = $(document).find('[id^=botao]').map((index, botao) => {
+            $(botao).css('cursor', 'pointer')
+            $(botao).click((e) => {
+                apagarJanelas();
+                $('#' + e.currentTarget.id).css('background-color', '#fac900');
+                $(janelas[index]).fadeIn();
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>

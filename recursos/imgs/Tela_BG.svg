@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="Camada_2" data-name="Camada 2" viewBox="0 0 481.99858 481.99858">
+	<defs>
+		<style>.cls-1{fill:#284666;}.cls-1,.cls-2{isolation:isolate;}.cls-2,.cls-3{fill:#fff;}</style>
+	</defs>
+	<path class="cls-1" d="M364.14111,512.44858A240.99933,240.99933,0,0,1,193.7286,101.037a240.99916,240.99916,0,1,1,340.82452,340.824A239.42192,239.42192,0,0,1,364.14111,512.44858Zm0-479.98522c-131.77724,0-238.98618,107.20845-238.98618,238.98568,0,131.77773,107.20894,238.98618,238.98618,238.98618S603.12679,403.22677,603.12679,271.449C603.12679,139.67181,495.91834,32.46336,364.14111,32.46336Z" transform="translate(-123.14157 -30.45)" />
+	<circle class="cls-1" cx="240.99929" cy="240.99929" r="103.07567" />
+	<path class="cls-1" d="M364.14087,380.30206A108.85277,108.85277,0,1,1,472.99363,271.44929,108.97587,108.97587,0,0,1,364.14087,380.30206Zm0-215.27307a106.4203,106.4203,0,1,0,106.4203,106.4203A106.541,106.541,0,0,0,364.14087,165.029Z" transform="translate(-123.14157 -30.45)" />
+	<path class="cls-2" d="M364.14087,368.74785a97.29856,97.29856,0,1,1,97.29856-97.29856A97.40852,97.40852,0,0,1,364.14087,368.74785Zm0-193.38089a96.08233,96.08233,0,1,0,96.08233,96.08233A96.19147,96.19147,0,0,0,364.14087,175.367Z" transform="translate(-123.14157 -30.45)" /> <!-- Code injected by live-server -->
+	<script type="text/javascript">
+		//
+		<![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+	</script>
+</svg>

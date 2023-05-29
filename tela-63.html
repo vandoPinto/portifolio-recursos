@@ -1,0 +1,558 @@
+<style>
+    .feed {
+        position: relative;
+        width: 270px;
+        height: 125px;
+        background-color: #004c72;
+        border-radius: 10px;
+        flex-wrap: nowrap;
+        cursor: pointer;
+    }
+
+    .coluna {
+        background-color: #b7b7b7;
+        width: 130px;
+        height: 400px;
+        margin-top: 10px;
+        margin-left: -30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .coluna-incolor {
+        width: 130px;
+        height: 400px;
+        margin-top: 10px;
+        margin-left: -30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .caixa-texto {
+        background-color: white;
+        width: 110px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .caixa-font {
+        font-size: 7px;
+        text-align: center;
+    }
+</style>
+<div style="width: 1008px;height: 60px;display: flex;background-color: #0D536A;">
+    <p style="position: absolute;color: white;margin-left: 42px;margin-top: 26px;font-size: 12px;">Drag`n Drop - Arrastar</p>
+</div>
+<div style="display: flex;flex-direction: row;justify-content: space-between;">
+    <div style="margin-left: 82px;margin-top: 130px;width: 362px;">
+        <p>Então vamos lá: observe o problema fictício município de Nárnia e elabore o modelo lógico da intervenção,
+            arrastado os
+            itens para seu lugar correspondente, a fim de ligar corretamente os componentes estruturais dessa
+            intervenção. </p>
+        <p>Clique em
+            Iniciar para começar o exercício.</p>
+    </div>
+    <div id="botao_1" class="coluna-direita animate__animated animate__backInRight" style="cursor: pointer;">
+        <img style="margin-top: 151px;margin-right: 127px;width: 231px;" src="recursos/imgs/img-slide-11-estado-1.svg">
+        <img id="btn_1_2" style="position: absolute; top: 151px; left: 0px; width: 231px; display: none;"
+            src="recursos/imgs/img-slide-11-estado-2.svg">
+    </div>
+    <div id="janela_1"
+        style="width: 870px; height: 455px; background: 0% 0% no-repeat padding-box padding-box rgb(63, 107, 113); border-radius: 12px; display: none; position: absolute; top: 6px; left: 10px; align-items: center; justify-content: space-evenly;">
+        <div>
+            <div>
+                <div style="position: absolute; left: 414px;top: 70px;width: 20px; border: .5px solid #8a8787;">
+                </div>
+                <div style="position: absolute; left: 434px;top: 70px;height: 146px; border-right: 1px solid #8a8787;">
+                </div>
+                <div style="position: absolute; left: 414px;top: 108px;width: 20px; border: .5px solid #8a8787;">
+                </div>
+                <div style="position: absolute; left: 414px;top: 138px;width: 20px; border: .5px solid #8a8787;">
+                </div>
+                <div style="position: absolute; left: 414px;top: 168px;width: 20px; border: .5px solid #8a8787;">
+                </div>
+                <div style="position: absolute; left: 414px;top: 215px;width: 20px; border: .5px solid #8a8787;">
+                </div>
+                <div style="position: absolute; left: 434px;top: 85px;width: 20px; border: .5px solid #8a8787;">
+                </div>
+                <div style="position: absolute; left: 414px;top: 250px;width: 20px; border: .5px solid #8a8787;">
+                </div>
+                <div style="position: absolute; left: 434px;top: 251px;height: 38px; border-right: 1px solid #8a8787;">
+                </div>
+                <div style="position: absolute; left: 414px;top: 288px;width: 20px; border: .5px solid #8a8787;">
+                </div>
+                <div style="position: absolute; left: 434px;top: 268px;width: 7px; border: .5px solid #8a8787;">
+                </div>
+                <div style="position: absolute; left: 442px;top: 151px;height: 118px; border-right: 1px solid #8a8787;">
+                </div>
+                <div style="position: absolute; left: 443px;top: 151px;width: 7px; border: .5px solid #8a8787;">
+                </div>
+                <div
+                    style="position: absolute; left: 411px;top: 305px;width: 40px; border: .5px solid #8a8787;transform: rotate(131deg);">
+                </div>
+                <div style="position: absolute; left: 416px;top: 350px;width: 30px; border: .5px solid #8a8787;">
+                </div>
+                <div
+                    style="position: absolute; left: 406px;top: 380px;width: 50px; border: .5px solid #8a8787;transform: rotate(302deg);">
+                </div>
+                <div style="position: absolute; left: 416px;top: 420px;width: 30px; border: .5px solid #8a8787;">
+                </div>
+                <div style="position: absolute; left: 145px;top: 70px;width: 20px; border: .5px solid #8a8787;">
+                </div>
+                <div style="position: absolute; left: 166px;top: 70px;height: 370px; border-right: 1px solid #8a8787;">
+                </div>
+                <div style="position: absolute; left: 145px;top: 438px;width: 20px; border: .5px solid #8a8787;">
+                </div>
+                <div style="position: absolute; left: 167px;top: 238px;width: 20px; border: .5px solid #8a8787;">
+                </div>
+                <div style="position: absolute; left: 286px;top: 70px;width: 20px; border: .5px solid #8a8787;">
+                </div>
+                <div style="position: absolute; left: 286px;top: 107px;width: 20px; border: .5px solid #8a8787;">
+                </div>
+                <div style="position: absolute; left: 286px;top: 140px;width: 20px; border: .5px solid #8a8787;">
+                </div>
+                <div style="position: absolute; left: 286px;top: 170px;width: 20px; border: .5px solid #8a8787;">
+                </div>
+                <div
+                    style="position: absolute; left: 286px;top: 200px;width: 30px; border: .5px solid #8a8787;transform: rotate(19deg);">
+                </div>
+                <div
+                    style="position: absolute; left: 286px;top: 240px;width: 20px; border: .5px solid #8a8787;transform: rotate(19deg);">
+                </div>
+                <div
+                    style="position: absolute; left: 281px;top: 279px;width: 30px; border: .5px solid #8a8787;transform: rotate(34deg);">
+                </div>
+                <div
+                    style="position: absolute; left: 281px;top: 309px;width: 30px; border: .5px solid #8a8787;transform: rotate(34deg);">
+                </div>
+                <div
+                    style="position: absolute; left: 281px;top: 342px;width: 30px; border: .5px solid #8a8787;transform: rotate(34deg);">
+                </div>
+                <div
+                    style="position: absolute; left: 281px;top: 384px;width: 30px; border: .5px solid #8a8787;transform: rotate(34deg);">
+                </div>
+                <div
+                    style="position: absolute; left: 281px;top: 419px;width: 30px; border: .5px solid #8a8787;transform: rotate(34deg);">
+                </div>
+                <div
+                    style="position: absolute; left: 281px;top: 435px;width: 30px; border: .5px solid #8a8787;transform: rotate(336deg);">
+                </div>
+                <div style="position: absolute; left: 542px;top: 80px;width: 20px; border: .5px solid #8a8787;">
+                </div>
+                <div style="position: absolute; left: 562px;top: 81px;height: 340px; border-right: 1px solid #8a8787;">
+                </div>
+                <div style="position: absolute; left: 542px;top: 420px;width: 20px; border: .5px solid #8a8787;">
+                </div>
+                <div style="position: absolute; left: 562px;top: 250px;width: 20px; border: .5px solid #8a8787;">
+                </div>
+            </div>
+            <div
+                style="width: 680px;display: flex;justify-content: space-around;position: absolute;top: 10px;left: 40px;">
+                <div>
+                    <div
+                        style="height: 30px; width: 80px; background-color: #a5a5a5;display: flex;justify-content: center;align-items: center;">
+                        <p style="color: white;">Insumos</p>
+                    </div>
+                    <div class="coluna">
+                        <div class="caixa-texto">
+                            <p class="caixa-font">Profissionais da APS</p>
+                        </div>
+                        <div class="caixa-texto">
+                            <p class="caixa-font">Equipamentos de Proteção individual para os
+                                profissionais</p>
+                        </div>
+                        <div class="caixa-texto">
+                            <p class="caixa-font">Máscaras descartáveis para os usuários</p>
+                        </div>
+                        <div class="caixa-texto">
+                            <p class="caixa-font">Insumos para testagem</p>
+                        </div>
+                        <div class="caixa-texto">
+                            <p class="caixa-font">Insumos para testagem</p>
+                        </div>
+                        <div class="caixa-texto">
+                            <p class="caixa-font">Material informativo para os usuários</p>
+                        </div>
+                        <div class="caixa-texto">
+                            <p class="caixa-font">Linha telefônica e internet habilitada na unidade</p>
+                        </div>
+                        <div class="caixa-texto">
+                            <p class="caixa-font">Roteiro para monitoramento de casos confirmados e suspeitos</p>
+                        </div>
+                        <div class="caixa-texto">
+                            <p class="caixa-font">Sistema informatizado (prontuário eletrônico do cliente)</p>
+                        </div>
+                        <div class="caixa-texto">
+                            <p class="caixa-font">Fichas de notificação</p>
+                        </div>
+                        <div class="caixa-texto">
+                            <p class="caixa-font">Insumos e imunobiológicos para imunização</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div
+                        style="height: 30px; width: 80px; background-color: #ed7d31;display: flex;justify-content: center;align-items: center;">
+                        <p style="color: white;">Atividades</p>
+                    </div>
+                    <div class="coluna-incolor">
+                        <div style="background-color: white; width: 110px; height: 38px; align-items: center; display: flex; justify-content: center;"
+                            id="drop_1">
+                            <p class="caixa-font"></p>
+                        </div>
+                        <div style="background-color: white; width: 110px; height: 38px; align-items: center; display: flex; justify-content: center;"
+                            id="drop_2">
+                            <p class="caixa-font"></p>
+                        </div>
+                        <div class="caixa-texto">
+                            <p class="caixa-font">Realização de consulta</p>
+                        </div>
+                        <div class="caixa-texto">
+                            <p class="caixa-font">Realização de testagem para covid-19</p>
+                        </div>
+                        <div class="caixa-texto">
+                            <p class="caixa-font">Orientação ao usuário e indicação de isolamento</p>
+                        </div>
+                        <div class="caixa-texto">
+                            <p class="caixa-font">Acompanhamento dos contatos domiciliares</p>
+                        </div>
+                        <div class="caixa-texto">
+                            <p class="caixa-font">Monitoramento dos sintomas de agravamento</p>
+                        </div>
+                        <div style="background-color: white; width: 110px; height: 38px; align-items: center; display: flex; justify-content: center;"
+                            id="drop_3">
+                            <p class="caixa-font"></p>
+                        </div>
+                        <div class="caixa-texto">
+                            <p class="caixa-font">Notificação dos casos</p>
+                        </div>
+                        <div style="background-color: white; width: 110px; height: 38px; align-items: center; display: flex; justify-content: center;"
+                            id="drop_4">
+                            <p class="caixa-font"></p>
+                        </div>
+                        <div style="background-color: white; width: 110px; height: 38px; align-items: center; display: flex; justify-content: center;"
+                            id="drop_5">
+                            <p class="caixa-font"></p>
+                        </div>
+                        <div class="caixa-texto">
+                            <p class="caixa-font">Busca ativa para imunização</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div
+                        style="height: 30px; width: 80px; background-color: #70ad47;display: flex;justify-content: center;align-items: center;">
+                        <p style="color: white;">Produtos</p>
+                    </div>
+                    <div class="coluna-incolor">
+                        <div style="background-color: white; width: 110px; height: 38px; align-items: center; display: flex; justify-content: center;"
+                            id="drop_6">
+                            <p class="caixa-font"></p>
+                        </div>
+                        <div class="caixa-texto">
+                            <p class="caixa-font">Acolhimento e classificação de risco realizada</p>
+                        </div>
+                        <div class="caixa-texto">
+                            <p class="caixa-font">Consultas realizadas</p>
+                        </div>
+                        <div style="background-color: white; width: 110px; height: 38px; align-items: center; display: flex; justify-content: center;"
+                            id="drop_7">
+                            <p class="caixa-font"></p>
+                        </div>
+                        <div style="background-color: white; width: 110px; height: 38px; align-items: center; display: flex; justify-content: center;"
+                            id="drop_8">
+                            <p class="caixa-font"></p>
+                        </div>
+                        <div style="background-color: white; width: 110px; height: 38px; align-items: center; display: flex; justify-content: center;"
+                            id="drop_9">
+                            <p class="caixa-font"></p>
+                        </div>
+                        <div class="caixa-texto">
+                            <p class="caixa-font">Casos suspeitos e confirmados monitorados</p>
+                        </div>
+                        <div class="caixa-texto">
+                            <p class="caixa-font">Casos de agravamento encaminhados para unidade de referência</p>
+                        </div>
+                        <div style="background-color: white; width: 110px; height: 38px; align-items: center; display: flex; justify-content: center;"
+                            id="drop_10">
+                            <p class="caixa-font"></p>
+                        </div>
+                        <div class="caixa-texto">
+                            <p class="caixa-font">Usuários acompanhados</p>
+                        </div>
+                        <div style="background-color: white; width: 110px; height: 38px; align-items: center; display: flex; justify-content: center;"
+                            id="drop_11">
+                            <p class="caixa-font"></p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div
+                        style="height: 30px; width: 80px; background-color: #ffc000;display: flex;justify-content: center;align-items: center;">
+                        <p style="color: white;">Resultados</p>
+                    </div>
+                    <div class="coluna-incolor">
+                        <div style="background-color: white; width: 110px; height: 38px; align-items: center; display: flex; justify-content: center;"
+                            id="drop_12">
+                            <p class="caixa-font"></p>
+                        </div>
+                        <div class="caixa-texto">
+                            <p class="caixa-font">Aumento do diagnóstico precoce e do acompanhamento pela APS</p>
+                        </div>
+                        <div style="background-color: white; width: 110px; height: 38px; align-items: center; display: flex; justify-content: center;"
+                            id="drop_13">
+                            <p class="caixa-font"></p>
+                        </div>
+                        <div style="background-color: white; width: 110px; height: 38px; align-items: center; display: flex; justify-content: center;"
+                            id="drop_14">
+                            <p class="caixa-font"></p>
+                        </div>
+                        <div style="background-color: white; width: 110px; height: 38px; align-items: center; display: flex; justify-content: center;"
+                            id="drop_15">
+                            <p class="caixa-font"></p>
+                        </div>
+                        <div style="background-color: white; width: 110px; height: 38px; align-items: center; display: flex; justify-content: center;"
+                            id="drop_16">
+                            <p class="caixa-font"></p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div
+                        style="height: 30px; width: 80px; background-color: #8a878700;display: flex;justify-content: center;align-items: center;">
+                        <p style="color: white;">Impactos</p>
+                    </div>
+                    <div class="coluna">
+                        <div class="caixa-texto">
+                            <p class="caixa-font" id="feedCerto" style="display: none;">Redução da taxa de
+                                mortalidade por covid-19 do
+                                município</p>
+                        </div>
+                        <div class="caixa-texto">
+                            <p class="caixa-font" id="feedCerto" style="display: none;">Redução da taxa de
+                                internação por do município</p>
+                        </div>
+                        <div class="caixa-texto">
+                            <p class="caixa-font" id="feedCerto" style="display: none;">Redução da morbidade por
+                                covid-19 do município</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div id="drag_1" draggable="true"
+                    style="left: 730px;top: 20px;position: absolute; background-color: white;width: 110px;align-items: center;display: flex;justify-content: center;">
+                    <p class="caixa-font">Capacitação dos profissionais da APS</p>
+                </div>
+                <div id="drag_2" draggable="true"
+                    style="left: 730px;top: 54px;position: absolute; background-color: white;width: 110px;align-items: center;display: flex;justify-content: center;">
+                    <p class="caixa-font">Acolhimento com classificação de rico</p>
+                </div>
+                <div id="drag_3" draggable="true"
+                    style="left: 730px;top: 88px;position: absolute; background-color: white;width: 110px;align-items: center;display: flex;justify-content: center;">
+                    <p class="caixa-font">Encaminhamento para unidade de referência em caso de agravamento</p>
+                </div>
+                <div id="drag_4" draggable="true"
+                    style="left: 730px;top: 130px;position: absolute; background-color: white;width: 110px;align-items: center;display: flex;justify-content: center;">
+                    <p class="caixa-font">Seguimento do usuário</p>
+                </div>
+                <div id="drag_5" draggable="true"
+                    style="left: 730px;top: 156px;position: absolute; background-color: white;width: 110px;align-items: center;display: flex;justify-content: center;">
+                    <p class="caixa-font">Realização de imunização</p>
+                </div>
+                <div id="drag_6" draggable="true"
+                    style="left: 730px;top: 182px;position: absolute; background-color: white;width: 110px;align-items: center;display: flex;justify-content: center;">
+                    <p class="caixa-font">Profissionais capacitados</p>
+                </div>
+                <div id="drag_7" draggable="true"
+                    style="left: 730px;top: 208px;position: absolute; background-color: white;width: 110px;align-items: center;display: flex;justify-content: center;">
+                    <p class="caixa-font">Testagem realizada</p>
+                </div>
+                <div id="drag_8" draggable="true"
+                    style="left: 730px;top: 233px;position: absolute; background-color: white;width: 110px;align-items: center;display: flex;justify-content: center;">
+                    <p class="caixa-font">Orientação e isolamento realizados</p>
+                </div>
+                <div id="drag_9" draggable="true"
+                    style="left: 730px;top: 267px;position: absolute; background-color: white;width: 110px;align-items: center;display: flex;justify-content: center;">
+                    <p class="caixa-font">Contatos domiciliares acompanhados</p>
+                </div>
+                <div id="drag_10" draggable="true"
+                    style="left: 730px;top: 301px;position: absolute; background-color: white;width: 110px;align-items: center;display: flex;justify-content: center;">
+                    <p class="caixa-font">Casos notificados</p>
+                </div>
+                <div id="drag_11" draggable="true"
+                    style="left: 730px;top: 326px;position: absolute; background-color: white;width: 110px;align-items: center;display: flex;justify-content: center;">
+                    <p class="caixa-font">Usuários vacinados</p>
+                </div>
+                <div id="drag_12" draggable="true"
+                    style="left: 730px;top: 351px;position: absolute; background-color: white;width: 110px;align-items: center;display: flex;justify-content: center;">
+                    <p class="caixa-font">Qualificação de assistência ao usuário</p>
+                </div>
+                <div id="drag_13" draggable="true"
+                    style="left: 730px;top: 386px;position: absolute; background-color: white;width: 110px;align-items: center;display: flex;justify-content: center;">
+                    <p class="caixa-font">Redução do percentual de internações</p>
+                </div>
+                <div id="drag_14" draggable="true"
+                    style="left: 730px;top: 416px;position: absolute; background-color: white;width: 110px;align-items: center;display: flex;justify-content: center;">
+                    <p class="caixa-font">Redução do tempo entre o agravamento e o acesso à unidade de referência
+                    </p>
+                </div>
+                <div id="drag_15" draggable="true"
+                    style="left: 730px;top: 416px;position: absolute; background-color: white;width: 110px;align-items: center;display: flex;justify-content: center;">
+                    <p class="caixa-font">Ampliação do monitoramento e do seguimento dos casos</p>
+                </div>
+                <div id="drag_16" draggable="true"
+                    style="left: 730px;top: 416px;position: absolute; background-color: white;width: 110px;align-items: center;display: flex;justify-content: center;">
+                    <p class="caixa-font">Aumento do percentual de usuários do território imunizados</p>
+                </div>
+            </div>
+        </div>
+        <p id="close"
+            style="font-size: 13px; color: white; position: absolute; top: 0px; left: 850px; cursor: pointer;">X
+        </p>
+        <div id="sub"
+            style="cursor: pointer; position: absolute; top: 410px; left: 260px; margin-left: 320px; background-color: rgb(0, 76, 114); width: 110px; height: 30px; text-align: center; display: none; justify-content: center; align-items: center; border-radius: 6px;">
+            <p style="color: white; font-weight: bolder; text-align: center;">Submeter</p>
+        </div>
+    </div>
+</div>
+<footer style="width: 1008px;height: 19px;display: flex;background-color: #0D536A;"></footer>
+<script>
+    $(() => {
+        let sub = $("#sub").hide().on("click", validarReposta);
+        const empties = $(document).find('[id^=drop]');
+        let drag;
+        let voltar = [];
+        let positions = [];
+        let preenchido = [];
+        let janelas = $(document).find('[id^=feed]')//.css('cursor', 'pointer')//.on("click", apagarJanelas);
+        apagarJanelas();
+
+        empties.map((index, objeto) => {
+            preenchido[index] = false;
+        })
+
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+
+        const dragStart = function () {
+            this.className += " hold";
+            drag = this;
+            setTimeout(() => (this.className = "invisible"), 0);
+            apagarJanelas();
+        };
+
+        const dragOver = function (e) {
+            e.preventDefault();
+        };
+
+        const dragEnter = function (e) {
+            e.preventDefault();
+            this.className += " hovered";
+        };
+
+        const dragLeave = function () {
+            this.className = "empty";
+        };
+
+        const dragEnd = function () {
+            this.className = "drag";
+        };
+
+        const dragDrop = function () {
+            this.className = "empty";
+
+            if (this.id.indexOf('drop') == 0) {
+
+                preenchido[Number(drag.id.split('_')[1]) - 1] = true;
+                $("#" + drag.id).animate({ top: ($(this)[0].offsetTop + 10), left: ($(this)[0].offsetLeft + 40) }, 1);
+                if (drag.id.split('_')[1] == this.id.split('_')[1]) {
+                    //$(janelas[(this.id.split('_')[1] - 1)]).fadeIn();
+                    voltar.map((objeto, index) => {
+                        if (objeto == drag.id) {
+                            voltar[index] = null;
+                        }
+                    })
+                } else {
+                    voltar[Number(drag.id.split('_')[1]) - 1] = drag.id;
+                    $("#" + drag.id).animate(positions[Number(drag.id.split('_')[1]) - 1], 600);
+                }
+                let podeMostrar = true;
+                preenchido.map((objeto, index) => {
+                    if (objeto == false) {
+                        podeMostrar = false;
+                    }
+                })
+
+                if (podeMostrar) {
+                    validarReposta();
+                    // $(sub).fadeIn();
+                } else {
+                    // $(sub).hide();
+                }
+            }
+        };
+
+        function validarReposta() {
+            if (voltar.every(elem => elem == null)) {
+                $('[id^=feedCerto]').fadeIn();
+            } else {
+                voltar.map((objeto, index) => {
+                    $("#" + objeto).animate(positions[index], 600);
+                    if (objeto != null) {
+                        preenchido[index] = false;
+                    }
+                })
+                $("#feedErrado").fadeIn();
+            }
+            voltar = [];
+        }
+
+        $(document).find('[id^=drag]').map((index, objeto) => {
+            objeto.addEventListener("dragstart", dragStart);
+            objeto.addEventListener("dragend", dragEnd);
+            positions[index] = { top: objeto.offsetTop, left: objeto.offsetLeft }
+        })
+
+        empties.map((a, b) => {
+            b.addEventListener("dragover", dragOver);
+            b.addEventListener("dragenter", dragEnter);
+            b.addEventListener("dragleave", dragLeave);
+            b.addEventListener("drop", dragDrop);
+        })
+    })
+    $(() => {
+        let janelas = $(document).find('[id^=janela]')//.on("click", apagarJanelas);
+        let close = $(document).find('[id^=close]').on("click", apagarJanelas).css('cursor', 'pointer');
+        apagarJanelas();
+        $(document).find('[id^=btn]').hide();
+        let botoes = $(document).find('[id^=botao]').map((index, botao) => {
+            $(botao).css('cursor', 'pointer');
+            $(botao).hover(() => {
+                $(document).find(`[id=btn_${index + 1}_2]`).show();
+            });
+            $(botao).mouseleave(() => {
+                $(document).find('[id^=btn]').hide();
+            });
+            $(botao).click(() => {
+                //apagarJanelas();
+                $(janelas[index]).fadeIn();
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>
+<button onclick="copiarCodigo();" style="width: 140px;height: 30px;position: absolute;right: 20px;top: 13px;">Copiar
+    código</button>

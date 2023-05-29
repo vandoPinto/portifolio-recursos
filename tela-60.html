@@ -1,0 +1,66 @@
+<style>
+    .parent {
+        width: 898px;
+        overflow-x: hidden;
+        float: left;
+        margin-left: -14px;
+    }
+
+    .child {
+        width: 1000px;
+        height: 340px;
+        float: left;
+        cursor: pointer;
+    }
+</style>
+<div style="width: 1008px;height: 60px;display: flex;background-color: #0D536A;">
+    <p style="position: absolute;color: white;margin-left: 42px;margin-top: 26px;font-size: 12px;">Drag`n Drop - Arrastar</p>
+</div>
+<div style="width: 889px;display: flex;">
+    <div style="margin-left: 43px;width: 238px;">
+        <p style="margin-top: 157px;">A imagem a seguir apresenta a sistematização de algumas modelagens para
+            organização do acolhimento à
+            demanda
+            espontânea
+            nas unidades da APS.</p>
+    </div>
+    <div style="margin-top: 19px;width: 559px;margin-left: 30px;">
+        <p style="text-align: center;">Arraste-a para cima e conheça o conteúdo.</p>
+        <div class="parent">
+            <div class="child">
+                <img src="recursos/imgs/figura4.png" style="width: 559px; ">
+            </div>
+        </div>
+    </div>
+</div>
+<footer style="width: 1008px;height: 19px;display: flex;background-color: #0D536A;"></footer>
+<script>
+    $(() => {
+        const slider = document.querySelector('.parent');
+        let mouseDown = false;
+        let startY, scrollTop;
+
+        let startDragging = function (e) {
+            mouseDown = true;
+            startY = e.pageY - slider.offsetTop;
+            scrollTop = slider.scrollTop;
+        };
+        let stopDragging = function (event) {
+            mouseDown = false;
+        };
+
+        slider.addEventListener('mousemove', (e) => {
+            e.preventDefault();
+            if (!mouseDown) { return; }
+            const x = e.pageY - slider.offsetTop;
+            const scroll = x - startY;
+            slider.scrollTop = scrollTop - scroll;
+        });
+
+        slider.addEventListener('mousedown', startDragging, false);
+        slider.addEventListener('mouseup', stopDragging, false);
+        slider.addEventListener('mouseleave', stopDragging, false);
+    })
+</script>
+<button onclick="copiarCodigo();" style="width: 140px;height: 30px;position: absolute;right: 20px;top: 13px;">Copiar
+    código</button>

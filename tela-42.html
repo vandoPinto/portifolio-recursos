@@ -1,0 +1,44 @@
+<div style="width: 1008px;height: 60px;display: flex;background-color: #0D536A;">
+    <p style="position: absolute;color: white;margin-left: 42px;margin-top: 26px;font-size: 12px;">HotWord</p>
+</div>
+<div class="coluna-esquerda largura-1_2 animate__animated animate__backInLeft">
+    <img style="margin-top: 6px;width: 272px;" src="recursos/imgs/SI_18.png">
+</div>
+<div class="coluna-direita largura-2_3">
+    <div style="margin-top: 140px;margin-right: 60px;width: 480px;">
+        <p style="margin-top: 20px;">As pessoas diagnosticadas com hanseníase são classificadas em dois grupos:
+            as<strong> paucibacilares</strong> (PB) e as<strong> multibacilares</strong> (MB).</p>
+        <p>As <strong style="background-color: #fac900; color: #004c72;"><a id="hotWord-bt">paucibacilares</a></strong>
+            têm como característica principal apresentar até cinco lesões de pele e/ou
+            um
+            tronco nervoso
+            acometido. São consideradas formas que abrigam pequeno número de bacilos, insuficiente para gerar a
+            cadeia de
+            transmissão. Esse grupo de pessoas apresenta resultado da baciloscopia negativo.</p>
+        <p>Embora com a quantidade de bactéria no organismo tão pequena, esse grupo de pacientes precisa ser
+            tratado para evitar
+            que a doença evolua.</p>
+    </div>
+</div>
+<div id="conteudo"
+    style="position: absolute; background-color: rgb(250, 201, 1); top: 150px; right: 290px; width: 357px; border-radius: 10px; display: none;">
+    <p style="text-align: center;">Paucibacilares: Classificação dada aos pacientes diagnosticados com hanseníase e
+        que
+        apresentam até cinco lesões de pele
+        e/ou um tronco nervoso acometido.
+    </p>
+</div>
+<footer style="width: 1008px;height: 19px;display: flex;background-color: #0D536A;"></footer>
+<script>
+    $(() => {
+        let conteudo = $('#conteudo').hide();
+        $('#hotWord-bt').hover(() => {
+            conteudo.fadeIn()
+        })
+        $('#hotWord-bt').mouseout(() => {
+            conteudo.fadeOut()
+        })
+    })
+</script>
+<button onclick="copiarCodigo();" style="width: 140px;height: 30px;position: absolute;right: 20px;top: 13px;">Copiar
+    código</button>

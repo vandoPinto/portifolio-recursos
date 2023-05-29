@@ -1,0 +1,181 @@
+<style>
+    p {
+        font-size: 11px;
+    }
+
+    li {
+        margin-bottom: 12px;
+        margin-left: 18px;
+    }
+
+    .questao:hover {
+        background-color: #FF592A;
+        cursor: pointer;
+    }
+
+    .marcado {
+        background-color: #FF592A;
+    }
+
+    .submeter {
+        margin: 1em auto;
+        font-weight: bold;
+        color: #ffffff;
+        border-radius: 3px;
+        background-color: #FF592A;
+        border: solid 0 transparent;
+        outline: none;
+        box-shadow: 0 .1em rgba(0, 0, 0, .5);
+        padding: .5em;
+        display: block;
+        width: 50%;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    .feed {
+        position: relative;
+        width: 270px;
+        height: 125px;
+        background-color: #FF592A;
+        border-radius: 10px;
+        flex-wrap: nowrap;
+        cursor: pointer;
+    }
+
+    input {
+        text-transform: uppercase;
+    }
+</style>
+<div style="width: 1008px;height: 60px;display: flex;background-color: #0D536A;">
+    <p style="position: absolute;color: white;margin-left: 42px;margin-top: 26px;font-size: 12px;">Atividades</p>
+</div>
+<div class="coluna-esquerda largura-1_3">
+    <img class="animate__animated animate__flipInX"
+        style="height: 219.4px; width: 241.85px; margin-top: 80.65px; margin-left: 35px;" src="recursos/imgs/SI_46.png">
+</div>
+<div class="coluna-direita largura-2_1" style="width: 500px; height: 500px; margin-top: 55px;margin-right: 75px;">
+    <h1>Questão 1</h1>
+    <p><strong>Relacione as colunas quanto ao funcionamento previsto (em horas de trabalho) para a oferta de
+            serviços de
+            saúde
+            prisional de acordo com o quantitativo de custodiados.</strong>
+    </p>
+    <img style="margin-top: 10px; margin-left: 30px;width: 436px;" src="recursos/imgs/SI_tabela.png">
+    <div style="display: flex; flex-direction: column; position: absolute; margin-top: -153px; margin-left: 243px;">
+        <input style="width: 20px; height: 20px; text-align: center; margin-bottom: 19px;" type="text" id="opc_0">
+        <input style="width: 20px; height: 20px; text-align: center; margin-bottom: 28px;" type="text" id="opc_1">
+        <input style="width: 20px; height: 20px; text-align: center;" type="text" id="opc_2">
+    </div>
+    <div class="submeter" style="display: none;">Submeter</div>
+    <div style="margin-top: -235px; width: 500px; height: 267px; display: none;" class="feed" id="feedCerto">
+        <img style="height: 70px; margin-top: -48px; margin-left: 30px;margin-bottom: 15px;"
+            src="recursos/imgs/SI_CE.png">
+        <h2 style="margin-left: 30px;">Resposta correta</h2>
+        <p style="margin-left: 30px; width: 450px;">Parabéns! De acordo com com a Portaria GM/MS n<sup>o</sup>
+            2.298/2021, ao considerar a população prisional e o funcionamento dos
+            serviços de saúde, o MS classifica os estabelecimentos prisionais, em três faixas, a saber:
+            I - unidades prisionais que contenham até 300 (trezentos) custodiados: serviço de saúde com
+            funcionamento
+            mínimo de 6
+            (seis) horas semanais, sob responsabilidade do ente municipal, por meio de eAPP;
+            II - unidades prisionais que contenham de 101 (cento e um) a 1.700 (mil e setecentos) custodiados:
+            serviço
+            de saúde com
+            funcionamento mínimo de 20 (vinte) horas semanais, sob responsabilidade do ente estadual ou
+            municipal, por
+            meio de eAPP
+            Essencial ou Ampliada;
+            III - unidades prisionais que contenham de 1.201 (mil duzentos e um) a 2.700 (dois mil e setecentos)
+            custodiados:
+            serviço de saúde com funcionamento mínimo de 30 (trinta) horas semanais, sob responsabilidade do
+            estado ou
+            município,
+            por meio de eAPP Essencial ou Ampliada podendo esta ser complementada.</p>
+    </div>
+    <div style="margin-top: -288px; width: 500px; height: 277px; display: none;" class="feed" id="feedErrado">
+        <img style="height: 70px; margin-top: -48px; margin-left: 30px;margin-bottom: 15px;"
+            src="recursos/imgs/SI_CE.png">
+        <h2 style="margin-left: 30px;">Resposta incorreta</h2>
+        <p style="margin-left: 30px; width: 450px;">Na verdade, a sequência correta não é essa. Vamos conferir?
+            De
+            acordo com a Portaria GM/MS n<sup>o</sup> 2.298/2021, ao considerar
+            a população prisional e o funcionamento dos serviços de saúde, o MS classifica os estabelecimentos
+            prisionais, em três
+            faixas, a saber:
+            I - unidades prisionais que contenham até 300 (trezentos) custodiados: serviço de saúde com
+            funcionamento
+            mínimo de 6
+            (seis) horas semanais, sob responsabilidade do ente municipal, por meio de eAPP;
+            II - unidades prisionais que contenham de 101 (cento e um) a 1.700 (mil e setecentos) custodiados:
+            serviço
+            de saúde com
+            funcionamento mínimo de 20 (vinte) horas semanais, sob responsabilidade do ente estadual ou
+            municipal, por
+            meio de eAPP
+            Essencial ou Ampliada;
+            III - unidades prisionais que contenham de 1.201 (mil duzentos e um) a 2.700 (dois mil e setecentos)
+            custodiados:
+            serviço de saúde com funcionamento mínimo de 30 (trinta) horas semanais, sob responsabilidade do
+            estado ou
+            município,
+            por meio de eAPP Essencial ou Ampliada podendo esta ser complementada.</p>
+    </div>
+</div>
+<footer style="width: 1008px;height: 19px;display: flex;background-color: #0D536A;"></footer>
+<script>
+    $(() => {
+        pontos = 0;
+        let respondido = [];
+        let gabarito = ["I", "III", "II"];
+        let comparacao = [];
+        let mostrarSub = true;
+        let resposta = '';
+        let feedCerto = $(document).find('[id^=feedCerto]').hide();
+        let feedErrado = $(document).find('[id^=feedErrado]').hide();
+        let submeter = $(document).find('[class=submeter]').hide();
+        let questao = $(document).find('[id^=opc]');
+
+        $(feedCerto).on('click', apagarFeeds);
+        $(feedErrado).on('click', apagarFeeds);
+
+        function apagarFeeds() {
+            feedCerto.fadeOut();
+            feedErrado.fadeOut();
+        }
+
+        questao.map((index, sel) => {
+            respondido[index] = false;
+            comparacao[index] = false;
+            $(sel).click(responder);
+        });
+
+        function responder(sel) {
+            resposta = sel.target.id;
+            respondido[(sel.target.id).split("_")[1]] = true;
+            if (mostrarSub && respondido.every(elem => elem == true)) {
+                submeter.fadeIn();
+            }
+        }
+
+        $(submeter).on('click', () => {
+            questao.map((index, selected) => {
+                console.log(selected.value);
+                if (selected.value.toUpperCase() == gabarito[index]) {
+                    comparacao[index] = true;
+                }
+            })
+
+            if (comparacao.every(elem => elem == true)) {
+                $(feedCerto).fadeIn();
+                pontos += 1;
+                mostrarSub = false;
+                submeter.hide();
+            } else {
+                $(feedErrado).fadeIn();
+            }
+        })
+    })
+</script>
+<button onclick="copiarCodigo();" style="width: 140px;height: 30px;position: absolute;right: 20px;top: 13px;">Copiar
+    código</button>

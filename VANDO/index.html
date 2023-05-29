@@ -1,0 +1,52 @@
+<style>
+    .frame {
+        width: 937px;
+        height: 522px;
+        border: 0;
+        -ms-transform: scale(0.5);
+        -moz-transform: scale(0.5);
+        -o-transform: scale(0.5);
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+
+        -ms-transform-origin: 0 0;
+        -moz-transform-origin: 0 0;
+        -o-transform-origin: 0 0;
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0;
+        margin-bottom: 10px;
+    }
+</style>
+<link rel="stylesheet" href="../css/normalize.css">
+<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="../css/exercicios.css">
+<link rel="stylesheet" href="../css/modal.css">
+<link rel="stylesheet" href="../css/telas.css">
+<link href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+<script src="../js/vendor/modernizr-2.8.3.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+<script src="../bootstrap/jquery/jquery-3.5.1.min.js"></script>
+<script src="../bootstrap/jquery/jquery-3.5.1.min.js"></script>
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<script src="../js/plugins.js"></script>
+<script src="../js/main.js"></script>
+
+<div style="overflow: scroll;width: 100%;height: 100%; ">
+    <div id="placeholder"></div>
+</div>
+<script>
+    $(() => {
+        for (var t = 1; t <= 77; t++) {
+            document.getElementById("placeholder").innerHTML += `<div style="width: 860px;height: 262px; position: relative; border-style: solid;padding: 2px 4px;">
+                    <button id="botao_${t}" style="width: 230px;height: 50px;position: absolute;right: 0;top: 100px;">Copiar</button>
+                    <iframe id="myIframe_${t}" class="frame" src="../index.html#tela-${t}"></iframe>
+                </div>`;
+        }
+        $(document).find('[id^=botao]').click((elemento) => {
+            navigator.clipboard.writeText($(`#myIframe_${elemento.target.id.split("_")[1]}`).contents().find('main').find('#tela').html());
+            console.log($(`#myIframe_${elemento.target.id.split("_")[1]}`).contents().find('main').find('#tela').html());
+        })
+    })
+</script>

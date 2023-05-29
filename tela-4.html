@@ -1,0 +1,77 @@
+<div style="width: 1008px;height: 60px;display: flex;background-color: #0D536A;">
+    <p style="position: absolute;color: white;margin-left: 42px;margin-top: 26px;font-size: 12px;">Botao Janela</p>
+</div>
+<div class="coluna-esquerda largura-1_1" style="max-width: 888px;">
+    <p style="margin-top: 75px;margin-left: 150px;width: 630px;text-align: left;">Nesse contexto, é importante
+        destacar
+        que o Sistema Único de Saúde (SUS) é um dos maiores e mais complexos
+        sistemas de saúde do mundo e que atende, igualmente, as pessoas privadas de liberdade. A oferta de
+        serviços
+        na rede SUS acontece por níveis.</p>
+    <p style="color: #004D73; font-size: 10px;margin-left: 150px;"><strong>Clique nos números para compreender
+            esses
+            níveis.</strong></p><strong>
+        <div style="text-align: center;margin: 40px 224px auto 269px;cursor: pointer;display: flex;justify-content: space-between;padding-right: 30px;"
+            class="btn" data-toggle="modal" data-target="#modalCentro">
+            <img class="btn animate__animated animate__backInLeft" id="botao_1" src="recursos/imgs/SI_24_1.png"
+                style="width: 100px;">
+            <img class="btn animate__animated animate__backInUp" id="botao_2" src="recursos/imgs/SI_24_2.png"
+                style="width: 100px;">
+            <img class="btn animate__animated animate__backInLeft" id="botao_3" src="recursos/imgs/SI_24_3.png"
+                style="width: 100px;">
+        </div>
+        <div>
+            <div id="janela_1"
+                style="position: relative; width: 270px; height: 125px; background-color: rgba(255, 214, 64, 0.8); border-radius: 10px; flex-wrap: nowrap; margin-left: 39px; margin-top: -65px; display: none;">
+                <p style="font-weight: normal;padding: 10px;font-size: 11px;">
+                    O primeiro nível – atenção primária – é a
+                    porta de entrada para o SUS. Esse nível é
+                    composto, especialmente, das Unidades
+                    Básicas de Saúde (UBSs). Na atenção
+                    primária, as ações são direcionadas à
+                    redução do risco de doenças e à proteção
+                    da saúde, isso significa que o primeiro nível
+                    possui também um aspecto preventivo.
+                </p>
+            </div>
+            <div id="janela_2"
+                style="position: relative; width: 240px; height: 84px; background-color: rgba(255, 214, 64, 0.8); border-radius: 10px; flex-wrap: nowrap; margin-top: -90px; margin-left: 330px; display: none;">
+                <p style="font-weight: normal;padding: 10px;font-size: 11px;">
+                    O segundo nível – atenção secundária
+                    – é constituído pelos serviços de saúde
+                    especializados ofertados em hospitais,
+                    ambulatórios e Unidades de Pronto
+                    Atendimento (UPAs).
+                </p>
+            </div>
+            <div id="janela_3"
+                style="position: relative; width: 217px; height: 90px; background-color: rgba(255, 214, 64, 0.8); border-radius: 10px; flex-wrap: nowrap; margin-top: -140px; margin-left: 606px; display: none;">
+                <p style="font-weight: normal;padding: 10px;font-size: 11px;">
+                    O terceiro nível de atenção à saúde
+                    – atenção terciária – se ocupa
+                    com os atendimentos mais
+                    complexos que são realizados em
+                    hospitais de grande porte.
+                </p>
+            </div>
+        </div>
+</div>
+<footer style="width: 1008px;height: 19px;display: flex;background-color: #0D536A;"></footer><button
+    onclick="copiarCodigo();" style="width: 140px;height: 30px;position: absolute;right: 20px;top: 13px;">Copiar
+    código</button>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]');
+        apagarJanelas();
+        let botoes = $(document).find('[id^=botao]').map((index, botao) => {
+            $(botao).click(() => {
+                $(janelas[index]).fadeIn();
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>

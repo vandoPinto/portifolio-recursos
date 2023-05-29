@@ -1,0 +1,127 @@
+<style>
+    .bot {
+        width: 110px;
+        background-color: #fac900;
+        color: #836bff;
+        font-size: 40px;
+        font-weight: bolder;
+        text-align: center;
+        cursor: pointer;
+        border: 8px solid #836bff;
+        height: 110px;
+        border-radius: 50%;
+    }
+
+    p {
+        font-size: 11px;
+    }
+</style>
+<div style="width: 1008px;height: 60px;display: flex;background-color: #0D536A;">
+    <p style="position: absolute;color: white;margin-left: 42px;margin-top: 26px;font-size: 12px;">Botao Janela</p>
+</div>
+<div class="coluna-esquerda largura-1_1">
+    <div style="margin-top: 25px;margin-left: 70px;width: 760px;">
+        <p>Questões relacionadas ao entendimento e ao cuidado sobre saúde mental vêm sendo elaboradas há décadas em
+            todo o mundo.
+        </p>
+        <p>Observe alguns marcos históricos globais quanto ao reconhecimento da necessidade de um olhar diferencial
+            para a saúde
+            mental.</p>
+        <p style="text-align: center;"><b style="color: #836bff;">Clique</b> nas datas para conhecer esses marcos.
+        </p>
+        <div
+            style="margin-left: -20px;margin-top: 30px;display: inline-flex;width: 790px;justify-content: space-between;">
+            <div class="bot" id="botao_1">
+                <div style="margin-top: 30px;" id="texto_1">1991</div>
+            </div>
+            <div class="bot" id="botao_2">
+                <div style="margin-top: 30px;" id="texto_2">1993</div>
+            </div>
+            <div class="bot" id="botao_3">
+                <div style="margin-top: 30px;" id="texto_3">1996</div>
+            </div>
+            <div class="bot" id="botao_4">
+                <div style="margin-top: 30px;" id="texto_4">2001</div>
+            </div>
+            <div class="bot" id="botao_5">
+                <div style="margin-top: 30px;" id="texto_5">2005</div>
+            </div>
+
+            <img style="position: absolute;top: 250px;width: 40px;left: 176px;" src="recursos/imgs/SI_11Fundo.png">
+            <img style="position: absolute;top: 250px;width: 40px;left: 342px;" src="recursos/imgs/SI_11Fundo.png">
+            <img style="position: absolute;top: 250px;width: 40px;left: 508px;" src="recursos/imgs/SI_11Fundo.png">
+            <img style="position: absolute;top: 250px;width: 40px;left: 674px;" src="recursos/imgs/SI_11Fundo.png">
+        </div>
+        <div>
+            <div id="janela_1"
+                style="width: 330px; background-color: rgb(131, 107, 255); height: 70px; padding-top: 5px; border-radius: 10px; padding-left: 10px; padding-right: 10px; margin-left: -50px; margin-top: -10px; border: 3px solid rgb(250, 201, 0); position: absolute; display: none;">
+                <p style="color: white;">A Assembleia Geral das Nações Unidas adota os Princípios para a Proteção de
+                    Pessoas com Doença Mental e para a Melhoria
+                    de Cuidados de Saúde Mental.</p>
+            </div>
+            <div id="janela_2"
+                style="width: 330px; background-color: rgb(131, 107, 255); height: 70px; padding-top: 5px; border-radius: 10px; padding-left: 10px; padding-right: 10px; margin-left: -50px; top: 170px; border: 3px solid rgb(250, 201, 0); position: absolute; display: none;">
+                <p style="color: white;">Publicação do Banco Mundial revela que 8% da carga global de deficiência e
+                    morbidade no mundo é devido a distúrbios
+                    mentais e neurológicos.</p>
+            </div>
+            <div id="janela_3"
+                style="width: 330px; background-color: rgb(131, 107, 255); height: 70px; padding-top: 5px; border-radius: 10px; padding-left: 10px; padding-right: 10px; left: 260px; top: 160px; border: 3px solid rgb(250, 201, 0); position: absolute; display: none;">
+                <p style="color: white;">A Organização Mundial da Saúde (OMS) lança um programa global ("Nações para
+                    a Saúde Mental")
+                    dedicado no sentido de
+                    melhorar a saúde mental e o bem-estar psicossocial das populações carentes do mundo.</p>
+            </div>
+            <div id="janela_4"
+                style="width: 390px; background-color: rgb(131, 107, 255); height: 80px; padding-top: 5px; border-radius: 10px; padding-left: 10px; padding-right: 10px; left: 310px; top: 300px; border: 3px solid rgb(250, 201, 0); position: absolute; display: none;">
+                <p style="color: white;">A OMS estabeleceu o Dia Mundial da Saúde Mental com o<i> slogan</i> "Acabar
+                    com a
+                    exclusão - Atreva-se a cuidar ", na tentativa
+                    de sensibilizar o público em geral sobre saúde mental por meio da disseminação do conhecimento e
+                    mudança de atitudes
+                    negativas.</p>
+            </div>
+            <div id="janela_5"
+                style="width: 400px; background-color: rgb(131, 107, 255); height: 98px; padding-top: 5px; border-radius: 10px; padding-left: 10px; padding-right: 10px; left: 310px; top: 150px; border: 3px solid rgb(250, 201, 0); position: absolute; display: none;">
+                <p style="color: white;">Declaração de Caracas - documento que marca a reestruturação da atenção
+                    psiquiátrica na América Latina. Uma nova
+                    política para os serviços de saúde mental, lançado na Conferência Regional para a Reestruturação
+                    da Atenção Psiquiátrica
+                    na América Latina no contexto dos Sistemas Locais de Saúde (SILOS).</p>
+            </div>
+        </div>
+    </div>
+</div>
+<footer style="width: 1008px;height: 19px;display: flex;background-color: #0D536A;"></footer><button
+    onclick="copiarCodigo();" style="width: 140px;height: 30px;position: absolute;right: 20px;top: 13px;">Copiar
+    código</button>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]');
+        console.log(janelas);
+        apagarJanelas();
+        let botoes = $(document).find('[id^=botao]').map((index, botao) => {
+            $(botao).click(() => {
+                apagarJanelas();
+                //mudarBotao(index + 1)
+                $(janelas[index]).show();
+            })
+        })
+
+        function mudarBotao(numero) {
+            console.log($(document).find(`[id^=botao_${numero}]`));
+            $(document).find('[id^=botao]').map((index, botao) => {
+                $(document).find(`[id^=botao_${index + 1}]`).css("background-color", "#004c72");
+                $(document).find(`[id^=texto_${index + 1}]`).css("color", "#fac900");
+            })
+            $(document).find(`[id^=botao_${numero}]`).css("background-color", "#fac900");
+            $(document).find(`[id^=texto_${numero}]`).css("color", "#004c72");
+        }
+
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>

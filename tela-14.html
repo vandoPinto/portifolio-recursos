@@ -1,0 +1,174 @@
+<style>
+    .jan {
+        z-index: 30;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, .8);
+    }
+</style>
+<div style="width: 1008px;height: 60px;display: flex;background-color: #0D536A;">
+    <p style="position: absolute;color: white;margin-left: 42px;margin-top: 26px;font-size: 12px;">Botao Janela</p>
+</div>
+<div class=" coluna-esquerda largura-1_1 " style="margin-left: 62px;margin-top: 40px;">
+    <p style="width: 788px;">Podemos nos referir aos mapas de três formas diferentes. Clique em cada um para
+        entender
+        suas especificidades.</p>
+    <div style="margin-top: 80px;margin-left: 40px;display: flex;width: 698px;justify-content: space-between;">
+        <div id="botao_1"
+            style="display: flex; width: 141px; height: 100px; background: 0% 0% no-repeat padding-box padding-box rgb(233, 165, 39); border-radius: 5px; color: white; cursor: pointer;">
+            <p style="font-size: 12px;margin-top: 42px;margin-left: 10px;">Unibase</p>
+            <p
+                style="font-size: 60px;margin: 0 auto;margin-top: 10px;margin-left: 40px;font-weight: bold;font-family: Open Sans;">
+                1
+            </p>
+        </div>
+        <div id="botao_2"
+            style="display: flex; width: 173px; height: 100px; background: 0% 0% no-repeat padding-box padding-box rgb(63, 107, 113); border-radius: 5px; color: white; cursor: pointer;">
+            <p style="font-size: 12px;margin-top: 43px;margin-left: 10px;">Mapa síntese</p>
+            <p
+                style="font-size: 60px;margin: 0 auto;margin-top: 10px;margin-left: 30px;font-weight: bold;font-family: Open Sans;">
+                2</p>
+        </div>
+        <div id="botao_3"
+            style="display: flex; width: 213px; height: 100px; background: 0% 0% no-repeat padding-box padding-box rgb(80, 109, 143); border-radius: 5px; color: white; cursor: pointer;">
+            <p style="font: normal normal normal 12px/14px Open Sans;margin-top: 29px;margin-left: 10px;width: 150px;">
+                Mapa por meio da cartografia social e participativa</p>
+            <p style="font-size: 60px;margin: 0 auto;margin-top: 10px;font-weight: bold;font-family: Open Sans;">3
+            </p>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="jan" id="janela_1" style="cursor: pointer; display: none;">
+        <div
+            style="position: absolute; top: 85px; left: 20px; width: 850px; height: 354px; background: 0% 0% no-repeat padding-box padding-box rgb(244, 187, 42); border-radius: 10px; display: flex; cursor: pointer;">
+            <div>
+                <img src="recursos/imgs/janela1.png" style="margin-top: 50px;margin-left: 20px;">
+            </div>
+            <div style="width: 420px;">
+                <p style="margin-top: 70px;margin-left: 38px;font-size: 14px;color: #FFFFFF;">UNIBASE</p>
+                <p style="color: white;font-size: 12px;margin-left: 38px;width: 402px;">A unibase é um mapa
+                    que apresenta a trama urbana (ruas, quarteirões, quadras, terrenos) das cidades ou dos
+                    municípios,
+                    geralmente disponíveis na Secretaria de Planejamento Urbano e Infraestrutura, mas pode ser
+                    encontrado
+                    também
+                    nas secretarias de saúde. Esses mapas são apresentados em diversas escalas, que consistem na
+                    relação
+                    entre a
+                    dimensão representada do objeto e a sua dimensão real.</p>
+                <p style="color: white;font-size: 12px;margin-left: 38px;width: 402px;">As escalas podem ser de
+                    redução,
+                    1:20.000, ou de
+                    aproximação, 20:1. A escala ideal para sistematização dos mapas na APS é a escala de redução, na
+                    proporção
+                    de 1:1.000 (1 centímetro equivale a 10 metros), pois apresenta um nível de desagregação da
+                    informação
+                    geográfica que vai até o terreno ou domicílio (FRIEDMANN, 2003).</p>
+            </div>
+            <div>
+                <p
+                    style="font: normal normal bold 85px/16px Open Sans;letter-spacing: 0px;color: #FFFFFF;margin: 0 auto;margin-top: 180px;margin-left: 40px;">
+                    1</p>
+            </div>
+            <p style="font-size: 13px;color: white;margin-top: 6px;margin-left: 0px;">x</p>
+        </div>
+    </div>
+    <div class="jan" id="janela_2" style="cursor: pointer; display: none;">
+        <div
+            style="position: absolute; top: 145px; left: 108px; width: 684px;height: 271px;background: #3F6B71 0% 0% no-repeat padding-box;border-radius: 10px; display: flex; ">
+            <div style="width: 420px;">
+                <p style="margin-top: 60px;margin-left: 67px;font-size: 14px;color: #FFFFFF;">MAPA SÍNTESE</p>
+                <p style="color: white;font-size: 12px;margin-left: 67px;width: 402px;">De posse da unibase, é
+                    possível
+                    elaborar o mapa síntese, que consiste em fazer a distribuição espacial do evento que
+                    queremos compreender e como se comporta espacialmente.</p>
+                <p style="color: white;font-size: 12px;margin-left: 67px;width: 402px;">Pode ser a espacialização
+                    das
+                    variáveis da vulnerabilidade do
+                    lugar, das condições prioritárias ou das visitas realizadas.</p>
+                <p style="color: white;font-size: 12px;margin-left: 67px;width: 402px;">Geralmente, no mapa síntese,
+                    é
+                    possível espacializar as
+                    informações obtidas nas dimensões econômica, física e sanitária.</p>
+                <p style="font-size: 13px;color: white;margin-top: -224px;margin-left: 660px;">x</p>
+            </div>
+            <div>
+                <p
+                    style="font: normal normal bold 85px/16px Open Sans;letter-spacing: 0px;color: #FFFFFF;margin: 0 auto;margin-top: 140px;margin-left: 130px;">
+                    2</p>
+            </div>
+        </div>
+    </div>
+    <div class="jan" id="janela_3" style="cursor: pointer; display: none;">
+        <div
+            style="position: absolute; top: 85px; left: 20px; width: 850px;height: 354px;background: #506D8F 0% 0% no-repeat padding-box;   border-radius: 10px; display: flex; ">
+            <div>
+                <img src="recursos/imgs/janela3.png" style="margin-top: 80px;margin-left: 20px;">
+                <p
+                    style="font: normal normal normal 10px/18px Poppins;letter-spacing: 0px;color: #FFFFFF;margin-left: 20px;">
+                    Fonte: Gerentes de Serviços da Atenção Primária 05.</p>
+            </div>
+            <div style="width: 420px;">
+                <p style="margin-top: 70px;margin-left: 38px;font-size: 14px;color: #FFFFFF;">CARTOGRAFIA SOCIAL E
+                    PARTICIPATIVA</p>
+                <p style="color: white;font-size: 12px;margin-left: 38px;width: 402px;">Os mapas gerados pela
+                    metodologia da
+                    cartografia social e participativa representam um processo de engajamento e
+                    mapeamento com o envolvimento integral da comunidade, no reconhecimento e no conhecimento de seu
+                    território, onde o
+                    território é retratado conforme a representação subjetiva dos sujeitos em relação ao território
+                    que
+                    produzem.</p>
+                <p style="color: white;font-size: 12px;margin-left: 38px;width: 402px;">A
+                    elaboração da cartografia social é muito indicada para trabalhar todas as dimensões do
+                    território.
+                    Importante salientar
+                    que um caminho metodológico não invalida o outro, mas o grande diferencial da cartografia
+                    participativa
+                    é que, além de
+                    permitir um conhecimento global sobre o território por parte da comunidade, contribui para
+                    impulsionar o
+                    empoderamento e
+                    a transformação social (GORAYEB; MEIRELES, 2014).</p>
+            </div>
+            <div>
+                <p
+                    style="font: normal normal bold 85px/16px Open Sans;letter-spacing: 0px;color: #FFFFFF;margin: 0 auto;margin-top: 180px;margin-left: 40px;">
+                    3</p>
+            </div>
+            <p style="font-size: 13px;color: white;margin-top: 6px;margin-left: 0px;">x</p>
+        </div>
+    </div>
+</div>
+<footer style="width: 1008px;height: 19px;display: flex;background-color: #0D536A;"></footer>
+<button onclick="copiarCodigo();" style="width: 140px;height: 30px;position: absolute;right: 20px;top: 13px;">Copiar
+    código</button>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
+        apagarJanelas();
+        $(document).find('[id^=btn]').hide();
+        let botoes = $(document).find('[id^=botao]').map((index, botao) => {
+            $(botao).css('cursor', 'pointer');
+            $(botao).hover(() => {
+                $(document).find(`[id=btn_${index + 1}_2]`).show();
+            });
+            $(botao).mouseleave(() => {
+                $(document).find('[id^=btn]').hide();
+            });
+            $(botao).click(() => {
+                apagarJanelas();
+                $(janelas[index]).fadeIn();
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>

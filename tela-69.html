@@ -1,0 +1,140 @@
+
+
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Caça Palavras</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen"> -->
+        <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'> -->
+        <!-- <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen"> -->
+        <!-- <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen"> -->
+        <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+        <style>
+            .janela {
+                background-color: #004c72;
+                position: absolute;
+                margin-top: 68px;
+                width: 550px;
+                margin-left: 153px;
+                display: grid;
+                justify-content: space-around;
+                border-radius: 10px;
+                cursor: pointer;
+                color: white;
+            }
+    
+            .textoJanela {
+                align-items: center;
+                justify-content: center;
+            }
+        </style>
+    </head>
+    <div style="width: 1008px;height: 60px;display: flex;background-color: #0D536A;">
+        <p style="position: absolute;color: white;margin-left: 42px;margin-top: 26px;font-size: 12px;">Caça-palavras</p>
+    </div>
+    <div class="coluna-esquerda largura-1_1" style="max-width: 888px;font-size: 10px;width: 100%;margin-top: 20px;">
+        <p style="margin-left: -40px;width: 100%;text-align: center;">Vamos verificar se você compreendeu
+            bem os conteúdos aqui trabalhados?</p>
+        <p style="margin-left: 5px;margin-bottom: 30px;width: 100%;text-align: center;">No caça-palavras, procure
+            cinco
+            palavras-chave que acabamos de estudar durante a aula.</p>
+        <section class="main-content" style="margin-top: -50px; margin-left: 130px;">
+            <div id='puzzle'></div>
+            <div id='words'></div>
+            <div><button id='solve'>Resolver o Puzzle</button></div>
+            <footer class="site-footer">
+                <script language="javascript" type="text/javascript"
+                    src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+                <script src="js/wordfind.js"></script>
+                <script type="text/javascript" src="js/wordfindgame.js"></script>
+                <script>
+                    var words = ['Lepra', 'Bactéria', 'Tratamento', 'Antibióticos', 'Doença'];
+                    // start a word find game
+                    var gamePuzzle = wordfindgame.create(words, '#puzzle', '#words');
+                    $('#solve').click(function () {
+                        wordfindgame.solve(gamePuzzle, words);
+                    });
+                    // create just a puzzle, without filling in the blanks and print to console
+                    var puzzle = wordfind.newPuzzle(words, {
+                        height: 10,
+                        width: 10
+                    });
+                    wordfind.print(puzzle);
+                </script>
+            </footer>
+        </section>
+        <div id="janelasCacaPalavras_1" class="janela"
+            style="height: 80px;align-items: center;top: 150px;left: 50px;width: 360px;">
+            <p class="textoJanela">A hanseníase antigamente era conhecida como<strong> lepra</strong>.</p>
+        </div>
+        <div id="janelasCacaPalavras_2" class="janela"
+            style="height: 80px;align-items: center;top: 150px;left: -60px;width: 578px;">
+            <p class="textoJanela">A hanseníase é causada por uma<strong> bactéria</strong>, o <i>Mycobacterium
+                    leprae <i>(M. leprae).</i></i< /p>
+        </div>
+        <div id="janelasCacaPalavras_3" class="janela"
+            style="height: 110px;align-items: center;top: 150px;left: -60px;width: 580px;">
+            <p class="textoJanela" style="text-align: center;">Quando a pessoa doente inicia o<strong>
+                    tratamento</strong>, ela deixa de ser
+                transmissora da doença,
+                pois as primeiras doses da
+                medicação matam os bacilos, tornando-os incapazes de infectar outras pessoas.</p>
+        </div>
+        <div id="janelasCacaPalavras_4" class="janela" style="height: 80px; align-items: center; top: 150px; left: -60px;">
+            <p class="textoJanela">A hanseníase tem cura. Seu tratamento consiste em uma combinação
+                de<strong> antibióticos</strong>.</p>
+        </div>
+        <div id="janelasCacaPalavras_5" class="janela"
+            style="height: 80px;align-items: center;top: 150px;left: -60px;width: 614px;">
+            <p class="textoJanela" style="text-align: center;">A hanseníase é uma<strong> doença</strong> de notificação
+                compulsória. Portanto, cada
+                caso
+                diagnosticado deve ser notificado na semana
+                epidemiológica de ocorrência do diagnóstico.</p>
+        </div>
+    </div>
+    <footer style="width: 1008px;height: 19px;display: flex;background-color: #0D536A;"></footer>
+    <script>
+        $(() => {
+            let arrDeRespostasCacaPalavras = [];
+            let janelasCacaPalavras = $(document).find('[id^=janelasCacaPalavras_]').hide();
+            $(document).find('[id^=feedFinal]').hide();
+    
+            janelasCacaPalavras.map((i, e) => {
+                arrDeRespostasCacaPalavras[i] = false;
+            })
+    
+            $(document).on('wordFound', (e) => {
+                // console.log(e.originalEvent.detail.word);
+                words.map((element, i) => {
+                    if (element == e.originalEvent.detail.word) {
+                        $(document).find(`[id^=janelasCacaPalavras_${i + 1}]`).fadeIn().on('click', fecharTodasAsjanelasCacaPalavras);
+                        console.log(Number(i));
+                        arrDeRespostasCacaPalavras[Number(i)] = true;
+                        console.log(arrDeRespostasCacaPalavras);
+                    }
+                })
+            })
+    
+            function fecharTodasAsjanelasCacaPalavras() {
+                $(document).find('[id^=janelasCacaPalavras]').fadeOut();
+                if (arrDeRespostasCacaPalavras.every(elem => elem == true)) {
+                    $(document).find('[id^=feedFinal]').fadeIn();
+                }
+            }
+    
+            // element.addEventListener('destoy', (e) => { /* … */ }, false);
+    
+            document.addEventListener('destroy', function () {
+                $(document).off('wordFound')
+            })
+        })
+    </script>
+    <button onclick="copiarCodigo();" style="width: 140px;height: 30px;position: absolute;right: 20px;top: 13px;">Copiar
+        código</button>
+    
+    
+    
+    
+    

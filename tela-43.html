@@ -1,0 +1,76 @@
+<div style="width: 1008px;height: 60px;display: flex;background-color: #0D536A;">
+    <p style="position: absolute;color: white;margin-left: 42px;margin-top: 26px;font-size: 12px;">HotWord</p>
+</div>
+<div>
+    <div style="display: flex;">
+        <div style="width: 374px;margin-left: 29px;margin-top: 81px;">
+            <p>A expressão modelo não é concebida, nesta discussão, como sinônimo de um exemplo ou padrão a ser
+                seguido.</p>
+            <p>No Brasil, os
+                termos modelos de atenção, modelos assistenciais ou modelos tecnoassistenciais apareceram em textos,
+                documentos oficiais
+                e publicações científicas a partir da década de 1980 com significados próximos (PAIM, 2012).</p>
+            <p>Contudo, é importante
+                demarcarmos algumas distinções entre o uso dos termos
+                <strong style="width: 40px; background-color: #1F6D4C; display: inline;"><a id="hotWord-bt"
+                        style="cursor: pointer;">assistencial</a></strong> e
+                <strong style="width: 40px; background-color: #1F6D4C; display: inline;"><a id="hotWord-bt2"
+                        style="cursor: pointer;">atenção</a></strong>.
+            </p>
+        </div>
+        <div class="animate__animated animate__backInRight"
+            style="margin-top: 133px;margin-left: 29px;display: flex;flex-direction: row;width: 423px;height: 113px;top: 139px;right: 15px;background-color: #CCDFD7;border-radius: 10px;">
+            <img src="recursos/imgs/lampada.svg" style="width: 60px;height: 60px;margin-top: 29px;margin-left: 17px;">
+            <div style="display: initial;margin-left: 25px;width: 302px;">
+                <p style="font-weight: bold;color: #1F6D4C;font-size: 15px;">PARA REFLETIR</p>
+                <p style="font-size: 12px;">Já parou para pensar nisso? </p>
+                <p style="font-size: 12px;">Quais os diferentes significados e implicações associadas ao uso de tais
+                    termos?</p>
+            </div>
+        </div>
+    </div>
+</div>
+<footer style="width: 1008px;height: 19px;display: flex;background-color: #0D536A;"></footer>
+<div id="conteudo"
+    style="position: absolute; top: 0px; left: 20px; width: 640px; border-radius: 10px; display: none; flex-direction: column; align-items: center; justify-content: center;">
+    <div
+        style="margin-top: 200px;margin-left: 80px;width: 748px;height: 121px;background: #376551 0% 0% no-repeat padding-box;border: 1px solid #707070;display: flex;flex-direction: column;align-items: center;justify-content: space-around;">
+        <p style="text-align: center;font: normal normal bold 16px/25px Poppins;color: #FFFFFF;">
+            ASSISTENCIAL</p>
+        <p style="font: normal normal normal 16px/25px Poppins;color: #FFFFFF;width: 616px;">
+            Relaciona-se à assistência
+            médica ou odontológica centrada em procedimentos individuais.</p>
+    </div>
+</div>
+<div id="conteudo2"
+    style="position: absolute; top: 80px; left: 20px; width: 640px; border-radius: 10px; display: none; flex-direction: column; align-items: center; justify-content: center;">
+    <div
+        style="margin-top: 140px;margin-left: 80px;width: 748px;height: 121px;background: #376551 0% 0% no-repeat padding-box;border: 1px solid #707070;display: flex;flex-direction: column;align-items: center;justify-content: space-around;">
+        <p style="text-align: center;font: normal normal bold 16px/25px Poppins;color: #FFFFFF;">
+            ATENÇÃO</p>
+        <p style="font: normal normal normal 16px/25px Poppins;color: #FFFFFF;width: 616px;">
+            Além de envolver assistência, inclui ações individuais e coletivas, nos âmbitos de promoção,
+            proteção, recuperação e
+            reabilitação da saúde.</p>
+    </div>
+</div>
+<script>
+    $(() => {
+        let conteudo = $('#conteudo').hide();
+        let conteudo2 = $('#conteudo2').hide();
+        $('#hotWord-bt').css('cursor', 'pointer').hover(() => {
+            conteudo.fadeIn()
+        })
+        $('#hotWord-bt').mouseout(() => {
+            conteudo.fadeOut()
+        })
+        $('#hotWord-bt2').css('cursor', 'pointer').hover(() => {
+            conteudo2.fadeIn()
+        })
+        $('#hotWord-bt2').mouseout(() => {
+            conteudo2.fadeOut()
+        })
+    })
+</script>
+<button onclick="copiarCodigo();" style="width: 140px;height: 30px;position: absolute;right: 20px;top: 13px;">Copiar
+    código</button>

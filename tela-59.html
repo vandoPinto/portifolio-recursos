@@ -1,0 +1,208 @@
+<style>
+    .feed {
+        position: relative;
+        width: 270px;
+        height: 125px;
+        background-color: #004c72;
+        border-radius: 10px;
+        flex-wrap: nowrap;
+        cursor: pointer;
+    }
+
+    p {
+        font-size: 11px;
+    }
+</style>
+<div style="width: 1008px;height: 60px;display: flex;background-color: #0D536A;">
+    <p style="position: absolute;color: white;margin-left: 42px;margin-top: 26px;font-size: 12px;">Drag`n Drop - Arrastar</p>
+</div>
+<div style="margin-top: 20px;margin-left: 52px;">
+    <p>Considerando as formas de transmissão do HIV que acabamos de estudar, vamos fazer uma revisão?</p>
+    <p style="font-weight: bolder; color: #004c72;">Arraste corretamente os itens que estão no quadro a fim de
+        completar
+        todos os espaços vazios de transmissão e de não
+        transmissão do HIV.</p>
+</div>
+
+<img style="width: 828px;margin-left: 30px;" src="recursos/imgs/SI_39fundo.png">
+
+<div id="sub"
+    style="cursor: pointer; position: absolute; left: 360px; background-color: rgb(0, 76, 114); top: 412px; width: 140px; height: 30px; text-align: center; display: none;">
+    <p style="color: white; font-weight: bolder; text-align: center;">Submeter</p>
+</div>
+
+
+<div>
+    <div id="drop_1_2"
+        style="position: absolute;top: 200px;left: 42px;background-color: gray;width: 90px;height: 90px;opacity: .5;">
+    </div>
+    <div id="drop_5_2"
+        style="position: absolute;top: 200px;left: 140px;opacity: .5;background-color: gray;width: 90px;height: 90px;">
+    </div>
+    <div id="drop_7_2"
+        style="position: absolute;top: 200px;left: 235px;opacity: .5;background-color: gray;width: 90px;height: 90px;">
+    </div>
+    <div id="drop_4_2"
+        style="position: absolute;top: 200px;left: 330px;opacity: .5;background-color: gray;width: 90px;height: 90px;">
+    </div>
+    <div id="drop_2_1"
+        style="position: absolute;top: 200px;left: 470px;opacity: .5;background-color: gray;width: 90px;height: 90px;">
+    </div>
+    <div id="drop_6_1"
+        style="position: absolute;top: 200px;left: 565px;opacity: .5;background-color: gray;width: 90px;height: 90px;">
+    </div>
+    <div id="drop_3_1"
+        style="position: absolute;top: 200px;left: 660px;opacity: .5;background-color: gray;width: 90px;height: 90px;">
+    </div>
+    <div id="drop_8_1"
+        style="position: absolute;top: 200px;left: 756px;opacity: .5;background-color: gray;width: 90px;height: 90px;">
+    </div>
+</div>
+
+<div>
+    <div id="drag_1_1" style="position: absolute;left: 60px;top: 315px;">
+        <img src="recursos/imgs/SI_39a.png" style="width: 90px;">
+    </div>
+    <div id="drag_2_2" draggable="true" style="position: absolute;left: 160px;top: 315px;">
+        <img src="recursos/imgs/SI_39b.png" style="width: 90px;">
+    </div>
+    <div id="drag_3_2" draggable="true" style="position: absolute;left: 260px;top: 315px;">
+        <img src="recursos/imgs/SI_39c.png" style="width: 90px;">
+    </div>
+    <div id="drag_4_1" draggable="true" style="position: absolute;left: 360px;top: 315px;">
+        <img src="recursos/imgs/SI_39d.png" style="width: 90px;">
+    </div>
+
+
+    <div id="drag_5_1" draggable="true" style="position: absolute;left: 460px;top: 315px;">
+        <img src="recursos/imgs/SI_39e.png" style="width: 90px;">
+    </div>
+    <div id="drag_6_2" draggable="true" style="position: absolute;left: 558px;top: 315px;">
+        <img src="recursos/imgs/SI_39f.png" style="width: 90px;">
+    </div>
+    <div id="drag_7_1" draggable="true" style="position: absolute;left: 656px;top: 315px;">
+        <img src="recursos/imgs/SI_39g.png" style="width: 90px;">
+    </div>
+    <div id="drag_8_2" draggable="true" style="position: absolute;left: 753px;top: 315px;">
+        <img src="recursos/imgs/SI_39h.png" style="width: 90px;">
+    </div>
+</div>
+
+
+<div style="margin-top: -150px; margin-left: 110px; width: 710px; height: 170px; position: absolute; z-index: 100; cursor: pointer; display: none;"
+    class="feed" id="feedCerto">
+    <img style="height: 70px; margin-top: -48px; margin-left: 30px;margin-bottom: 15px;" src="recursos/imgs/SI_CE.png">
+    <h1 style="margin-left: 50px; color: #fac900;">Resposta correta</h1>
+    <p style="margin-left: 50px;width: 610px;color: white;">
+        Você está de parabéns! Além de o HIV ser transmitido por prática de sexo desprotegido (sem uso de
+        preservativo),
+        outras
+        formas de transmissão são compartilhamento de seringas, agulhas, lâminas de barbear e outros materiais
+        que
+        perfuram ou
+        cortam a pele e transfusão de sangue contaminado, durante a gestação (transmissão vertical) e a
+        amamentação.</p>
+</div>
+<div style="margin-top: -192px; margin-left: 80px; width: 720px; height: 280px; position: absolute; z-index: 100; cursor: pointer; display: none;"
+    class="feed" id="feedErrado">
+    <img style="height: 70px; margin-top: -48px; margin-left: 30px;margin-bottom: 15px;" src="recursos/imgs/SI_CE.png">
+    <h1 style="margin-left: 50px; color: #fac900;">Resposta incorreta</h1>
+    <p style="margin-left: 50px;color: white;">Essa foi por pouco! Além de o HIV ser transmitido por
+        prática de sexo desprotegido (sem uso de preservativo), outras
+        formas de transmissão são compartilhamento de seringas, agulhas, lâminas de barbear e outros materiais
+        que
+        perfuram ou
+        cortam a pele e transfusão de sangue contaminado, durante a gestação (transmissão vertical) e a
+        amamentação.
+        Observe a
+        sequência correta da atividade.</p>
+    <img style="width: 650px;position: absolute;left: 39px;" src="recursos/imgs/SI_39Errado.png">
+</div>
+</div>
+<footer style="width: 1008px;height: 19px;display: flex;background-color: #0D536A;"></footer>
+<script>
+    $(() => {
+        let sub = $("#sub").hide().on("click", validarReposta);
+        const empties = $(document).find('[id^=drop]');
+        let drag;
+        let voltar = [];
+        let positions = [];
+        let janelas = $(document).find('[id^=feed]').css('cursor', 'pointer').on("click", apagarJanelas);
+        apagarJanelas();
+
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+
+        const dragStart = function () {
+            this.className += " hold";
+            drag = this;
+            setTimeout(() => (this.className = "invisible"), 0);
+            apagarJanelas();
+        };
+
+        const dragOver = function (e) {
+            e.preventDefault();
+        };
+
+        const dragEnter = function (e) {
+            e.preventDefault();
+            this.className += " hovered";
+        };
+
+        const dragLeave = function () {
+            this.className = "empty";
+        };
+
+        const dragEnd = function () {
+            this.className = "drag";
+        };
+
+        const dragDrop = function () {
+            this.className = "empty";
+            if (this.id.indexOf('drop') == 0) {
+                $(sub).fadeIn();
+                $("#" + drag.id).animate({ top: $(this)[0].offsetTop, left: $(this)[0].offsetLeft }, 1);
+                if (drag.id.split('_')[2] == this.id.split('_')[2]) {
+                    //$(janelas[(this.id.split('_')[1] - 1)]).fadeIn();
+                    voltar.map((objeto, index) => {
+                        if (objeto == drag.id) {
+                            voltar[index] = null;
+                        }
+                    })
+                } else {
+                    voltar[Number(drag.id.split('_')[1]) - 1] = drag.id;
+                }
+            }
+        };
+
+        function validarReposta() {
+            if (voltar.every(elem => elem == null)) {
+                $("#feedCerto").fadeIn();
+            } else {
+                voltar.map((objeto, index) => {
+                    $("#" + objeto).animate(positions[index], 600);
+                })
+                $("#feedErrado").fadeIn();
+            }
+            voltar = [];
+        }
+
+        $(document).find('[id^=drag]').map((index, objeto) => {
+            objeto.addEventListener("dragstart", dragStart);
+            objeto.addEventListener("dragend", dragEnd);
+            positions[index] = { top: objeto.offsetTop, left: objeto.offsetLeft }
+        })
+
+        empties.map((a, b) => {
+            b.addEventListener("dragover", dragOver);
+            b.addEventListener("dragenter", dragEnter);
+            b.addEventListener("dragleave", dragLeave);
+            b.addEventListener("drop", dragDrop);
+        })
+    })
+</script>
+<button onclick="copiarCodigo();" style="width: 140px;height: 30px;position: absolute;right: 20px;top: 13px;">Copiar
+    código</button>

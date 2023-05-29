@@ -1,0 +1,134 @@
+<style>
+    li {
+        margin-bottom: 12px;
+        margin-left: 18px;
+    }
+
+    .questao:hover {
+        background-color: #FAC900;
+        cursor: pointer;
+    }
+
+    .marcado {
+        background-color: #FAC900;
+    }
+
+    .submeter {
+        margin: 1em auto;
+        font-weight: bold;
+        color: #ffffff;
+        border-radius: 3px;
+        background-color: #FAC900;
+        border: solid 0 transparent;
+        outline: none;
+        box-shadow: 0 .1em rgba(0, 0, 0, .5);
+        padding: .5em;
+        display: block;
+        width: 50%;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    .feed {
+        position: relative;
+        width: 270px;
+        height: 125px;
+        background-color: rgba(255, 214, 64, 1);
+        border-radius: 10px;
+        flex-wrap: nowrap;
+        cursor: pointer;
+    }
+</style>
+<div style="width: 1008px;height: 60px;display: flex;background-color: #0D536A;">
+    <p style="position: absolute;color: white;margin-left: 42px;margin-top: 26px;font-size: 12px;">Atividades</p>
+</div>
+<div class="coluna-esquerda largura-1_3">
+    <img class="animate__animated animate__flipInX"
+        style="height: 219.4px; width: 241.85px; margin-top: 80.65px; margin-left: 35px;" src="recursos/imgs/SI_28.png">
+</div>
+<div class="coluna-direita largura-2_1" style="width: 500px; height: 500px; margin-top: 80px;margin-right: 75px;">
+    <!-- <iframe src="quiz.html"></iframe> -->
+    <h1>Questão 1</h1>
+    <p><strong>Considerando os dados coletados pelo Depen, até dezembro de 2020, é possível afirmar que o
+            Brasil:</strong>
+    </p>
+
+    <p class="questao" id="opc_e">a) Possui cerca de 500.000 pessoas reclusas em prisões.</p>
+    <p class="questao" id="opc_e">b) Tem uma população carcerária majoritariamente feminina.</p>
+    <p class="questao" id="opc_c">c) Distribui sua população carcerária em 1.527 estabelecimentos penais.</p>
+    <p class="questao" id="opc_e">d) Mantém estabelecimentos penais específicos para idosos.</p>
+    <p class="questao" id="opc_e">e) Possui um sistema prisional com condições ambientais desfavoráveis à
+        propagação de
+        doenças.</p>
+    <div class="submeter" style="display: none;">Submeter</div>
+
+    <div style="margin-top: -230px; width: 500px; height: 150px; display: none;" class="feed" id="feedCerto">
+        <img style="height: 70px; margin-top: -48px; margin-left: 30px;margin-bottom: 15px;"
+            src="recursos/imgs/SI_CE.png">
+        <h2 style="margin-left: 30px;">Resposta correta</h2>
+        <p style="margin-left: 30px; width: 450px;">Você acertou! Os dados coletados por meio do sistema
+            informatizado
+            que o Depen mantém ratificam a existência de 1.527 estabelecimentos
+            penais no país.</p>
+    </div>
+
+    <div style="margin-top: -230px; width: 500px; height: 150px; display: none;" class="feed" id="feedErrado">
+        <img style="height: 70px; margin-top: -48px; margin-left: 30px;margin-bottom: 15px;"
+            src="recursos/imgs/SI_CE.png">
+        <h2 style="margin-left: 30px;">Resposta incorreta</h2>
+        <p style="margin-left: 30px; width: 450px;">Na verdade, a alternativa correta é a letra “c”. Os dados
+            coletados
+            por
+            meio do sistema informatizado que o Depen mantém ratificam a
+            existência de 1.527 estabelecimentos penais no país.</p>
+    </div>
+</div>
+<footer style="width: 1008px;height: 19px;display: flex;background-color: #0D536A;"></footer>
+<script>
+    $(() => {
+        pontos = 0;
+        let mostrarSub = true;
+        let resposta = '';
+        let feedCerto = $(document).find('[id^=feedCerto]').hide();
+        let feedErrado = $(document).find('[id^=feedErrado]').hide();
+        let submeter = $(document).find('[class=submeter]').hide();
+
+        $(feedCerto).on('click', apagarFeeds);
+        $(feedErrado).on('click', apagarFeeds);
+
+        function apagarFeeds() {
+            feedCerto.fadeOut();
+            feedErrado.fadeOut();
+        }
+        function desmarcarTudo() {
+            let questao = $(document).find('[id^=opc]').map((index, sel) => {
+                $(sel).removeClass("marcado");
+            })
+        }
+
+        let questao = $(document).find('[id^=opc]').map((index, sel) => {
+            $(sel).click(() => {
+                console.log(sel.id);
+                resposta = sel.id;
+                if (mostrarSub) {
+                    submeter.fadeIn();
+                }
+                desmarcarTudo();
+                $(sel).addClass("marcado");
+            })
+        })
+
+        $(submeter).on('click', () => {
+            if (resposta.split("_")[1] == "c") {
+                $(feedCerto).fadeIn();
+                pontos += 1;
+                mostrarSub = false;
+                submeter.hide();
+            } else {
+                $(feedErrado).fadeIn();
+            }
+        })
+    })
+</script>
+<button onclick="copiarCodigo();" style="width: 140px;height: 30px;position: absolute;right: 20px;top: 13px;">Copiar
+    código</button>

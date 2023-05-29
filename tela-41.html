@@ -1,0 +1,53 @@
+<div class="coluna-esquerda altura-1_1 largura-1_3 centro">
+    <img src="recursos/imgs/T5.png" style="top: 0px;left: 0px;width: 138px;">
+</div>
+<div style="margin-left: 170px;margin-top: 146px;">
+    <div>
+        <p style="color: #FFA800;font-size: 20px;font-weight: bolder;">Apoio matricial/matriciamento</p>
+        <p style="width: 692px;margin-top: 40px;">O <strong
+                style="width: 40px; background-color: #1F6D4C; display: inline;"><a id="hotWord-bt"
+                    style="cursor: pointer;">apoio matricial</a></strong>, também conhecido como matriciamento, é um
+            arranjo
+            organizacional
+            e um método de compartilhamento de
+            conhecimentos que permite o suporte técnico pedagógico e institucional para retaguarda especializada
+            para as equipes
+            responsáveis pela construção de ações para a população adscrita, nomeadas equipes de referência
+            (LAZARINO <i>et al.</i>, 2019).</p>
+    </div>
+</div>
+<div id="conteudo"
+    style="position: absolute; background-color: rgb(31, 109, 76); top: 260px; left: 20px; width: 690px; border-radius: 10px; flex-direction: column; align-items: center; justify-content: center; display: flex;">
+    <p style="width: 640px;text-align: left;font: normal normal normal 14px/18px Poppins;color: #FFFFFF;">
+        É um modo de produzir saúde em que duas ou mais equipes, num processo de construção
+        compartilhada, criam uma proposta de
+        intervenção pedagógico-terapêutica. Distingue-se do atendimento realizado por um
+        especialista
+        dentro de uma unidade de
+        APS tradicional. A proposta integradora do matriciamento visa transformar a lógica
+        tradicional
+        dos sistemas de saúde:
+        encaminhamentos, referência e contrarreferência, protocolos e centros de regulação. Na
+        horizontalização decorrente do
+        processo de matriciamento, o sistema de saúde se reestrutura em dois tipos de equipes:
+        equipe de
+        referência e equipe de
+        apoio matricial. Os efeitos burocráticos e pouco dinâmicos da lógica tradicional podem ser
+        atenuados por ações
+        horizontais que integrem os componentes e seus saberes nos diferentes níveis de atenção
+        (CHIAVERINI, 2011).</p>
+</div>
+<script>
+    $(() => {
+        let conteudo = $('#conteudo').hide();
+        $('#hotWord-bt').css('cursor', 'pointer').hover(() => {
+            conteudo.fadeIn()
+        })
+        $('#hotWord-bt').mouseout(() => {
+            conteudo.fadeOut()
+        })
+    })
+</script>
+
+<button onclick="copiarCodigo();" style="width: 140px;height: 30px;position: absolute;right: 20px;top: 13px;">Copiar
+    código</button>

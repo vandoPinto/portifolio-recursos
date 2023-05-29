@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="111" height="111" viewBox="0 0 111 111">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Retângulo_981" data-name="Retângulo 981" width="111" height="111" transform="translate(-0.001 0)" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="icon-interação-fisiologica" transform="translate(0.001 -2.4)">
+    <g id="Grupo_1288" data-name="Grupo 1288" transform="translate(0 2.4)" clip-path="url(#clip-path)">
+      <path id="Caminho_1406" data-name="Caminho 1406" d="M52.592,49.241H15.116a4,4,0,1,0,0,8H33.625l5.713,5.371,5.827-5.371h7.426a4,4,0,0,0,0-8" transform="translate(6.022 22.972)" fill="#fff"/>
+      <path id="Caminho_1407" data-name="Caminho 1407" d="M39.191,64.484l-7.884-7.312H10.969v5.37a5.364,5.364,0,0,0,5.37,5.371H51.188a5.364,5.364,0,0,0,5.37-5.371v-5.37H47.189Z" transform="translate(5.941 27.268)" fill="#fff"/>
+      <path id="Caminho_1408" data-name="Caminho 1408" d="M33.705,35.011c-12.568,0-22.736,4.8-22.736,17.368H56.443c0-12.455-10.17-17.368-22.738-17.368" transform="translate(5.941 15.264)" fill="#fff"/>
+      <path id="Caminho_1409" data-name="Caminho 1409" d="M77.6,17.254a2.262,2.262,0,0,0-3.2-3.2L62.972,25.824l-.458,4.227H30.979v3.427l.8,9.712c11.768,2.4,18.509,9.941,18.509,21.139V86.382a9.869,9.869,0,0,1-1.6,5.371H67.655l4.571-58.275V30.051h-4.8l.228-2.285Z" transform="translate(16.78 3.542)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

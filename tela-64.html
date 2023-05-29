@@ -1,0 +1,70 @@
+<style>
+    .parent {
+        width: 898px;
+        overflow-x: hidden;
+        float: left;
+        margin-left: -14px;
+    }
+
+    .child {
+        width: 1000px;
+        float: left;
+        cursor: pointer;
+    }
+</style>
+<div style="width: 1008px;height: 60px;display: flex;background-color: #0D536A;">
+    <p style="position: absolute;color: white;margin-left: 42px;margin-top: 26px;font-size: 12px;">Drag`n Drop - Arrastar</p>
+</div>
+<div style="margin-top: 12px; margin-left: 14px;">
+    <p>Navegue pela linha do tempo, clicando e arrastando para a esquerda.</p>
+    <div class="parent">
+        <div class="child">
+            <img src="recursos/imgs/LinhaTempo.svg" style="height: 228px;">
+        </div>
+    </div>
+    <div class="animate__animated animate__backInRight"
+        style="position: absolute;margin-left: 59px;display: flex;flex-direction: row;width: 725px;height: 100px;top: 341px;background-color: #fff2d9;border-radius: 10px;padding-left: 40px;padding-top: 10px;">
+        <img id="drag_1" draggable="true" src="recursos/imgs/lampada.png"
+            style="width: 60px;height: 60px;margin-left: -22px;margin-top: 16px;">
+        <p style="position: absolute;top: 15px;left: 100px;font-weight: bold;color: #294666;font-size: 15px;">PARA
+            REFLETIR
+        </p>
+        <div style="font-size: 14px;margin-left: 23px;margin-top: 31px;">
+            <p>E como é a realidade da gestão dos trabalhadores da APS?<br> Como essa abordagem pode ser
+                implementada na
+                gestão da APS no
+                Distrito Federal? </p>
+        </div>
+    </div>
+</div>
+<footer style="width: 1008px;height: 19px;display: flex;background-color: #0D536A;"></footer>
+<script>
+    $(() => {
+        const slider = document.querySelector('.parent');
+        let mouseDown = false;
+        let startX, scrollLeft;
+
+        let startDragging = function (e) {
+            mouseDown = true;
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        };
+        let stopDragging = function (event) {
+            mouseDown = false;
+        };
+
+        slider.addEventListener('mousemove', (e) => {
+            e.preventDefault();
+            if (!mouseDown) { return; }
+            const x = e.pageX - slider.offsetLeft;
+            const scroll = x - startX;
+            slider.scrollLeft = scrollLeft - scroll;
+        });
+
+        slider.addEventListener('mousedown', startDragging, false);
+        slider.addEventListener('mouseup', stopDragging, false);
+        slider.addEventListener('mouseleave', stopDragging, false);
+    })
+</script>
+<button onclick="copiarCodigo();" style="width: 140px;height: 30px;position: absolute;right: 20px;top: 13px;">Copiar
+    código</button>

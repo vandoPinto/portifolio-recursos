@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="91" height="91" viewBox="0 0 91 91">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Retângulo_92" data-name="Retângulo 92" width="91" height="91" transform="translate(0 -0.415)" fill="#294667"/>
+    </clipPath>
+  </defs>
+  <g id="Grupo_1850" data-name="Grupo 1850" transform="translate(0 0.415)">
+    <g id="Grupo_126" data-name="Grupo 126" clip-path="url(#clip-path)">
+      <path id="Caminho_73" data-name="Caminho 73" d="M1.9,0A1.9,1.9,0,0,0,0,1.9V89.146a1.9,1.9,0,0,0,1.9,1.9H72.076a1.9,1.9,0,0,0,1.9-1.9V60.7a1.9,1.9,0,0,0-3.794-.054V87.249H3.793V3.794H53.108V22.831A1.862,1.862,0,0,0,55,24.658H70.179v17.07a1.9,1.9,0,0,0,3.794.054V22.761a1.9,1.9,0,0,0-.429-1.2L56.472.7A1.9,1.9,0,0,0,55.005,0ZM56.9,7.213l11.287,13.8H56.9Z" fill="#294667" fill-rule="evenodd"/>
+      <path id="Caminho_74" data-name="Caminho 74" d="M131.035,67.954a1.894,1.894,0,0,0-1.315.552L101.606,96.619a1.892,1.892,0,0,0-.433.674l-5.127,13.614a1.9,1.9,0,0,0,2.441,2.445l13.618-5.127a1.893,1.893,0,0,0,.671-.437l28.114-28.114a1.9,1.9,0,0,0,0-2.682L132.4,68.506a1.9,1.9,0,0,0-1.367-.552m.026,4.579,5.805,5.8-25.321,25.321-5.8-5.805ZM103.747,101.22l4.43,4.427-7.105,2.678Z" transform="translate(-50.402 -35.706)" fill="#294667" fill-rule="evenodd"/>
+      <path id="Caminho_75" data-name="Caminho 75" d="M25.9,67.942a1.9,1.9,0,0,0-.054,3.794h41.73a1.9,1.9,0,0,0,.054-3.794H25.9Z" transform="translate(-12.599 -35.699)" fill="#294667" fill-rule="evenodd"/>
+      <path id="Caminho_76" data-name="Caminho 76" d="M25.9,115.9a1.9,1.9,0,0,0-.054,3.794H46.714a1.9,1.9,0,0,0,.054-3.794H25.9Z" transform="translate(-12.599 -60.901)" fill="#294667" fill-rule="evenodd"/>
+      <path id="Caminho_77" data-name="Caminho 77" d="M25.9,139.885a1.9,1.9,0,0,0-.054,3.794H46.714a1.9,1.9,0,0,0,.054-3.794H25.9Z" transform="translate(-12.599 -73.501)" fill="#294667" fill-rule="evenodd"/>
+      <path id="Caminho_78" data-name="Caminho 78" d="M25.9,91.923a1.9,1.9,0,0,0-.054,3.794h41.73a1.9,1.9,0,0,0,.054-3.794H25.9Z" transform="translate(-12.599 -48.3)" fill="#294667" fill-rule="evenodd"/>
+    </g>
+  </g>
+</svg>

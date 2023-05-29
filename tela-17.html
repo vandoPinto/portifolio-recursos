@@ -1,0 +1,87 @@
+<style>
+    .zoom:hover {
+        transition: transform .2s;
+        transform: scale(1.2);
+    }
+</style>
+<div style="width: 1008px;height: 60px;display: flex;background-color: #0D536A;">
+    <p style="position: absolute;color: white;margin-left: 42px;margin-top: 26px;font-size: 12px;">Botao Janela</p>
+</div>
+<div>
+    <div style="margin-left: 52px;margin-top: 75px;width: 784px;">
+        <p>Ao longo dos anos 2000 e parte dos anos 2010, tivemos um movimento de ampliação e fortalecimento da APS
+            convergente e
+            impulsionado por políticas e instrumentos normativos que assumiram a APS como ordenadora das redes e o
+            seu
+            caráter
+            substitutivo para reorganização das práticas.</p>
+        <p>Como exemplos importantes, podemos citar (AQUINO <i>et al.</i>, 2014):</p>
+    </div>
+    <div
+        style="margin-top: 37px;display: flex;flex-direction: column;justify-content: space-between;align-items: center;height: 120px;">
+        <div id="botao_1"
+            style="width: 491px; height: 43px; background: 0% 0% no-repeat padding-box padding-box rgb(100, 151, 129); cursor: pointer;"
+            class="zoom">
+            <p
+                style="text-align: center;font: normal normal bold 14px/18px Poppins;letter-spacing: 0px;color: #FFFFFF;">
+                Política Nacional da Atenção Básica (PNAB) de 2006.</p>
+        </div>
+        <div id="botao_2"
+            style="width: 491px; height: 61px; background: 0% 0% no-repeat padding-box padding-box rgb(100, 151, 129); cursor: pointer;"
+            class="zoom">
+            <p
+                style="text-align: center;font: normal normal bold 14px/18px Poppins;letter-spacing: 0px;color: #FFFFFF;">
+                Criação dos Núcleos Ampliados de Saúde<br> da Família (NASF), em 2008.</p>
+        </div>
+    </div>
+    <div>
+        <div id="janela_1" class="jan" style="cursor: pointer; display: none;">
+            <div
+                style="width: 625px;height: 202px;background: #376551 0% 0% no-repeat padding-box;margin-top: 170px;margin-left: 130px;display: flex;align-items: center;justify-content: center;">
+                <p style="text-align: center;font: normal normal bold 14px/18px Poppins;color: #FFAA00;width: 453px;">
+                    Reafirmada na
+                    segunda edição de 2011, explicitando a eleição da Saúde da Família como estratégia
+                    prioritária para
+                    expansão e consolidação da APS no Brasil.</p>
+            </div>
+            <p style="position: absolute;top: 170px;left: 730px;color:#FFAA00;">X</p>
+        </div>
+        <div id="janela_2" class="jan" style="cursor: pointer; display: none;">
+            <div
+                style="width: 625px;height: 202px;background: #376551 0% 0% no-repeat padding-box;margin-top: 170px;margin-left: 130px;display: flex;align-items: center;justify-content: center;">
+                <p style="text-align: center;font: normal normal bold 14px/18px Poppins;color: #FFAA00;width: 453px;">
+                    Para apoiar a inserção da Estratégia de Saúde da Família (ESF) na rede de serviços e ampliar a
+                    resolutividade da APS.</p>
+            </div>
+            <p style="position: absolute;top: 170px;left: 730px;color:#FFAA00;">X</p>
+        </div>
+    </div>
+</div>
+<footer style="width: 1008px;height: 19px;display: flex;background-color: #0D536A;"></footer>
+<button onclick="copiarCodigo();" style="width: 140px;height: 30px;position: absolute;right: 20px;top: 13px;">Copiar
+    código</button>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
+        apagarJanelas();
+        $(document).find('[id^=btn]').hide();
+        let botoes = $(document).find('[id^=botao]').addClass('zoom').map((index, botao) => {
+            $(botao).css('cursor', 'pointer');
+            $(botao).hover(() => {
+                $(document).find(`[id=botao_${index + 1}]`).css('background-color', '#FFA800');
+            });
+            $(botao).mouseleave(() => {
+                $(document).find(`[id=botao_${index + 1}]`).css('background-color', '#649781');
+            });
+            $(botao).click(() => {
+                apagarJanelas();
+                $(janelas[index]).fadeIn();
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>

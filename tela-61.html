@@ -1,0 +1,64 @@
+<style>
+    .parent {
+        width: 555px;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        float: left;
+        margin-left: -14px;
+        border-style: solid;
+        margin-top: 12px;
+        margin-right: 10px;
+    }
+
+    .child {
+        width: 525px;
+        height: 380px;
+        float: left;
+        cursor: pointer;
+    }
+</style>
+<div style="width: 1008px;height: 60px;display: flex;background-color: #0D536A;">
+    <p style="position: absolute;color: white;margin-left: 42px;margin-top: 26px;font-size: 12px;">Drag`n Drop - Arrastar</p>
+</div>
+<div style="display: flex;flex-direction: row;justify-content: space-between;">
+    <div style="margin-left: 37px;margin-top: 141px;width: 260px;">
+        <p>Agora, veremos algumas dicas para a realização da agenda. </p>
+        <p>Arraste a imagem ao lado para cima para ler o conteúdo.</p>
+    </div>
+    <div class="parent">
+        <div class="child">
+            <img src="recursos/imgs/figura8.png" style="width: 559px; ">
+        </div>
+    </div>
+</div>
+<footer style="width: 1008px;height: 19px;display: flex;background-color: #0D536A;"></footer>
+<script>
+    $(() => {
+        const slider = document.querySelector('.parent');
+        let mouseDown = false;
+        let startY, scrollTop;
+
+        let startDragging = function (e) {
+            mouseDown = true;
+            startY = e.pageY - slider.offsetTop;
+            scrollTop = slider.scrollTop;
+        };
+        let stopDragging = function (event) {
+            mouseDown = false;
+        };
+
+        slider.addEventListener('mousemove', (e) => {
+            e.preventDefault();
+            if (!mouseDown) { return; }
+            const x = e.pageY - slider.offsetTop;
+            const scroll = x - startY;
+            slider.scrollTop = scrollTop - scroll;
+        });
+
+        slider.addEventListener('mousedown', startDragging, false);
+        slider.addEventListener('mouseup', stopDragging, false);
+        slider.addEventListener('mouseleave', stopDragging, false);
+    })
+</script>
+<button onclick="copiarCodigo();" style="width: 140px;height: 30px;position: absolute;right: 20px;top: 13px;">Copiar
+    código</button>

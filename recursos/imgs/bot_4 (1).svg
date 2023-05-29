@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="457.625" height="182" viewBox="0 0 457.625 182">
+  <defs>
+    <linearGradient id="linear-gradient" x1="-1.919" y1="0.5" x2="0.886" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#2f5579"/>
+      <stop offset="1" stop-color="#2f9943"/>
+    </linearGradient>
+    <clipPath id="clip-path">
+      <rect id="Retângulo_1671" data-name="Retângulo 1671" width="457.625" height="162" fill="url(#linear-gradient)"/>
+    </clipPath>
+  </defs>
+  <g id="Grupo_2604" data-name="Grupo 2604" transform="translate(-2934.351 2775.084)">
+    <g id="Grupo_2585" data-name="Grupo 2585" transform="translate(2934.351 -2775.084)">
+      <g id="Grupo_2584" data-name="Grupo 2584" clip-path="url(#clip-path)">
+        <path id="Caminho_6020" data-name="Caminho 6020" d="M362.25,0H0L95.375,81,0,162H362.25l95.375-81Z" fill="url(#linear-gradient)"/>
+      </g>
+    </g>
+    <path id="Caminho_6021" data-name="Caminho 6021" d="M133.383,89.485A8.629,8.629,0,1,1,142,80.845a8.476,8.476,0,0,1-8.617,8.64m0-3.744c2.688,0,4.44-1.944,4.44-4.9,0-3-1.752-4.9-4.44-4.9-2.736,0-4.464,1.9-4.464,4.9,0,2.952,1.728,4.9,4.464,4.9" transform="translate(2934.351 -2775.084)" fill="#fff"/>
+    <path id="Caminho_6022" data-name="Caminho 6022" d="M151.167,72.468c4.128,0,6.193,2.376,6.193,5.3a4.905,4.905,0,0,1-3.745,4.873l3.889,6.672h-4.633l-3.5-6.36h-.984v6.36h-4.1V72.468Zm-.24,3.408h-2.544v4.177h2.544c1.536,0,2.257-.792,2.257-2.113,0-1.248-.721-2.064-2.257-2.064" transform="translate(2934.351 -2775.084)" fill="#fff"/>
+    <path id="Caminho_6023" data-name="Caminho 6023" d="M175.648,77.8h-4.537a3.529,3.529,0,0,0-3.313-1.729c-2.64,0-4.392,1.873-4.392,4.8,0,3.119,1.776,4.944,4.729,4.944a4.035,4.035,0,0,0,4.079-2.976h-5.207V79.813h8.929v3.816A8.583,8.583,0,1,1,167.8,72.276c4.033,0,6.962,2.064,7.85,5.521" transform="translate(2934.351 -2775.084)" fill="#fff"/>
+    <path id="Caminho_6024" data-name="Caminho 6024" d="M188.7,86.342h-6.29l-1.007,2.975h-4.3l6.1-16.849h4.753l6.1,16.849h-4.344ZM185.559,77l-2.064,6.169h4.152Z" transform="translate(2934.351 -2775.084)" fill="#fff"/>
+    <path id="Caminho_6025" data-name="Caminho 6025" d="M210.975,72.468v16.85h-4.1l-6.865-10.394V89.318h-4.1V72.468h4.1l6.865,10.44V72.468Z" transform="translate(2934.351 -2775.084)" fill="#fff"/>
+    <rect id="Retângulo_1672" data-name="Retângulo 1672" width="4.104" height="16.85" transform="translate(3148.3 -2702.616)" fill="#fff"/>
+    <path id="Caminho_6026" data-name="Caminho 6026" d="M232.646,75.588,225.4,85.957h7.248v3.36h-11.9V86.2l7.2-10.369h-7.2v-3.36h11.9Z" transform="translate(2934.351 -2775.084)" fill="#fff"/>
+    <path id="Caminho_6027" data-name="Caminho 6027" d="M245.823,86.342h-6.29l-1.007,2.975h-4.3l6.1-16.849h4.752l6.1,16.849H246.83ZM242.678,77l-2.064,6.169h4.152Z" transform="translate(2934.351 -2775.084)" fill="#fff"/>
+    <path id="Caminho_6028" data-name="Caminho 6028" d="M260.8,72.275a7.824,7.824,0,0,1,7.993,5.9h-4.513a3.712,3.712,0,0,0-3.528-2.161c-2.519,0-4.248,1.873-4.248,4.85s1.729,4.847,4.248,4.847a3.709,3.709,0,0,0,3.528-2.16h4.513a7.8,7.8,0,0,1-7.993,5.881,8.166,8.166,0,0,1-8.473-8.568,8.187,8.187,0,0,1,8.473-8.594" transform="translate(2934.351 -2775.084)" fill="#fff"/>
+    <rect id="Retângulo_1673" data-name="Retângulo 1673" width="4.104" height="16.85" transform="translate(3205.661 -2702.616)" fill="#fff"/>
+    <path id="Caminho_6029" data-name="Caminho 6029" d="M286.358,89.485a8.629,8.629,0,1,1,8.616-8.64,8.477,8.477,0,0,1-8.616,8.64m0-3.744c2.688,0,4.44-1.944,4.44-4.9,0-3-1.752-4.9-4.44-4.9-2.736,0-4.465,1.9-4.465,4.9,0,2.952,1.729,4.9,4.465,4.9" transform="translate(2934.351 -2775.084)" fill="#fff"/>
+    <path id="Caminho_6030" data-name="Caminho 6030" d="M312.326,72.468v16.85h-4.1l-6.865-10.394V89.318h-4.1V72.468h4.1l6.865,10.44V72.468Z" transform="translate(2934.351 -2775.084)" fill="#fff"/>
+    <path id="Caminho_6031" data-name="Caminho 6031" d="M325.79,86.342H319.5l-1.008,2.975h-4.3l6.1-16.849h4.754l6.1,16.849H326.8ZM322.646,77l-2.064,6.169h4.152Z" transform="translate(2934.351 -2775.084)" fill="#fff"/>
+    <path id="Caminho_6032" data-name="Caminho 6032" d="M337.094,72.468V86.149h5.376v3.169h-9.48V72.468Z" transform="translate(2934.351 -2775.084)" fill="#fff"/>
+    <rect id="Retângulo_1674" data-name="Retângulo 1674" width="457.625" height="182" transform="translate(2934.351 -2775.084)" fill="none"/>
+  </g>
+</svg>

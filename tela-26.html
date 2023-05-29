@@ -1,0 +1,82 @@
+<style>
+    li {
+        margin-bottom: 12px;
+        margin-left: 18px;
+    }
+</style>
+<div style="width: 1008px;height: 60px;display: flex;background-color: #0D536A;">
+    <p style="position: absolute;color: white;margin-left: 42px;margin-top: 26px;font-size: 12px;">Videos</p>
+</div>
+<div class="coluna-esquerda largura-1_1" style="max-width: 888px;">
+    <p style="width: 100%; text-align: center; margin-top: 60px;">
+        <strong style="color: #004D73;"> Clique</strong> nos vídeos para visualizar exemplos de incidência e
+        prevalência.
+    </p>
+    <div style="display: inline-flex; width: 100%; flex-wrap: wrap; justify-content: space-evenly;">
+        <div style="text-align: center; margin-top: 40px; cursor: pointer;"
+            class="btn btn animate__animated animate__tada" data-toggle="modal" data-target="#modalCentro1">
+            <img src="recursos/imgs/SI_37.png" style="width: 233px; height: 180px;">
+            <div
+                style="margin-left: 45px; background-color: #fac900; margin-top: 10px; width: 140px; height: 30px; text-align: center;">
+                <p style="color: #004c72; font-weight: bolder; padding: 10px; text-align: center;">Incidência
+                </p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 40px; cursor: pointer;"
+            class="btn btn animate__animated animate__tada" data-toggle="modal" data-target="#modalCentro2">
+            <img src="recursos/imgs/SI_37.png" style="width: 233px; height: 180px;">
+            <div
+                style="margin-left: 45px; background-color: #fac900; margin-top: 10px; width: 140px; height: 30px; text-align: center;">
+                <p style="color: #004c72; font-weight: bolder; padding: 10px; text-align: center;">Prevalência
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="modalCentro1" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+    aria-hidden="true" style="overflow-y:hidden;">
+    <div class="modal-dialog modal-dialog-centered " role="document">
+        <div class="modal-content" style="position: fixed; top: 72px; left: 0; width: 100%; height: 370px;">
+            <div data-dismiss="modal" class="close" aria-hidden="true" style="margin-left: auto; padding-right: 10px;">
+                ×</div>
+            <video id="full-video" width="100%" height="345px" controls="">
+                <source src="recursos/video/Mod03_aula01_incidencia.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modalCentro2" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+    aria-hidden="true" style="overflow-y:hidden;">
+    <div class="modal-dialog modal-dialog-centered " role="document">
+        <div class="modal-content" style="position: fixed; top: 72px; left: 0; width: 100%; height: 370px;">
+            <div data-dismiss="modal" class="close" aria-hidden="true" style="margin-left: auto; padding-right: 10px;">
+                ×</div>
+            <video id="full-video2" width="100%" height="345px" controls="">
+                <source src="recursos/video/Mod03_aula01_02_prevalencia.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+</div>
+<footer style="width: 1008px;height: 19px;display: flex;background-color: #0D536A;"></footer>
+<button onclick="copiarCodigo();" style="width: 140px;height: 30px;position: absolute;right: 20px;top: 13px;">Copiar
+    código</button>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.close').click(function (event) {
+            $("#full-video").get(0).pause();
+            $("#full-video").get(0).currentTime = 0;
+            $("#full-video2").get(0).pause();
+            $("#full-video2").get(0).currentTime = 0;
+            event.preventDefault();
+        });
+        $('.btn').click(function (event) {
+            console.log(event);
+            //$("#full-video").get(0).currentTime = 0;
+            //$("#full-video").get(0).play();
+        });
+    });
+</script>

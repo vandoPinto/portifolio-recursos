@@ -1,0 +1,106 @@
+<div style="width: 1008px;height: 60px;display: flex;background-color: #0D536A;">
+    <p style="position: absolute;color: white;margin-left: 42px;margin-top: 26px;font-size: 12px;">Botao Janela</p>
+</div>
+<div class="coluna-esquerda altura-1_1 centro">
+    <p style="margin-top: 27px;margin-left: 41px;width: 808px;">A seguir, apresentaremos alguns aportes
+        teóricos que podem auxiliar na busca de estratégias e soluções para momentos
+        desafiantes, evidenciados ao se colocar em prática certas iniciativas, a exemplo da implementação de
+        reuniões
+        integradas
+        em uma UBS.
+    </p>
+    <p style="margin-left: 40px;">Os elementos considerados pilares que sustentam a colaboração (D´AMOUR<i> et
+            al.</i>,
+        2005) são:</p>
+    <div
+        style="position: absolute;top: 237px;left: 114px;width: 662px;height: 212px;background-color: #CCE3F1;border-color: #707070;border-width: 1px;border-style: solid;">
+    </div>
+</div>
+<div>
+    <div id="botao_1" style="cursor: pointer;">
+        <img id="bt1" src="recursos/imgs/bot_1.svg"
+            style="position: absolute; margin-top: 138px; margin-left: -789px; width: 223px; cursor: pointer;">
+        <img id="btn_1_2" src="recursos/imgs/bot_1_2.svg"
+            style="position: absolute; margin-top: 118px; margin-left: -789px; width: 223px; cursor: pointer; display: none;">
+    </div>
+    <div id="botao_2" style="cursor: pointer;">
+        <img id="bt2" src="recursos/imgs/bot_2.svg"
+            style="position: absolute; margin-top: 138px; margin-left: -609px; width: 223px; cursor: pointer;">
+        <img id="btn_2_2" src="recursos/imgs/bot_2_2.svg"
+            style="position: absolute; margin-top: 118px; margin-left: -609px; width: 223px; cursor: pointer; display: none;">
+    </div>
+    <div id="botao_3" style="cursor: pointer;">
+        <img id="bt3" src="recursos/imgs/bot_3.svg"
+            style="position: absolute; margin-top: 138px; margin-left: -429px; width: 223px; cursor: pointer;">
+        <img id="btn_3_2" src="recursos/imgs/bot_3_2.svg"
+            style="position: absolute; margin-top: 118px; margin-left: -429px; width: 223px; cursor: pointer; display: none;">
+    </div>
+    <div id="botao_4" style="cursor: pointer;">
+        <img id="bt4" src="recursos/imgs/bot_4.svg"
+            style="position: absolute; margin-top: 138px; margin-left: -249px; width: 223px; cursor: pointer;">
+        <img id="btn_4_2" src="recursos/imgs/bot_4_2.svg"
+            style="position: absolute; margin-top: 118px; margin-left: -249px; width: 223px; cursor: pointer; display: none;">
+    </div>
+</div>
+<div id="janela_1"
+    style="position: absolute; margin-top: 256px; margin-left: 128px; width: 634px; cursor: pointer; display: none;">
+    <p>Quando um grupo passa a compartilhar os mesmos objetivos e metas na dinâmica do trabalho, é possível colocar
+        o
+        usuário
+        na centralidade do cuidado, e não os profissionais envolvidos e os processos, como muitas vezes ocorre.</p>
+</div>
+<div id="janela_2"
+    style="position: absolute; margin-top: 260px; margin-left: 128px; width: 634px; cursor: pointer; display: none;">
+    <p>Com isso, estabelece-se a parceria, conceito mais relacionado à atuação propriamente dita, e que impulsiona a
+        comunicação efetiva, a confiança e o respeito mútuo. Quando isso ocorre, um profissional valoriza e
+        reconhece o
+        trabalho
+        do outro.</p>
+</div>
+<div id="janela_3"
+    style="position: absolute; margin-top: 260px; margin-left: 146px; width: 624px; cursor: pointer; display: none;">
+    <p>Assim, os profissionais reconhecem suas limitações e a necessidade do outro para efetivação de determinadas
+        ações.
+        Emerge, então, a interdependência, conceito que explicita a existência de objetivos comuns e a potência do
+        trabalho em
+        equipe.</p>
+</div>
+<div id="janela_4"
+    style="position: absolute; margin-top: 237px; margin-left: 128px; width: 634px; cursor: pointer; display: none;">
+    <p>Para que esses elementos se tornem viáveis, é fundamental que haja equilíbrio nas relações de poder, de modo
+        que
+        todos
+        os membros de uma equipe ou entre equipes se sintam empoderados, tornando as relações interprofissionais
+        saudáveis e
+        mais sólidas (COSTA, 2017). Tornar as relações mais horizontais possibilita a criação da identidade de
+        grupo. A
+        percepção de igualdade entre membros de um grupo pode reduzir preconceitos e favorecer a aproximação entre
+        participantes
+        (AMADO; VILELA, 2016).</p>
+</div>
+<footer style="width: 1008px;height: 19px;display: flex;background-color: #0D536A;"></footer>
+<button onclick="copiarCodigo();" style="width: 140px;height: 30px;position: absolute;right: 20px;top: 13px;">Copiar
+    código</button>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
+        apagarJanelas();
+        $(document).find('[id^=btn]').hide();
+        let botoes = $(document).find('[id^=botao]').map((index, botao) => {
+            $(botao).css('cursor', 'pointer');
+            $(botao).click(() => {
+                apagarJanelas();
+                $(janelas[index]).fadeIn();
+                $(document).find(`[id=btn_${index + 1}_2]`).show();
+                $(document).find(`[id=bt${index + 1}]`).hide();
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+                $(document).find('[id^=btn]').hide();
+                $(document).find(`[id=bt${index + 1}]`).show();
+            })
+        }
+    })
+</script>

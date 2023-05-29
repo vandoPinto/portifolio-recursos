@@ -1,0 +1,149 @@
+<style>
+    .aba {
+        width: 70px;
+        background-color: #fac900;
+        color: #836bff;
+        font-size: 40px;
+        font-weight: bolder;
+        text-align: center;
+        cursor: pointer;
+        border: 8px solid #836bff;
+        height: 70px;
+        -webkit-border-radius: 50%;
+    }
+
+    .janela {
+        margin-top: -50px;
+        background-color: #836bff;
+        width: 750px;
+        height: 260px;
+        border-radius: 10px;
+    }
+
+    p {
+        font-size: 11px;
+    }
+</style>
+<div style="width: 1008px;height: 60px;display: flex;background-color: #0D536A;">
+    <p style="position: absolute;color: white;margin-left: 42px;margin-top: 26px;font-size: 12px;">Abas</p>
+</div>
+<div style="margin-top: 30px;margin-left: 60px;">
+    <div style="display: inline-flex; margin-left: 30px;">
+        <div class="aba" id="botao_1">
+            <div style="margin: 5px;" id="texto_1">1</div>
+        </div>
+        <div class="aba" id="botao_2">
+            <div style="margin: 10px;" id="texto_2">2</div>
+        </div>
+        <div class="aba" id="botao_3">
+            <div style="margin: 10px;" id="texto_3">3</div>
+        </div>
+        <div class="aba" id="botao_4">
+            <div style="margin: 10px;" id="texto_4">4</div>
+        </div>
+        <div class="aba" id="botao_5">
+            <div style="margin: 10px;" id="texto_5">5</div>
+        </div>
+        <div class="aba" id="botao_6">
+            <div style="margin: 10px;" id="texto_6">6</div>
+        </div>
+    </div>
+    <div class="janela">
+        <div id="janela_0" style="">
+            <h1 style="color: #fac900; padding-top: 80px; padding-left: 180px;">Tipo 1</h1>
+            <p
+                style="margin-left: 180px;color:white;width: 390px;margin-top: 0px;justify-content: center;align-items: center;">
+                Concentrações elevadas e constantes de glicose acionam mecanismos diversos numa tentativa de
+                normalização dos níveis
+                glicêmicos, visto que nesses indivíduos a produção de insulina é praticamente inexistente, podendo
+                ser
+                observadas as
+                manifestações clínicas a seguir. Clique em cada uma das abas para conhecê-las.</p>
+        </div>
+        <div id="janela_1" style="display: none;">
+            <div style="display: flex;">
+                <p style="margin-left: 35px;color: white;width: 91%;margin-top: 110px;">
+                    Sede frequente e constante (tentativa de diluir o sangue).</p>
+                <img style="margin-top: -3px;width: 341px;" src="recursos/imgs/SI_25janela2.png">
+            </div>
+        </div>
+        <div id="janela_2" style="display: none;">
+            <div style="display: flex;">
+                <img style="width: 179px;margin-left: 80px;margin-top: 47px;" src="recursos/imgs/SI_25janela3.png">
+                <p style="margin-left: 85px;color: white;width: 300px;margin-top: 120px;">
+                    Cansaço e fadiga (as células não estão recebendo a quantidade de glicose de que precisam).</p>
+            </div>
+        </div>
+        <div id="janela_3" style="display: none;">
+            <div style="display: flex;">
+                <p style="margin-left: 35px;color: white;width: 350px;margin-top: 110px;">
+                    Perda expressiva de peso (as células não recebem a glicose de que precisam e utilizarão outras
+                    fontes de
+                    energia).</p>
+                <img style="margin-top: -10px;margin-left: 90px;width: 257px;" src="recursos/imgs/SI_25janela4.png">
+            </div>
+        </div>
+        <div id="janela_4" style="display: none;">
+            <div style="display: flex;">
+                <img style="width: 222px;margin-top: 48px;margin-left: 30px;" src="recursos/imgs/SI_25janela5.png">
+                <p style="margin-left: 85px;color: white;width: 303px;margin-top: 110px;">
+                    Grande volume urinário (para diluir a glicose da urina, é necessária uma maior quantidade de
+                    água,
+                    que,
+                    por sua vez,
+                    acarreta o aumento da ingestão de água).</p>
+            </div>
+        </div>
+        <div id="janela_5" style="display: none;">
+            <div style="display: flex;">
+                <p style="margin-left: 85px;color: white;width: 303px;margin-top: 110px;">
+                    Presença de altas concentrações de glicose na urina e de alguns metabólitos (conhecidos como
+                    “corpos
+                    cetônicos”)
+                    indicativos da falta dessa substância nas células.</p>
+                <img style="width: 216px;margin-top: -12px;margin-left: 137px;" src="recursos/imgs/SI_25janela6.png">
+            </div>
+        </div>
+        <div id="janela_6" style="display: none;">
+            <div style="display: flex;">
+                <img style="margin-top: 40px;width: 207px;margin-left: 65px;" src="recursos/imgs/SI_25janela7.png">
+                <p style="margin-left: 85px;color: white;width: 303px;margin-top: 110px;">
+                    Hálito peculiar (odor de maçã apodrecida).</p>
+            </div>
+        </div>
+    </div>
+</div>
+<footer style="width: 1008px;height: 19px;display: flex;background-color: #0D536A;"></footer>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]');
+        console.log(janelas);
+        apagarJanelas();
+        $(document).find('[id^=janela_0]').show();
+        let botoes = $(document).find('[id^=botao]').map((index, botao) => {
+            $(botao).click(() => {
+                apagarJanelas();
+                //mudarBotao(index + 1)
+                $(janelas[index + 1]).show();
+            })
+        })
+
+        function mudarBotao(numero) {
+            console.log($(document).find(`[id^=botao_${numero}]`));
+            $(document).find('[id^=botao]').map((index, botao) => {
+                $(document).find(`[id^=botao_${index + 1}]`).css("background-color", "#004c72");
+                $(document).find(`[id^=texto_${index + 1}]`).css("color", "#fac900");
+            })
+            $(document).find(`[id^=botao_${numero}]`).css("background-color", "#fac900");
+            $(document).find(`[id^=texto_${numero}]`).css("color", "#004c72");
+        }
+
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>
+<button onclick="copiarCodigo();" style="width: 140px;height: 30px;position: absolute;right: 20px;top: 13px;">Copiar
+    código</button>

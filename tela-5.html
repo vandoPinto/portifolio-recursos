@@ -1,0 +1,108 @@
+<style>
+    p {
+        font-size: 11px;
+    }
+</style>
+<div style="width: 1008px;height: 60px;display: flex;background-color: #0D536A;">
+    <p style="position: absolute;color: white;margin-left: 42px;margin-top: 26px;font-size: 12px;">Botao Janela</p>
+</div>
+<div class="coluna-esquerda ">
+    <div style="margin-top:46.45px; margin-left: 123.05px; width: 624.4px">
+        <p> Mesmo após a habilitação, a Portaria GM/MS nº 2.298/2021 prevê situações que poderão resultar em
+            suspensão
+            de repasses financeiros pelo Ministério da Saúde. </p>
+        <p><strong style="color: #004D73;">Clique</strong> na caixa vazia para dar um<i> check</i> e expandir as
+            situações
+            elencadas:</p>
+
+        <div style="margin-left: 70px;margin-top: 30px;width: 500px;">
+            <p id="texto_0" style="color: rgba(0, 0, 0, 0);">
+                ocorrência de duplicidade de
+                registro de profissionais após um período superior a 2 (duas) competências
+                consecutivas do SCNES;</p>
+            <p id="texto_1" style="color: rgba(0, 0, 0, 0);">
+                ocorrência de equipes
+                incompletas após um período superior a 2 (duas) competências consecutivas do
+                SCNES;
+            </p>
+            <p id="texto_2" style="color: rgba(0, 0, 0, 0);">
+                ocorrência de equipes ausentes ou
+                desativadas no SCNES;</p>
+            <p id="texto_3" style="color: rgba(0, 0, 0, 0);">
+                ocorrência de equipes mantidas
+                em estabelecimento de saúde com CNES desativado, de forma imediata à
+                competência financeira da ocorrência;</p>
+            <p id="texto_4" style="color: rgba(0, 0, 0, 0);">
+                ausência de envio de informação à
+                base de dados nacional após um período superior a 3 (três)
+                competências
+                consecutivas do Sistema de Informação em Saúde para a Atenção Básica (SISAB).</p>
+        </div>
+
+        <div style="display: flex;flex-direction: column;position: relative;margin-top: -179px;">
+            <div style="position: relative; margin-bottom: 18px; margin-left: 40px; width: 15.8px; height: 17.85px; cursor: pointer;"
+                id="botao1">
+                <img style="width: 18px; height: 18px;" src="recursos/imgs/SI_29_0.png">
+                <img class="animate__animated animate__bounceIn segundo-6"
+                    style="position: absolute; margin-top: -22px; width: 20px; height: 22px; display: none;"
+                    src="recursos/imgs/SI_29_1.png" id="marcado">
+            </div>
+
+            <div style="position: relative; margin-bottom: 10px; margin-left: 40px; width: 15.8px; height: 17.85px; cursor: pointer;"
+                id="botao2">
+                <img style="width: 18px; height: 18px;" src="recursos/imgs/SI_29_0.png">
+                <img class="animate__animated animate__bounceIn segundo-7"
+                    style="position: absolute; margin-top: -22px; width: 20px; height: 22px; display: none;"
+                    src="recursos/imgs/SI_29_1.png" id="marcado">
+            </div>
+
+            <div style="position: relative; margin-bottom: 18px; margin-left: 40px; width: 15.8px; height: 17.85px; cursor: pointer;"
+                id="botao3">
+                <img style="width: 18px; height: 18px;" src="recursos/imgs/SI_29_0.png">
+                <img class="animate__animated animate__bounceIn segundo-8"
+                    style="position: absolute; margin-top: -22px; width: 20px; height: 22px; display: none;"
+                    src="recursos/imgs/SI_29_1.png" id="marcado">
+            </div>
+
+            <div style="position: relative; margin-bottom: 18px; margin-left: 40px; width: 15.8px; height: 17.85px; cursor: pointer;"
+                id="botao4">
+                <img style="width: 18px; height: 18px;" src="recursos/imgs/SI_29_0.png">
+                <img class="animate__animated animate__bounceIn segundo-9"
+                    style="position: absolute; margin-top: -22px; width: 20px; height: 22px; display: none;"
+                    src="recursos/imgs/SI_29_1.png" id="marcado">
+            </div>
+
+            <div style="position: relative; margin-bottom: 18px; margin-left: 40px; width: 15.8px; height: 17.85px; cursor: pointer;"
+                id="botao5">
+                <img style="width: 18px; height: 18px;" src="recursos/imgs/SI_29_0.png">
+                <img class="animate__animated animate__bounceIn segundo-10"
+                    style="position: absolute; margin-top: -22px; width: 20px; height: 22px; display: none;"
+                    src="recursos/imgs/SI_29_1.png" id="marcado">
+            </div>
+
+        </div>
+    </div>
+</div>
+<footer style="width: 1008px;height: 19px;display: flex;background-color: #0D536A;"></footer><button
+    onclick="copiarCodigo();" style="width: 140px;height: 30px;position: absolute;right: 20px;top: 13px;">Copiar
+    código</button>
+<script>
+    $(() => {
+        let marcado = $(document).find('[id^=marcado]');
+        $(document).find('[id^=texto]');
+        apagarmarcado();
+        let botoes = $(document).find('[id^=botao]').map((index, botao) => {
+            $(botao).css("cursor", "pointer");
+            $(botao).click(() => {
+                $(marcado[index]).fadeIn();
+                $(document).find(`[id^=texto_${index}]`).css("color", "rgba(0, 0, 0, 1)").addClass("animate__animated animate__backInRight segundo-1");
+            })
+        })
+        function apagarmarcado() {
+            marcado.map((index, marca) => {
+                console.log(index);
+                $(marca).hide();
+            })
+        }
+    })
+</script>
