@@ -114,7 +114,7 @@ function playAudio(texto) {
     var msg = new SpeechSynthesisUtterance();
     msg.text = texto;
     msg.rate = .9;
-    // audio.speak(msg);
+    audio.speak(msg);
 }
 
 function stopAudio(texto) {
