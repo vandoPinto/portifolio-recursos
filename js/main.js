@@ -215,8 +215,8 @@ for (i = 0; i < qtTelas; i++) {
 }
 
 function copiarCodigo() {
-    navigator.clipboard.writeText($(document).contents().find('main').find('#tela').html());
-    console.log($(document).contents().find('main').find('#tela').html());
+    //navigator.clipboard.writeText($(document).contents().find('main').find('#tela').html());
+    //console.log($(document).contents().find('main').find('#tela').html());
 }
 
 carregarTela(telaAtual);
