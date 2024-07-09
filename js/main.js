@@ -106,14 +106,27 @@ function narrar() {
         // console.log($(val));
         // console.log($(val)[0].innerHTML.indexOf('nao-narrar') < 0);
     })
-    //playAudio(textoParaNarrar);
+    playAudio(textoParaNarrar);
 }
 
 function playAudio(texto) {
     audio.cancel();
     var msg = new SpeechSynthesisUtterance();
     msg.text = texto;
+    msg.lang = "pt-BR"; // Define a linguagem para português do Brasil
     msg.rate = .9;
+
+    // Opcional: escolha uma voz específica
+    var voices = window.speechSynthesis.getVoices();
+    for (var i = 0; i < voices.length; i++) {
+        console.log(voices[i].lang);
+        if (voices[i].lang === "pt-BR") {
+            console.log(voices[i]);
+            msg.voice = voices[i];
+            break;
+        }
+    }
+
     audio.speak(msg);
 }
 
