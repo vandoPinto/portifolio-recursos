@@ -1,0 +1,55 @@
+<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/play-ai-embed"></script>
+<script type="text/javascript">
+    addEventListener("load", () => {
+        // PlayAI.open('8i4L4_KZ-QxbtsCVoEHuj');
+    });
+</script> -->
+
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tocar Áudio</title>
+</head>
+
+<body>
+    <h1>Tocar Áudio</h1>
+    <audio id="audioPlayer" controls>
+        <source id="audioSource" src="" type="audio/mp3">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+    <button onclick="generateAndPlayAudio()">Gerar e Tocar Áudio</button>
+
+    <script>
+        const generateAndPlayAudio = async () => {
+            const voiceId = 'en_us_male'; // Substitua com o ID da voz que você quer usar
+            const text = 'Seu texto aqui'; // Texto que será convertido em áudio
+
+            try {
+                const response = await fetch('http://localhost:3000/generate-audio', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ voiceId, text })
+                });
+
+                const data = await response.json();
+                const audioUrl = data.audioUrl;
+
+                document.getElementById('audioSource').src = audioUrl;
+                const audioPlayer = document.getElementById('audioPlayer');
+                audioPlayer.load();
+                audioPlayer.play();
+            } catch (error) {
+                console.error('Erro ao gerar a URL do áudio:', error);
+            }
+        };
+    </script>
+</body>
+
+</html>

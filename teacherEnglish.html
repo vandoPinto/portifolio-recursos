@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/play-ai-embed"></script>
+    <script type="text/javascript">
+        addEventListener("load", () => {
+            PlayAI.open('5TDt3ZwGvkJMl6Ws-KEwu');
+        });
+    </script> -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversational English Tutor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        #chatbox {
+            height: 300px;
+            overflow-y: scroll;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        #messages {
+            list-style: none;
+            padding: 0;
+        }
+
+        .message {
+            padding: 5px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .message.user {
+            text-align: right;
+            color: blue;
+        }
+
+        .message.bot {
+            text-align: left;
+            color: green;
+        }
+
+        button {
+            padding: 10px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Conversational English Tutor</h1>
+        <div id="chatbox">
+            <div id="messages"></div>
+        </div>
+        <button onclick="startRecognition()">Speak</button>
+    </div>
+    <script>
+        const playHTUserId = 'POsqVZZB4gOksC02ZMuq7wnFNZf1';
+        const playHTSecretKey = 'ak-237ab32958384226a96f9fdf40d7f05c';
+
+        async function sendMessage(userInput) {
+            addMessage(userInput, 'user');
+
+            try {
+                const botMessage = await synthesizeSpeech(userInput);
+                addMessage(botMessage, 'bot');
+                speak(botMessage);
+            } catch (error) {
+                addMessage("Error: " + error.message, 'bot');
+            }
+        }
+
+        function addMessage(text, sender) {
+            const messageElement = document.createElement('div');
+            messageElement.classList.add('message', sender);
+            messageElement.textContent = text;
+
+            const messagesContainer = document.getElementById('messages');
+            messagesContainer.appendChild(messageElement);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+
+        function startRecognition() {
+            const recognition = new webkitSpeechRecognition();
+            recognition.lang = 'en-US';
+            recognition.interimResults = false;
+            recognition.maxAlternatives = 1;
+
+            recognition.onresult = function (event) {
+                const userInput = event.results[0][0].transcript;
+                sendMessage(userInput);
+            };
+
+            recognition.start();
+        }
+
+        async function synthesizeSpeech(text) {
+            const response = await fetch('https://api.play.ai/api/v1/agents', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${playHTSecretKey}`,
+                    'X-User-ID': playHTUserId
+                },
+                body: JSON.stringify({
+                    voice: 'en_us_jenny_neural',
+                    content: [text],
+                    speed: 1.0,
+                    sample_rate: 24000
+                })
+            });
+
+            if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+            }
+
+            const data = await response.json();
+            if (!data.audioUrl) {
+                throw new Error('No audio URL returned');
+            }
+
+            return new Promise((resolve) => {
+                const audio = new Audio(data.audioUrl);
+                audio.play();
+                audio.onended = () => resolve(text);
+            });
+        }
+
+        function speak(text) {
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'en-US';
+            speechSynthesis.speak(utterance);
+        }
+    </script>
+</body>
+
+</html>
