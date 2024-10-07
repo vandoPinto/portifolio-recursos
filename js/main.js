@@ -106,7 +106,7 @@ function narrar() {
         // console.log($(val));
         // console.log($(val)[0].innerHTML.indexOf('nao-narrar') < 0);
     })
-    playAudio(textoParaNarrar);
+    //playAudio(textoParaNarrar);
 }
 
 function playAudio(texto) {
